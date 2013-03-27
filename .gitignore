@@ -1,0 +1,12 @@
+*.py[cod]
+*.swp
+docs/_build
+.coverage
+tests/htmlcov
+cover
+build
+MANIFEST
+dist
+parser.out
+parsetab.py
+*.log
