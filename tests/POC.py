@@ -67,21 +67,21 @@ def DNP3(message):
     print("finalValue: " + str(finalValue))
     
     appControl = ""
-    if firstValue > 0:
+    if firstValue.uint > 0:
         appControl += "FIRST "
-    if finalValue > 0 :
+    if finalValue.uint > 0 :
         appControl += "FINAL "
-    if confirmValue > 0:
+    if confirmValue.uint > 0:
         appControl += "CONFIRM "
-    if unsolicitedValue > 0:
+    if unsolicitedValue.uint > 0:
         appControl += "UNSOLICITED"
         
-    print appControl
+    print (appControl)
     
     
     #function code parsing
     functionSection = (binMessage & funcCodeMask) >> funcCodeShift
-    print("function Code: " + str(functionSection))
+    print("function Code: " + str(functionSection) + " (" + str(functionSection.uint)+ ") ")
     
     mtype = ""
     funcCode = ""
@@ -151,6 +151,8 @@ def DNP3(message):
         mtype = "RESPONSE"
         funcCode = "RESERVED"
         
+    print (mtype)
+    print (funcCode)
     
     #lsb checking
     first = (binMessage & lsbMask) >> lsbShift
