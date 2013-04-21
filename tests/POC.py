@@ -16,7 +16,7 @@ seqShift = 0
 consecutiveMask = bitstring.Bits("0x0000000000000020")
 consecutiveShift = 5
 unsolicitedMask = bitstring.Bits("0x0000000000000010")
-unsolicitedShift = 5
+unsolicitedShift = 4
 firstMask = bitstring.Bits("0x0000000000000040")
 firstShift = 6
 finalMask = bitstring.Bits("0x0000000000000080")
@@ -26,7 +26,7 @@ finalShift = 7
 #function code masks
 #81 through 83 (hex) indicates response
 funcCodeMask = bitstring.Bits("0x000000000000FF00")
-funcCodeShift = 9
+funcCodeShift = 8
 
 #only for response from outstations
 lsbMask = bitstring.Bits("0x00000000000F0000")
