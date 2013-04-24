@@ -1,0 +1,37 @@
+----------- ** Capture Session Started 02/11/2013 13:20:00 ** ------------
+(Port 1): Response Timeout for Device 2, waited: 1000
+(Port 1): Consecutive Failures from Device Device 2: 22
+(Port 1): Setting All Points for Device Device 2: Offline
+(Port 1):  
+(Port 1): Reset Remote Link - Device 2 Address 1 
+(Port 1)TX[10]: 05 64 05 C0 01 00 0A 00 (E0 8C)-CRC
+(Port 1): Response Timeout for Device 2, waited: 1000
+(Port 1): Consecutive Failures from Device Device 2: 23
+(Port 1): Setting All Points for Device Device 2: Offline
+(Port 1):  
+(Port 1): Reset Remote Link - Device 2 Address 1 
+(Port 1)TX[10]: 05 64 05 C0 01 00 0A 00 (E0 8C)-CRC
+(Port 1): Response Timeout for Device 2, waited: 1000
+(Port 1): Consecutive Failures from Device Device 2: 24
+(Port 1): Setting All Points for Device Device 2: Offline
+(Port 1):  
+(Port 1): Reset Remote Link - Device 2 Address 1 
+(Port 1)TX[10]: 05 64 05 C0 01 00 0A 00 (E0 8C)-CRC
+(Port 1): Response Timeout for Device 2, waited: 1000
+(Port 1): Consecutive Failures from Device Device 2: 25
+(Port 1): Setting All Points for Device Device 2: Offline
+(Port 1):  
+(Port 1): Reset Remote Link - Device 2 Address 1 
+(Port 1)TX[10]: 05 64 05 C0 01 00 0A 00 (E0 8C)-CRC
+(Port 1): Response Timeout for Device 2, waited: 1000
+(Port 1): Consecutive Failures from Device Device 2: 26
+(Port 1): Setting All Points for Device Device 2: Offline
+(Port 1):  
+(Port 1): Reset Remote Link - Device 2 Address 1 
+(Port 1)TX[10]: 05 64 05 C0 01 00 0A 00 (E0 8C)-CRC
+(Port 1): Response Timeout for Device 2, waited: 1000
+(Port 1): Consecutive Failures from Device Device 2: 27
+(Port 1): Setting All Points for Device Device 2: Offline
+(Port 1):  
+(Port 1): Reset Remote Link - Device 2 Address 1 
+(Port 1)TX[10]: 05 64 05 C0 01 00 0A 00 (E0 8C)-CRC
