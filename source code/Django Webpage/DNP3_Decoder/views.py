@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 
 def index(request):
-	return render(request, 'DNP3_Decoder/input.html')
+	return render(request, 'DNP3_Decoder/basicTemplate.html')
 	
 def auto(request):
 	return render(request, 'DNP3_Decoder/auto.html')
