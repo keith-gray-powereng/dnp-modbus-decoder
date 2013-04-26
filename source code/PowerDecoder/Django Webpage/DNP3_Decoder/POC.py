@@ -1,5 +1,5 @@
 
-#FIVE SPACES TO A TAB
+#Four SPACES TO A TAB
 
 
 #a basic message to get us started
@@ -38,6 +38,14 @@ msbShift = 16
 
 def DNP3(message):
     
+    #if message[0] != "0" and message[1] != "x":
+    temp = ""
+    for i in message:
+     if i != " ":
+         temp += i
+    message = temp
+    message = "0x" + message 
+
     #bytes are recieved in reverse byte order
     print (message)
     binMessage = bitstring.BitArray(message)
@@ -137,6 +145,9 @@ def DNP3(message):
     elif functionSection.uint == 16:
         mtype = "REQUEST"
         funcCode = "INITIALIZE_APPLICATION"
+    elif functionSection.uint > 17 and functionSection.uint < 128:
+        mtype = "REQUEST"
+        funcCode = "RESERVED"
     #there are a lot of these, in the interest of rapid prototyping, I skip to the reponses   
     elif functionSection.uint == 129:
         mtype = "RESPONSE"

@@ -5,7 +5,7 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^decoder/', include('DNP3_Decoder.urls')),
+	url(r'^decoder/', include('DNP3_Decoder.urls'))
 	#url(r'^DNP3_Decoder/', include('DNP3_Decoder.urls')), #<- What tutorial says
 	
 	# Examples:
