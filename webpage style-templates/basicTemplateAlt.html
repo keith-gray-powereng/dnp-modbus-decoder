@@ -4,17 +4,16 @@
 <style>
 h2
 {
-	background-color: #FF681F;
+background-color: #FF681F;
 }
 </style>
 <body>
 <body style="background-color:#EEEEEE;">
 
-<h2><p style="font-size:150%>
+<h2><p style="font-size":150%>
 <a href="http://powereng.com" target="_blank">
 <img src="http://powereng.com/wp-content/themes/power/img/power-logo.png" width="171" height="51"></a>
 </p></h2>
-
 
 <table border = "1">
 <tr>
@@ -28,7 +27,6 @@ h2
 </tr>
 </table>
 
-
 <p>Input your DNP3 or Modbus message(s) in the textbox below or import it from a text file.</p>
 
 <form action="">
@@ -37,23 +35,21 @@ h2
 
 <br><strong>OR</strong><br><br>
 
-<form action={% block textBoxInput %}{% endblock %} method="post">
-<input type="text" name="input"  value = "Enter message..."><br></br>
+<form action="/decoder/dnp3/" method="get">
+<input type="text" name="message" value = "Enter message..."><br></br>
 
 <input type="radio" name="prtcl" value="Auto">Auto-detect
-<input type="radio" name="prtcl" value="DNP">DNP3
+<input type="radio" name="prtcl" value="DNP" selected>DNP3
 <input type="radio" name="prtcl" value="Modbus">Modbus<br></br>
 
-<input type="button" value="Decode Message(s)">
+<input type="submit" value="Decode Message(s)">
 </form>
 
 <br></br>
+<br>
 <img src = "http://www.utilityproducts.com/content/up/en/articles/2012/02/workshops-for-electrical-and-power-engineers/_jcr_content/leftcolumn/article/headerimage.img.jpg/1328715697057.jpg;">
 </td>
 </tr>
 </table>
-
 </body>
 </html> 
-
-
