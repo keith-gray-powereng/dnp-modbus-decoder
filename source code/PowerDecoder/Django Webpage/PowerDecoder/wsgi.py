@@ -31,4 +31,4 @@ application = get_wsgi_application()
 # Apply WSGI middleware here.
 # from helloworld.wsgi import HelloWorldApplication
 # application = HelloWorldApplication(application)
-sys.path.append("C:\\Users\\Owner\\Desktop\\PowerDecoder\\DNP3_Decoder")
+sys.path.append(".\\DNP3_Decoder")
