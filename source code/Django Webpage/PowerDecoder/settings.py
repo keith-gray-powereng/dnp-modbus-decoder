@@ -1,4 +1,4 @@
-# Django settings for magic project.
+# Django settings for PowerDecoder project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -83,7 +83,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '=$00maw03zn#n89(qch*@0ku@x#h0z351(lk2x^%sxa0t(m1r='
+SECRET_KEY = 'utxrc^^g)8ijby!!62ep&cu-gmalskh=k9_6u82nq*4sofpc)7'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -102,10 +102,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'magic.urls'
+ROOT_URLCONF = 'PowerDecoder.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'magic.wsgi.application'
+WSGI_APPLICATION = 'PowerDecoder.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -120,6 +120,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'DNP3_Decoder',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
