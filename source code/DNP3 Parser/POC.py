@@ -212,17 +212,17 @@ def DNP3(message):
         print ("Reserved(2) (you shouldn't ever get this)")
         msb1 += "Reserved(2) "
         
-        
-        
+    
+    return ("DNP3", appControl, mtype, funcCode, lsb1, msb1) 
     
     
     
 #base, proof of concept function to decode DNP3 messages
-yay = input("Message:")
+#yay = input("Message:")
 
-message = "0X" + str(yay)
-dspaced = ""
-for i in message:
-    if i != " ":
-        dspaced += i
-DNP3(dspaced)
+#message = "0X" + str(yay)
+#dspaced = ""
+#for i in message:
+#    if i != " ":
+#        dspaced += i
+#DNP3(dspaced)
