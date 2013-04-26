@@ -5,7 +5,7 @@
 #a basic message to get us started
 #05 64 05 C0 01 00 0A 00
 
-#bitstring is a dependency of python in order for this to work
+#bitstring is a dependency of python in order for this to worka
 #https://code.google.com/p/python-bitstring/
 import bitstring
 
