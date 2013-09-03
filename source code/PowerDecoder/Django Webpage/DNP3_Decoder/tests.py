@@ -21,6 +21,35 @@ class SimpleTest(TestCase):
         
     def test_sliceTestPass(self):
         testWord = bitstring.Bits("0x0000FF0000")
-        result = slice(testWord, 8, 2)
+        result = slice(testWord, 16, 8)
         assert result == bitstring.Bits("0xFF") , "slice is pulling the wrong bits"    
         
+    def test_sliceSequenceNum(self):
+        testWord = bitstring.Bits("0x000000000000000E")
+        result = getSequence(testWord)
+        assert result == bitstring.Bits("0x7") , "get Sequence slice Failed"
+        
+    def test_sliceConsequtiveFlag(self):
+        testWord = bitstring.Bits("0x0000000000000020")
+        result = getConsequtiveFlag(testWord)
+        assert result == bitstring.Bits("0x1")
+        
+    def test_sliceUnsolicitedFlag(self):
+        testWord = bitstring.Bits("0x0000000000000010")
+        result = getConsequtiveFlag(testWord)
+        assert result == bitstring.Bits("0x1")     
+
+    def test_sliceFirstFlag(self):
+        testWord = bitstring.Bits("0x0000000000000040")
+        result = getConsequtiveFlag(testWord)
+        assert result == bitstring.Bits("0x1")  
+
+    def test_sliceFinalFlag(self):
+        testWord = bitstring.Bits("0x0000000000000080")
+        result = getFinalFlag(testWord)
+        assert result == bitstring.Bits("0x1") 
+        
+    def test_getFunctionCode(self):
+        testWord = bitstring.Bits("0x000000000000FF00")
+        result = getFinalFlag(testWord)
+        assert result == bitstring.Bits("0x1") 
