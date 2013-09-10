@@ -2,6 +2,8 @@
 import os
 import sys
 
+sys.path.append(".\\DNP3_Decoder")
+
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "PowerDecoder.settings")
 

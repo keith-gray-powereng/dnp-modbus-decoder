@@ -5,8 +5,8 @@ Test are written first, and from these test, the actual functions are made
 
 from django.test import TestCase
 import bitstring
-import POC
-
+#import POC
+import BitSlice
 
 class SimpleTest(TestCase):
     def setUp(self):
@@ -31,17 +31,17 @@ class SimpleTest(TestCase):
         
     def test_sliceConsequtiveFlag(self):
         testWord = bitstring.Bits("0x0000000000000020")
-        result = getConsequtiveFlag(testWord)
+        result = getConsequtiveFlag(testWord, )
         assert result == bitstring.Bits("0x1")
         
     def test_sliceUnsolicitedFlag(self):
         testWord = bitstring.Bits("0x0000000000000010")
-        result = getConsequtiveFlag(testWord)
+        result = getUnsolicitedFlag(testWord)
         assert result == bitstring.Bits("0x1")     
 
     def test_sliceFirstFlag(self):
         testWord = bitstring.Bits("0x0000000000000040")
-        result = getConsequtiveFlag(testWord)
+        result = getFirstFlag(testWord)
         assert result == bitstring.Bits("0x1")  
 
     def test_sliceFinalFlag(self):
@@ -51,5 +51,5 @@ class SimpleTest(TestCase):
         
     def test_getFunctionCode(self):
         testWord = bitstring.Bits("0x000000000000FF00")
-        result = getFinalFlag(testWord)
+        result = getFuncCode(testWord)
         assert result == bitstring.Bits("0x1") 
