@@ -1,0 +1,492 @@
+----------- ** Capture Session Started 09/11/2013 15:03:55 ** ------------
+(Port 29)(20:03:57:452): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:03:57:452): Consecutive Failures from Device SEL2440: 22
+(Port 29)(20:03:57:452): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:03:57:453):  
+(Port 29)(20:03:57:453): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:03:57:460)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:03:58:481): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:03:58:482): Consecutive Failures from Device SEL2440: 23
+(Port 29)(20:03:58:482): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:03:58:483):  
+(Port 29)(20:03:58:483): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:03:58:489)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:03:59:509): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:03:59:510): Consecutive Failures from Device SEL2440: 24
+(Port 29)(20:03:59:510): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:03:59:511):  
+(Port 29)(20:03:59:511): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:03:59:517)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:00:536): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:00:537): Consecutive Failures from Device SEL2440: 25
+(Port 29)(20:04:00:537): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:00:538):  
+(Port 29)(20:04:00:538): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:00:544)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:01:565): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:01:565): Consecutive Failures from Device SEL2440: 26
+(Port 29)(20:04:01:565): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:01:566):  
+(Port 29)(20:04:01:566): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:01:572)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:02:591): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:02:592): Consecutive Failures from Device SEL2440: 27
+(Port 29)(20:04:02:592): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:02:592):  
+(Port 29)(20:04:02:592): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:02:598)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:03:618): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:03:619): Consecutive Failures from Device SEL2440: 28
+(Port 29)(20:04:03:619): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:03:620):  
+(Port 29)(20:04:03:620): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:03:626)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:04:646): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:04:647): Consecutive Failures from Device SEL2440: 29
+(Port 29)(20:04:04:647): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:04:647):  
+(Port 29)(20:04:04:647): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:04:654)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:05:673): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:05:674): Consecutive Failures from Device SEL2440: 30
+(Port 29)(20:04:05:674): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:05:675):  
+(Port 29)(20:04:05:675): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:05:682)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:06:703): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:06:703): Consecutive Failures from Device SEL2440: 31
+(Port 29)(20:04:06:703): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:06:704):  
+(Port 29)(20:04:06:704): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:06:710)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:07:730): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:07:730): Consecutive Failures from Device SEL2440: 32
+(Port 29)(20:04:07:731): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:07:731):  
+(Port 29)(20:04:07:732): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:07:737)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:08:757): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:08:757): Consecutive Failures from Device SEL2440: 33
+(Port 29)(20:04:08:758): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:08:758):  
+(Port 29)(20:04:08:759): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:08:764)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:09:784): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:09:784): Consecutive Failures from Device SEL2440: 34
+(Port 29)(20:04:09:785): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:09:785):  
+(Port 29)(20:04:09:785): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:09:791)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:10:811): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:10:812): Consecutive Failures from Device SEL2440: 35
+(Port 29)(20:04:10:812): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:10:813):  
+(Port 29)(20:04:10:813): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:10:820)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:11:839): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:11:840): Consecutive Failures from Device SEL2440: 36
+(Port 29)(20:04:11:840): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:11:841):  
+(Port 29)(20:04:11:841): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:11:846)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:12:866): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:12:867): Consecutive Failures from Device SEL2440: 37
+(Port 29)(20:04:12:867): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:12:867):  
+(Port 29)(20:04:12:867): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:12:873)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:13:893): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:13:893): Consecutive Failures from Device SEL2440: 38
+(Port 29)(20:04:13:894): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:13:894):  
+(Port 29)(20:04:13:895): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:13:900)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:14:920): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:14:920): Consecutive Failures from Device SEL2440: 39
+(Port 29)(20:04:14:921): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:14:921):  
+(Port 29)(20:04:14:922): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:14:927)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:15:947): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:15:948): Consecutive Failures from Device SEL2440: 40
+(Port 29)(20:04:15:948): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:15:949):  
+(Port 29)(20:04:15:949): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:15:956)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:16:976): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:16:976): Consecutive Failures from Device SEL2440: 41
+(Port 29)(20:04:16:976): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:16:977):  
+(Port 29)(20:04:16:977): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:16:985)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:18:006): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:18:007): Consecutive Failures from Device SEL2440: 42
+(Port 29)(20:04:18:007): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:18:008):  
+(Port 29)(20:04:18:008): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:18:014)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:19:034): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:19:034): Consecutive Failures from Device SEL2440: 43
+(Port 29)(20:04:19:035): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:19:035):  
+(Port 29)(20:04:19:035): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:19:041)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:20:061): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:20:062): Consecutive Failures from Device SEL2440: 44
+(Port 29)(20:04:20:062): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:20:063):  
+(Port 29)(20:04:20:063): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:20:069)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:21:089): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:21:090): Consecutive Failures from Device SEL2440: 45
+(Port 29)(20:04:21:090): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:21:090):  
+(Port 29)(20:04:21:091): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:21:096)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:22:117): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:22:117): Consecutive Failures from Device SEL2440: 46
+(Port 29)(20:04:22:117): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:22:118):  
+(Port 29)(20:04:22:118): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:22:124)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:23:144): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:23:144): Consecutive Failures from Device SEL2440: 47
+(Port 29)(20:04:23:145): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:23:145):  
+(Port 29)(20:04:23:146): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:23:152)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:24:172): Response Timeout for SEL2440, waited: 1000
+(Port 29)(20:04:24:173): Consecutive Failures from Device SEL2440: 48
+(Port 29)(20:04:24:173): Setting All Points for Device SEL2440: Offline
+(Port 29)(20:04:24:173):  
+(Port 29)(20:04:24:173): Reset Remote Link - SEL2440 Address 191 
+(Port 29)(20:04:24:179)TX[10]: 05 64 05 C0 BF 00 83 00 (74 1A)-CRC
+(Port 29)(20:04:25:032)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+E9 C1 81 00 00 (66 44)-CRC
+(Port 29)(20:04:25:033): SEL2440
+(Port 29)(20:04:25:038)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:039): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:045)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:045): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:051)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:052): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:058)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:059): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:064)RX[37]: 05 64 1C 44 83 00 BF 00 (A9 59)-CRC
+EA C6 81 00 04 0C 01 28 01 00 05 00 41 01 E8 03 (38 74)-CRC
+00 00 E8 03 00 00 04 (1C 30)-CRC
+(Port 29)(20:04:25:065): SEL2440
+(Port 29)(20:04:25:065): IIN: Invalid Data
+(Port 29)(20:04:25:066): Parse Object 12 Variation 1 Qualifier 28 Count 1  
+(Port 29)(20:04:25:067): Binary Output Response
+(Port 29)(20:04:25:073)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:073): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:079)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:080): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:085)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:085): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:091)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:091): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:098)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:098): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:104)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:105): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:110)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:110): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:116)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:116): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:122)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:122): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:128)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:128): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:134)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:134): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:140)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:140): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:146)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:146): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:153)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:153): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:158)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:159): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:164): Streaming Data Error
+(Port 29)(20:04:25:165)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:165): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:178)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:178): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:184)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:185): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:190)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:190): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:196)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:196): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:202)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:202): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:209)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:209): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:215)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:216): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:222)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:222): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:228)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:229): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:235)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:235): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:242)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:242): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:251)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:251): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:258)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:258): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:264)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:264): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:270)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:271): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:276)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:277): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:283)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:283): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:290)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:290): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:295)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:296): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:301)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:302): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:308)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:308): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:314): Streaming Data Error
+(Port 29)(20:04:25:315)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:315): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:320):  
+(Port 29)(20:04:25:320): Disable Unsoliciteds - SEL2440 Address 191
+(Port 29)(20:04:25:326)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+E3 C3 15 3C 04 06 3C 03 06 3C 02 06 (A8 B9)-CRC
+(Port 29)(20:04:25:332)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:333): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:338)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:338): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:344)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:345): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:351)RX[10]: 05 64 05 00 83 00 BF 00 (F1 B2)-CRC
+(Port 29)(20:04:25:351): Response to Reset Link - Function Code 0
+(Port 29)(20:04:25:357)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+EB C3 81 00 01 (9D FC)-CRC
+(Port 29)(20:04:25:357): SEL2440
+(Port 29)(20:04:25:357): IIN: Function Code not Implemented
+(Port 29)(20:04:25:868):  
+(Port 29)(20:04:25:868): Event/Individual Point Poll - SEL2440 Address 191
+(Port 29)(20:04:25:874)TX[49]: 05 64 26 C4 BF 00 83 00 (BE F4)-CRC
+E4 C4 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (52 22)-CRC
+00 32 00 01 02 01 3C 00 3C 00 01 02 01 76 00 78 (DE 21)-CRC
+00 (FF FF)-CRC
+(Port 29)(20:04:25:881)RX[95]: 05 64 50 44 83 00 BF 00 (66 20)-CRC
+EC C4 81 00 00 01 02 00 00 32 01 01 01 01 81 01 (2D A0)-CRC
+01 01 01 81 01 01 01 01 01 01 01 01 01 01 01 81 (C8 B5)-CRC
+01 01 01 01 01 01 01 01 01 01 01 01 81 01 81 01 (48 D4)-CRC
+01 01 01 01 01 01 01 01 01 01 01 01 01 01 02 00 (4E 45)-CRC
+3C 3C 01 01 02 00 76 78 01 81 81 (8C 81)-CRC
+(Port 29)(20:04:25:881): SEL2440
+(Port 29)(20:04:25:882): Parse Binary Inputs - Range 0 to 50 
+(Port 29)(20:04:25:884): Parse Binary Inputs - Range 60 to 60 
+(Port 29)(20:04:25:886): Parse Binary Inputs - Range 118 to 120 
+(Port 29)(20:04:25:938):  
+(Port 29)(20:04:25:938): DNP TX Binary Command - RB11_RB12 @SEL2440 Point #5: Code 41 Count 1 On 1000 Off 1000
+(Port 29)(20:04:25:944)TX[35]: 05 64 1A C4 BF 00 83 00 (4F AA)-CRC
+E5 C5 05 0C 01 28 01 00 05 00 41 01 E8 03 00 00 (5A 84)-CRC
+E8 03 00 00 00 (64 E9)-CRC
+(Port 29)(20:04:25:950)RX[37]: 05 64 1C 44 83 00 BF 00 (A9 59)-CRC
+ED C5 81 00 04 0C 01 28 01 00 05 00 41 01 E8 03 (CD 6B)-CRC
+00 00 E8 03 00 00 04 (1C 30)-CRC
+(Port 29)(20:04:25:951): SEL2440
+(Port 29)(20:04:25:951): IIN: Invalid Data
+(Port 29)(20:04:25:952): Parse Object 12 Variation 1 Qualifier 28 Count 1  
+(Port 29)(20:04:25:953): Binary Output Response
+(Port 29)(20:04:26:922):  
+(Port 29)(20:04:26:922): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:26:928)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+E6 C6 01 3C 04 06 3C 03 06 3C 02 06 (6A 18)-CRC
+(Port 29)(20:04:26:934)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+EE C6 81 00 00 (1E 7B)-CRC
+(Port 29)(20:04:26:935): SEL2440
+(Port 29)(20:04:27:954):  
+(Port 29)(20:04:27:955): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:27:961)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+E7 C7 01 3C 04 06 3C 03 06 3C 02 06 (03 E2)-CRC
+(Port 29)(20:04:27:967)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+EF C7 81 00 00 (F0 9A)-CRC
+(Port 29)(20:04:27:968): SEL2440
+(Port 29)(20:04:28:987):  
+(Port 29)(20:04:28:987): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:28:993)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+E8 C8 01 3C 04 06 3C 03 06 3C 02 06 (B0 E3)-CRC
+(Port 29)(20:04:29:000)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+F0 C8 81 00 00 (7C AF)-CRC
+(Port 29)(20:04:29:000): SEL2440
+(Port 29)(20:04:30:019):  
+(Port 29)(20:04:30:020): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:30:026)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+E9 C9 01 3C 04 06 3C 03 06 3C 02 06 (D9 19)-CRC
+(Port 29)(20:04:30:032)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+F1 C9 81 00 00 (92 4E)-CRC
+(Port 29)(20:04:30:033): SEL2440
+(Port 29)(20:04:31:052):  
+(Port 29)(20:04:31:053): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:31:059)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+EA CA 01 3C 04 06 3C 03 06 3C 02 06 (1B 5A)-CRC
+(Port 29)(20:04:31:065)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+F2 CA 81 00 00 (D9 21)-CRC
+(Port 29)(20:04:31:066): SEL2440
+(Port 29)(20:04:32:086):  
+(Port 29)(20:04:32:086): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:32:093)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+EB CB 01 3C 04 06 3C 03 06 3C 02 06 (72 A0)-CRC
+(Port 29)(20:04:32:099)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+F3 CB 81 00 00 (37 C0)-CRC
+(Port 29)(20:04:32:100): SEL2440
+(Port 29)(20:04:33:119):  
+(Port 29)(20:04:33:119): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:33:125)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+EC CC 01 3C 04 06 3C 03 06 3C 02 06 (9F DD)-CRC
+(Port 29)(20:04:33:131)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+F4 CC 81 00 00 (4F FF)-CRC
+(Port 29)(20:04:33:132): SEL2440
+(Port 29)(20:04:34:151):  
+(Port 29)(20:04:34:152): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:34:159)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+ED CD 01 3C 04 06 3C 03 06 3C 02 06 (F6 27)-CRC
+(Port 29)(20:04:34:165)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+F5 CD 81 00 00 (A1 1E)-CRC
+(Port 29)(20:04:34:166): SEL2440
+(Port 29)(20:04:35:185):  
+(Port 29)(20:04:35:186): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:35:192)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+EE CE 01 3C 04 06 3C 03 06 3C 02 06 (34 64)-CRC
+(Port 29)(20:04:35:199)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+F6 CE 81 00 00 (EA 71)-CRC
+(Port 29)(20:04:35:199): SEL2440
+(Port 29)(20:04:36:218):  
+(Port 29)(20:04:36:219): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:36:226)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+EF CF 01 3C 04 06 3C 03 06 3C 02 06 (5D 9E)-CRC
+(Port 29)(20:04:36:233)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+F7 CF 81 00 00 (04 90)-CRC
+(Port 29)(20:04:36:234): SEL2440
+(Port 29)(20:04:37:254):  
+(Port 29)(20:04:37:255): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:37:261)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+F0 C0 01 3C 04 06 3C 03 06 3C 02 06 (CB 42)-CRC
+(Port 29)(20:04:37:267)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+F8 C0 81 00 00 (1A 0F)-CRC
+(Port 29)(20:04:37:268): SEL2440
+(Port 29)(20:04:38:288):  
+(Port 29)(20:04:38:288): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:38:294)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+F1 C1 01 3C 04 06 3C 03 06 3C 02 06 (A2 B8)-CRC
+(Port 29)(20:04:38:300)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+F9 C1 81 00 00 (F4 EE)-CRC
+(Port 29)(20:04:38:300): SEL2440
+(Port 29)(20:04:39:320):  
+(Port 29)(20:04:39:320): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:39:326)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+F2 C2 01 3C 04 06 3C 03 06 3C 02 06 (60 FB)-CRC
+(Port 29)(20:04:39:336)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+FA C2 81 00 00 (BF 81)-CRC
+(Port 29)(20:04:39:337): SEL2440
+(Port 29)(20:04:40:356):  
+(Port 29)(20:04:40:356): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:40:362)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+F3 C3 01 3C 04 06 3C 03 06 3C 02 06 (09 01)-CRC
+(Port 29)(20:04:40:368)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+FB C3 81 00 00 (51 60)-CRC
+(Port 29)(20:04:40:369): SEL2440
+(Port 29)(20:04:41:388):  
+(Port 29)(20:04:41:388): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:41:394)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+F4 C4 01 3C 04 06 3C 03 06 3C 02 06 (E4 7C)-CRC
+(Port 29)(20:04:41:400)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+FC C4 81 00 00 (29 5F)-CRC
+(Port 29)(20:04:41:400): SEL2440
+(Port 29)(20:04:42:420):  
+(Port 29)(20:04:42:420): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:42:426)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+F5 C5 01 3C 04 06 3C 03 06 3C 02 06 (8D 86)-CRC
+(Port 29)(20:04:42:432)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+FD C5 81 00 00 (C7 BE)-CRC
+(Port 29)(20:04:42:433): SEL2440
+(Port 29)(20:04:43:452):  
+(Port 29)(20:04:43:453): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:43:459)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+F6 C6 01 3C 04 06 3C 03 06 3C 02 06 (4F C5)-CRC
+(Port 29)(20:04:43:465)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+FE C6 81 00 00 (8C D1)-CRC
+(Port 29)(20:04:43:466): SEL2440
+(Port 29)(20:04:44:485):  
+(Port 29)(20:04:44:485): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:44:491)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+F7 C7 01 3C 04 06 3C 03 06 3C 02 06 (26 3F)-CRC
+(Port 29)(20:04:44:497)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+FF C7 81 00 00 (62 30)-CRC
+(Port 29)(20:04:44:498): SEL2440
+(Port 29)(20:04:45:517):  
+(Port 29)(20:04:45:517): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:45:524)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+F8 C8 01 3C 04 06 3C 03 06 3C 02 06 (95 3E)-CRC
+(Port 29)(20:04:45:530)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+C0 C8 81 00 00 (B3 1D)-CRC
+(Port 29)(20:04:45:530): SEL2440
+(Port 29)(20:04:46:550):  
+(Port 29)(20:04:46:551): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:46:557)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+F9 C9 01 3C 04 06 3C 03 06 3C 02 06 (FC C4)-CRC
+(Port 29)(20:04:46:567)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+C1 C9 81 00 00 (5D FC)-CRC
+(Port 29)(20:04:46:567): SEL2440
+(Port 29)(20:04:47:587):  
+(Port 29)(20:04:47:587): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:47:593)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+FA CA 01 3C 04 06 3C 03 06 3C 02 06 (3E 87)-CRC
+(Port 29)(20:04:47:599)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+C2 CA 81 00 00 (16 93)-CRC
+(Port 29)(20:04:47:600): SEL2440
+(Port 29)(20:04:48:619):  
+(Port 29)(20:04:48:619): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:48:626)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+FB CB 01 3C 04 06 3C 03 06 3C 02 06 (57 7D)-CRC
+(Port 29)(20:04:48:632)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+C3 CB 81 00 00 (F8 72)-CRC
+(Port 29)(20:04:48:633): SEL2440
+(Port 29)(20:04:49:652):  
+(Port 29)(20:04:49:652): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:49:659)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+FC CC 01 3C 04 06 3C 03 06 3C 02 06 (BA 00)-CRC
+(Port 29)(20:04:49:666)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+C4 CC 81 00 00 (80 4D)-CRC
+(Port 29)(20:04:49:666): SEL2440
+(Port 29)(20:04:50:685):  
+(Port 29)(20:04:50:685): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:50:692)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+FD CD 01 3C 04 06 3C 03 06 3C 02 06 (D3 FA)-CRC
+(Port 29)(20:04:50:698)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+C5 CD 81 00 00 (6E AC)-CRC
+(Port 29)(20:04:50:699): SEL2440
+(Port 29)(20:04:51:718):  
+(Port 29)(20:04:51:718): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:51:725)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+FE CE 01 3C 04 06 3C 03 06 3C 02 06 (11 B9)-CRC
+(Port 29)(20:04:51:731)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+C6 CE 81 00 00 (25 C3)-CRC
+(Port 29)(20:04:51:732): SEL2440
+(Port 29)(20:04:52:751):  
+(Port 29)(20:04:52:752): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:52:758)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+FF CF 01 3C 04 06 3C 03 06 3C 02 06 (78 43)-CRC
+(Port 29)(20:04:52:764)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+C7 CF 81 00 00 (CB 22)-CRC
+(Port 29)(20:04:52:765): SEL2440
+(Port 29)(20:04:53:784):  
+(Port 29)(20:04:53:784): Event Poll - SEL2440 Address 191
+(Port 29)(20:04:53:791)TX[24]: 05 64 11 C4 BF 00 83 00 (C3 A3)-CRC
+C0 C0 01 3C 04 06 3C 03 06 3C 02 06 (DD 68)-CRC
+(Port 29)(20:04:53:797)RX[17]: 05 64 0A 44 83 00 BF 00 (B1 4A)-CRC
+C8 C0 81 00 00 (D5 BD)-CRC
+(Port 29)(20:04:53:798): SEL2440

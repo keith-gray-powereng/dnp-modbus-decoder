@@ -9,4 +9,3 @@ MANIFEST
 dist
 parser.out
 parsetab.py
-*.log
