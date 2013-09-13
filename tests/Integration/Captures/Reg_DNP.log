@@ -1,0 +1,455 @@
+----------- ** Capture Session Started 09/12/2013 07:05:32 ** ------------
+(Port 13)(14:05:35:049):  
+(Port 13)(14:05:35:049): Reset Remote Link - Reg B CL-6 Address 2 
+(Port 13)(14:05:35:077)TX[10]: 05 64 05 C0 02 00 64 00 (18 9D)-CRC
+(Port 13)(14:05:36:110): Response Timeout for Reg B CL-6, waited: 1000
+(Port 13)(14:05:36:110): Consecutive Failures from Device Reg B CL-6: 11
+(Port 13)(14:05:36:110): Setting All Points for Device Reg B CL-6: Offline
+(Port 13)(14:05:37:059):  
+(Port 13)(14:05:37:059): Reset Remote Link - Reg B CL-6 Address 2 
+(Port 13)(14:05:37:088)TX[10]: 05 64 05 C0 02 00 64 00 (18 9D)-CRC
+(Port 13)(14:05:38:121): Response Timeout for Reg B CL-6, waited: 1000
+(Port 13)(14:05:38:121): Consecutive Failures from Device Reg B CL-6: 12
+(Port 13)(14:05:38:121): Setting All Points for Device Reg B CL-6: Offline
+(Port 13)(14:05:39:070):  
+(Port 13)(14:05:39:070): Reset Remote Link - Reg B CL-6 Address 2 
+(Port 13)(14:05:39:098)TX[10]: 05 64 05 C0 02 00 64 00 (18 9D)-CRC
+(Port 13)(14:05:40:131): Response Timeout for Reg B CL-6, waited: 1000
+(Port 13)(14:05:40:131): Consecutive Failures from Device Reg B CL-6: 13
+(Port 13)(14:05:40:131): Setting All Points for Device Reg B CL-6: Offline
+(Port 13)(14:05:41:081):  
+(Port 13)(14:05:41:081): Reset Remote Link - Reg B CL-6 Address 2 
+(Port 13)(14:05:41:109)TX[10]: 05 64 05 C0 02 00 64 00 (18 9D)-CRC
+(Port 13)(14:05:42:142): Response Timeout for Reg B CL-6, waited: 1000
+(Port 13)(14:05:42:142): Consecutive Failures from Device Reg B CL-6: 14
+(Port 13)(14:05:42:142): Setting All Points for Device Reg B CL-6: Offline
+(Port 13)(14:05:43:092):  
+(Port 13)(14:05:43:092): Reset Remote Link - Reg B CL-6 Address 2 
+(Port 13)(14:05:43:120)TX[10]: 05 64 05 C0 02 00 64 00 (18 9D)-CRC
+(Port 13)(14:05:43:195)RX[10]: 05 64 05 00 64 00 02 00 (20 A9)-CRC
+(Port 13)(14:05:43:195): Response to Reset Link - Function Code 0
+(Port 13)(14:05:43:634):  
+(Port 13)(14:05:43:634): Disable Unsoliciteds - Reg B CL-6 Address 2
+(Port 13)(14:05:43:670)TX[24]: 05 64 11 C4 02 00 64 00 (AF 24)-CRC
+FC CC 15 3C 04 06 3C 03 06 3C 02 06 (3E 65)-CRC
+(Port 13)(14:05:43:716)RX[17]: 05 64 0A 44 64 00 02 00 (60 51)-CRC
+FB CC 81 00 01 (4A 75)-CRC
+(Port 13)(14:05:43:716): Reg B CL-6
+(Port 13)(14:05:43:717): IIN: Function Code not Implemented
+(Port 13)(14:05:44:228):  
+(Port 13)(14:05:44:228): Time Sync - Reg B CL-6 Address 2 09/12/2013 07:05:44.228 Local
+(Port 13)(14:05:44:264)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+FD CD 02 32 01 07 01 24 66 FD 10 41 01 (73 70)-CRC
+(Port 13)(14:05:44:315)RX[17]: 05 64 0A 44 64 00 02 00 (60 51)-CRC
+FC CD 81 00 00 (EE 68)-CRC
+(Port 13)(14:05:44:316): Reg B CL-6
+(Port 13)(14:05:44:827):  
+(Port 13)(14:05:44:827): Event/Individual Point Poll - Reg B CL-6 Address 2
+(Port 13)(14:05:44:929)TX[150]: 05 64 81 C4 02 00 64 00 (ED 4D)-CRC
+FE CE 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (FE 94)-CRC
+00 05 00 01 02 01 0C 00 0D 00 01 02 01 11 00 15 (45 C7)-CRC
+00 01 02 01 17 00 17 00 01 02 01 1A 00 1E 00 01 (14 C3)-CRC
+02 01 3B 00 3C 00 01 02 01 4B 00 4D 00 01 02 01 (1E BF)-CRC
+52 00 54 00 0A 02 01 00 00 02 00 0A 02 01 56 00 (00 68)-CRC
+56 00 1E 02 01 05 00 06 00 1E 02 01 21 00 21 00 (6E 52)-CRC
+1E 02 01 53 00 54 00 28 02 01 0F 00 10 00 28 02 (DF 8E)-CRC
+01 18 00 18 00 14 02 01 00 00 01 00 (92 E3)-CRC
+(Port 13)(14:05:45:173)RX[212]: 05 64 B7 44 64 00 02 00 (F5 AB)-CRC
+FD CE 81 00 00 01 02 01 00 00 05 00 01 01 01 01 (F0 2A)-CRC
+01 01 01 02 01 0C 00 0D 00 81 81 01 02 01 11 00 (53 B9)-CRC
+15 00 81 01 81 01 01 01 02 01 17 00 17 00 81 01 (CB 4F)-CRC
+02 01 1A 00 1E 00 01 01 81 01 01 01 02 01 3B 00 (6A DF)-CRC
+3C 00 01 01 01 02 01 4B 00 4D 00 01 01 81 01 02 (64 99)-CRC
+01 52 00 54 00 01 01 01 0A 02 01 00 00 02 00 01 (9E C2)-CRC
+01 01 0A 02 01 56 00 56 00 01 1E 02 01 05 00 06 (66 C2)-CRC
+00 01 EC 02 01 00 00 1E 02 01 21 00 21 00 01 00 (3B A5)-CRC
+00 1E 02 01 53 00 54 00 01 00 00 01 00 00 28 02 (BC 92)-CRC
+01 0F 00 10 00 01 00 00 01 00 00 28 02 01 18 00 (78 B8)-CRC
+18 00 01 00 00 14 02 01 00 00 01 00 01 04 00 01 (AC DA)-CRC
+00 00 (FF FF)-CRC
+(Port 13)(14:05:45:173): Reg B CL-6
+(Port 13)(14:05:45:175): Parse Binary Inputs - Range 0 to 5 
+(Port 13)(14:05:45:177): Parse Binary Inputs - Range 12 to 13 
+(Port 13)(14:05:45:179): Parse Binary Inputs - Range 17 to 21 
+(Port 13)(14:05:45:181): Parse Binary Inputs - Range 23 to 23 
+(Port 13)(14:05:45:183): Parse Binary Inputs - Range 26 to 30 
+(Port 13)(14:05:45:185): Parse Binary Inputs - Range 59 to 60 
+(Port 13)(14:05:45:187): Parse Binary Inputs - Range 75 to 77 
+(Port 13)(14:05:45:189): Parse Binary Inputs - Range 82 to 84 
+(Port 13)(14:05:45:191): Parse Binary Output Status - Range 0 to 2 
+(Port 13)(14:05:45:193): Parse Binary Output Status - Range 86 to 86 
+(Port 13)(14:05:45:195): Parse Analog Inputs - Range 5 to 6
+(Port 13)(14:05:45:197): Parse Analog Inputs - Range 33 to 33
+(Port 13)(14:05:45:199): Parse Analog Inputs - Range 83 to 84
+(Port 13)(14:05:45:201): Parse Analog Output Status - Range 15 to 16
+(Port 13)(14:05:45:203): Parse Analog Output Status - Range 24 to 24
+(Port 13)(14:05:45:205): Parse Counter Input - Range 0 to 1
+(Port 13)(14:05:45:278):  
+(Port 13)(14:05:45:278): Event/Individual Point Poll - Reg B CL-6 Address 2
+(Port 13)(14:05:45:380)TX[150]: 05 64 81 C4 02 00 64 00 (ED 4D)-CRC
+FF CF 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (6A B7)-CRC
+00 05 00 01 02 01 0C 00 0D 00 01 02 01 11 00 15 (45 C7)-CRC
+00 01 02 01 17 00 17 00 01 02 01 1A 00 1E 00 01 (14 C3)-CRC
+02 01 3B 00 3C 00 01 02 01 4B 00 4D 00 01 02 01 (1E BF)-CRC
+52 00 54 00 0A 02 01 00 00 02 00 0A 02 01 56 00 (00 68)-CRC
+56 00 1E 02 01 05 00 06 00 1E 02 01 21 00 21 00 (6E 52)-CRC
+1E 02 01 53 00 54 00 28 02 01 0F 00 10 00 28 02 (DF 8E)-CRC
+01 18 00 18 00 14 02 01 00 00 01 00 (92 E3)-CRC
+(Port 13)(14:05:45:611)RX[212]: 05 64 B7 44 64 00 02 00 (F5 AB)-CRC
+FE CF 81 00 00 01 02 01 00 00 05 00 01 01 01 01 (7C 92)-CRC
+01 01 01 02 01 0C 00 0D 00 81 81 01 02 01 11 00 (53 B9)-CRC
+15 00 81 01 81 01 01 01 02 01 17 00 17 00 81 01 (CB 4F)-CRC
+02 01 1A 00 1E 00 01 01 81 01 01 01 02 01 3B 00 (6A DF)-CRC
+3C 00 01 01 01 02 01 4B 00 4D 00 01 01 81 01 02 (64 99)-CRC
+01 52 00 54 00 01 01 01 0A 02 01 00 00 02 00 01 (9E C2)-CRC
+01 01 0A 02 01 56 00 56 00 01 1E 02 01 05 00 06 (66 C2)-CRC
+00 01 EC 02 01 00 00 1E 02 01 21 00 21 00 01 00 (3B A5)-CRC
+00 1E 02 01 53 00 54 00 01 00 00 01 00 00 28 02 (BC 92)-CRC
+01 0F 00 10 00 01 00 00 01 00 00 28 02 01 18 00 (78 B8)-CRC
+18 00 01 00 00 14 02 01 00 00 01 00 01 04 00 01 (AC DA)-CRC
+00 00 (FF FF)-CRC
+(Port 13)(14:05:45:612): Reg B CL-6
+(Port 13)(14:05:45:614): Parse Binary Inputs - Range 0 to 5 
+(Port 13)(14:05:45:616): Parse Binary Inputs - Range 12 to 13 
+(Port 13)(14:05:45:618): Parse Binary Inputs - Range 17 to 21 
+(Port 13)(14:05:45:620): Parse Binary Inputs - Range 23 to 23 
+(Port 13)(14:05:45:622): Parse Binary Inputs - Range 26 to 30 
+(Port 13)(14:05:45:624): Parse Binary Inputs - Range 59 to 60 
+(Port 13)(14:05:45:626): Parse Binary Inputs - Range 75 to 77 
+(Port 13)(14:05:45:628): Parse Binary Inputs - Range 82 to 84 
+(Port 13)(14:05:45:630): Parse Binary Output Status - Range 0 to 2 
+(Port 13)(14:05:45:632): Parse Binary Output Status - Range 86 to 86 
+(Port 13)(14:05:45:634): Parse Analog Inputs - Range 5 to 6
+(Port 13)(14:05:45:636): Parse Analog Inputs - Range 33 to 33
+(Port 13)(14:05:45:638): Parse Analog Inputs - Range 83 to 84
+(Port 13)(14:05:45:641): Parse Analog Output Status - Range 15 to 16
+(Port 13)(14:05:45:643): Parse Analog Output Status - Range 24 to 24
+(Port 13)(14:05:45:645): Parse Counter Input - Range 0 to 1
+(Port 13)(14:05:47:325):  
+(Port 13)(14:05:47:325): Event/Individual Point Poll - Reg B CL-6 Address 2
+(Port 13)(14:05:47:427)TX[150]: 05 64 81 C4 02 00 64 00 (ED 4D)-CRC
+C0 C0 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (C1 A1)-CRC
+00 05 00 01 02 01 0C 00 0D 00 01 02 01 11 00 15 (45 C7)-CRC
+00 01 02 01 17 00 17 00 01 02 01 1A 00 1E 00 01 (14 C3)-CRC
+02 01 3B 00 3C 00 01 02 01 4B 00 4D 00 01 02 01 (1E BF)-CRC
+52 00 54 00 0A 02 01 00 00 02 00 0A 02 01 56 00 (00 68)-CRC
+56 00 1E 02 01 05 00 06 00 1E 02 01 21 00 21 00 (6E 52)-CRC
+1E 02 01 53 00 54 00 28 02 01 0F 00 10 00 28 02 (DF 8E)-CRC
+01 18 00 18 00 14 02 01 00 00 01 00 (92 E3)-CRC
+(Port 13)(14:05:47:637)RX[212]: 05 64 B7 44 64 00 02 00 (F5 AB)-CRC
+FF C0 81 00 00 01 02 01 00 00 05 00 01 01 01 01 (8A 3F)-CRC
+01 01 01 02 01 0C 00 0D 00 81 81 01 02 01 11 00 (53 B9)-CRC
+15 00 81 01 81 01 01 01 02 01 17 00 17 00 81 01 (CB 4F)-CRC
+02 01 1A 00 1E 00 01 01 81 01 01 01 02 01 3B 00 (6A DF)-CRC
+3C 00 01 01 01 02 01 4B 00 4D 00 01 01 81 01 02 (64 99)-CRC
+01 52 00 54 00 01 01 01 0A 02 01 00 00 02 00 01 (9E C2)-CRC
+01 01 0A 02 01 56 00 56 00 01 1E 02 01 05 00 06 (66 C2)-CRC
+00 01 EC 02 01 00 00 1E 02 01 21 00 21 00 01 00 (3B A5)-CRC
+00 1E 02 01 53 00 54 00 01 00 00 01 00 00 28 02 (BC 92)-CRC
+01 0F 00 10 00 01 00 00 01 00 00 28 02 01 18 00 (78 B8)-CRC
+18 00 01 00 00 14 02 01 00 00 01 00 01 04 00 01 (AC DA)-CRC
+00 00 (FF FF)-CRC
+(Port 13)(14:05:47:637): Reg B CL-6
+(Port 13)(14:05:47:639): Parse Binary Inputs - Range 0 to 5 
+(Port 13)(14:05:47:641): Parse Binary Inputs - Range 12 to 13 
+(Port 13)(14:05:47:643): Parse Binary Inputs - Range 17 to 21 
+(Port 13)(14:05:47:645): Parse Binary Inputs - Range 23 to 23 
+(Port 13)(14:05:47:647): Parse Binary Inputs - Range 26 to 30 
+(Port 13)(14:05:47:649): Parse Binary Inputs - Range 59 to 60 
+(Port 13)(14:05:47:651): Parse Binary Inputs - Range 75 to 77 
+(Port 13)(14:05:47:653): Parse Binary Inputs - Range 82 to 84 
+(Port 13)(14:05:47:655): Parse Binary Output Status - Range 0 to 2 
+(Port 13)(14:05:47:657): Parse Binary Output Status - Range 86 to 86 
+(Port 13)(14:05:47:659): Parse Analog Inputs - Range 5 to 6
+(Port 13)(14:05:47:661): Parse Analog Inputs - Range 33 to 33
+(Port 13)(14:05:47:663): Parse Analog Inputs - Range 83 to 84
+(Port 13)(14:05:47:665): Parse Analog Output Status - Range 15 to 16
+(Port 13)(14:05:47:667): Parse Analog Output Status - Range 24 to 24
+(Port 13)(14:05:47:669): Parse Counter Input - Range 0 to 1
+(Port 13)(14:05:49:348):  
+(Port 13)(14:05:49:348): Event/Individual Point Poll - Reg B CL-6 Address 2
+(Port 13)(14:05:49:451)TX[150]: 05 64 81 C4 02 00 64 00 (ED 4D)-CRC
+C1 C1 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (55 82)-CRC
+00 05 00 01 02 01 0C 00 0D 00 01 02 01 11 00 15 (45 C7)-CRC
+00 01 02 01 17 00 17 00 01 02 01 1A 00 1E 00 01 (14 C3)-CRC
+02 01 3B 00 3C 00 01 02 01 4B 00 4D 00 01 02 01 (1E BF)-CRC
+52 00 54 00 0A 02 01 00 00 02 00 0A 02 01 56 00 (00 68)-CRC
+56 00 1E 02 01 05 00 06 00 1E 02 01 21 00 21 00 (6E 52)-CRC
+1E 02 01 53 00 54 00 28 02 01 0F 00 10 00 28 02 (DF 8E)-CRC
+01 18 00 18 00 14 02 01 00 00 01 00 (92 E3)-CRC
+(Port 13)(14:05:49:656)RX[212]: 05 64 B7 44 64 00 02 00 (F5 AB)-CRC
+C0 C1 81 00 00 01 02 01 00 00 05 00 01 01 01 01 (43 A7)-CRC
+01 01 01 02 01 0C 00 0D 00 81 81 01 02 01 11 00 (53 B9)-CRC
+15 00 81 01 81 01 01 01 02 01 17 00 17 00 81 01 (CB 4F)-CRC
+02 01 1A 00 1E 00 01 01 81 01 01 01 02 01 3B 00 (6A DF)-CRC
+3C 00 01 01 01 02 01 4B 00 4D 00 01 01 81 01 02 (64 99)-CRC
+01 52 00 54 00 01 01 01 0A 02 01 00 00 02 00 01 (9E C2)-CRC
+01 01 0A 02 01 56 00 56 00 01 1E 02 01 05 00 06 (66 C2)-CRC
+00 01 EC 02 01 00 00 1E 02 01 21 00 21 00 01 00 (3B A5)-CRC
+00 1E 02 01 53 00 54 00 01 00 00 01 00 00 28 02 (BC 92)-CRC
+01 0F 00 10 00 01 00 00 01 00 00 28 02 01 18 00 (78 B8)-CRC
+18 00 01 00 00 14 02 01 00 00 01 00 01 04 00 01 (AC DA)-CRC
+00 00 (FF FF)-CRC
+(Port 13)(14:05:49:656): Reg B CL-6
+(Port 13)(14:05:49:658): Parse Binary Inputs - Range 0 to 5 
+(Port 13)(14:05:49:660): Parse Binary Inputs - Range 12 to 13 
+(Port 13)(14:05:49:662): Parse Binary Inputs - Range 17 to 21 
+(Port 13)(14:05:49:664): Parse Binary Inputs - Range 23 to 23 
+(Port 13)(14:05:49:666): Parse Binary Inputs - Range 26 to 30 
+(Port 13)(14:05:49:668): Parse Binary Inputs - Range 59 to 60 
+(Port 13)(14:05:49:670): Parse Binary Inputs - Range 75 to 77 
+(Port 13)(14:05:49:674): Parse Binary Inputs - Range 82 to 84 
+(Port 13)(14:05:49:676): Parse Binary Output Status - Range 0 to 2 
+(Port 13)(14:05:49:678): Parse Binary Output Status - Range 86 to 86 
+(Port 13)(14:05:49:680): Parse Analog Inputs - Range 5 to 6
+(Port 13)(14:05:49:682): Parse Analog Inputs - Range 33 to 33
+(Port 13)(14:05:49:684): Parse Analog Inputs - Range 83 to 84
+(Port 13)(14:05:49:686): Parse Analog Output Status - Range 15 to 16
+(Port 13)(14:05:49:688): Parse Analog Output Status - Range 24 to 24
+(Port 13)(14:05:49:690): Parse Counter Input - Range 0 to 1
+(Port 13)(14:05:51:369):  
+(Port 13)(14:05:51:369): Event/Individual Point Poll - Reg B CL-6 Address 2
+(Port 13)(14:05:51:472)TX[150]: 05 64 81 C4 02 00 64 00 (ED 4D)-CRC
+C2 C2 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (E9 E6)-CRC
+00 05 00 01 02 01 0C 00 0D 00 01 02 01 11 00 15 (45 C7)-CRC
+00 01 02 01 17 00 17 00 01 02 01 1A 00 1E 00 01 (14 C3)-CRC
+02 01 3B 00 3C 00 01 02 01 4B 00 4D 00 01 02 01 (1E BF)-CRC
+52 00 54 00 0A 02 01 00 00 02 00 0A 02 01 56 00 (00 68)-CRC
+56 00 1E 02 01 05 00 06 00 1E 02 01 21 00 21 00 (6E 52)-CRC
+1E 02 01 53 00 54 00 28 02 01 0F 00 10 00 28 02 (DF 8E)-CRC
+01 18 00 18 00 14 02 01 00 00 01 00 (92 E3)-CRC
+(Port 13)(14:05:51:680)RX[212]: 05 64 B7 44 64 00 02 00 (F5 AB)-CRC
+C1 C2 81 00 00 01 02 01 00 00 05 00 01 01 01 01 (E7 58)-CRC
+01 01 01 02 01 0C 00 0D 00 81 81 01 02 01 11 00 (53 B9)-CRC
+15 00 81 01 81 01 01 01 02 01 17 00 17 00 81 01 (CB 4F)-CRC
+02 01 1A 00 1E 00 01 01 81 01 01 01 02 01 3B 00 (6A DF)-CRC
+3C 00 01 01 01 02 01 4B 00 4D 00 01 01 81 01 02 (64 99)-CRC
+01 52 00 54 00 01 01 01 0A 02 01 00 00 02 00 01 (9E C2)-CRC
+01 01 0A 02 01 56 00 56 00 01 1E 02 01 05 00 06 (66 C2)-CRC
+00 01 EC 02 01 00 00 1E 02 01 21 00 21 00 01 00 (3B A5)-CRC
+00 1E 02 01 53 00 54 00 01 00 00 01 00 00 28 02 (BC 92)-CRC
+01 0F 00 10 00 01 00 00 01 00 00 28 02 01 18 00 (78 B8)-CRC
+18 00 01 00 00 14 02 01 00 00 01 00 01 04 00 01 (AC DA)-CRC
+00 00 (FF FF)-CRC
+(Port 13)(14:05:51:680): Reg B CL-6
+(Port 13)(14:05:51:682): Parse Binary Inputs - Range 0 to 5 
+(Port 13)(14:05:51:684): Parse Binary Inputs - Range 12 to 13 
+(Port 13)(14:05:51:686): Parse Binary Inputs - Range 17 to 21 
+(Port 13)(14:05:51:689): Parse Binary Inputs - Range 23 to 23 
+(Port 13)(14:05:51:691): Parse Binary Inputs - Range 26 to 30 
+(Port 13)(14:05:51:693): Parse Binary Inputs - Range 59 to 60 
+(Port 13)(14:05:51:695): Parse Binary Inputs - Range 75 to 77 
+(Port 13)(14:05:51:697): Parse Binary Inputs - Range 82 to 84 
+(Port 13)(14:05:51:699): Parse Binary Output Status - Range 0 to 2 
+(Port 13)(14:05:51:701): Parse Binary Output Status - Range 86 to 86 
+(Port 13)(14:05:51:704): Parse Analog Inputs - Range 5 to 6
+(Port 13)(14:05:51:706): Parse Analog Inputs - Range 33 to 33
+(Port 13)(14:05:51:708): Parse Analog Inputs - Range 83 to 84
+(Port 13)(14:05:51:710): Parse Analog Output Status - Range 15 to 16
+(Port 13)(14:05:51:712): Parse Analog Output Status - Range 24 to 24
+(Port 13)(14:05:51:714): Parse Counter Input - Range 0 to 1
+(Port 13)(14:05:53:393):  
+(Port 13)(14:05:53:393): Event/Individual Point Poll - Reg B CL-6 Address 2
+(Port 13)(14:05:53:495)TX[150]: 05 64 81 C4 02 00 64 00 (ED 4D)-CRC
+C3 C3 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (7D C5)-CRC
+00 05 00 01 02 01 0C 00 0D 00 01 02 01 11 00 15 (45 C7)-CRC
+00 01 02 01 17 00 17 00 01 02 01 1A 00 1E 00 01 (14 C3)-CRC
+02 01 3B 00 3C 00 01 02 01 4B 00 4D 00 01 02 01 (1E BF)-CRC
+52 00 54 00 0A 02 01 00 00 02 00 0A 02 01 56 00 (00 68)-CRC
+56 00 1E 02 01 05 00 06 00 1E 02 01 21 00 21 00 (6E 52)-CRC
+1E 02 01 53 00 54 00 28 02 01 0F 00 10 00 28 02 (DF 8E)-CRC
+01 18 00 18 00 14 02 01 00 00 01 00 (92 E3)-CRC
+(Port 13)(14:05:53:701)RX[212]: 05 64 B7 44 64 00 02 00 (F5 AB)-CRC
+C2 C3 81 00 00 01 02 01 00 00 05 00 01 01 01 01 (6B E0)-CRC
+01 01 01 02 01 0C 00 0D 00 81 81 01 02 01 11 00 (53 B9)-CRC
+15 00 81 01 81 01 01 01 02 01 17 00 17 00 81 01 (CB 4F)-CRC
+02 01 1A 00 1E 00 01 01 81 01 01 01 02 01 3B 00 (6A DF)-CRC
+3C 00 01 01 01 02 01 4B 00 4D 00 01 01 81 01 02 (64 99)-CRC
+01 52 00 54 00 01 01 01 0A 02 01 00 00 02 00 01 (9E C2)-CRC
+01 01 0A 02 01 56 00 56 00 01 1E 02 01 05 00 06 (66 C2)-CRC
+00 01 EC 02 01 00 00 1E 02 01 21 00 21 00 01 00 (3B A5)-CRC
+00 1E 02 01 53 00 54 00 01 00 00 01 00 00 28 02 (BC 92)-CRC
+01 0F 00 10 00 01 00 00 01 00 00 28 02 01 18 00 (78 B8)-CRC
+18 00 01 00 00 14 02 01 00 00 01 00 01 04 00 01 (AC DA)-CRC
+00 00 (FF FF)-CRC
+(Port 13)(14:05:53:701): Reg B CL-6
+(Port 13)(14:05:53:703): Parse Binary Inputs - Range 0 to 5 
+(Port 13)(14:05:53:705): Parse Binary Inputs - Range 12 to 13 
+(Port 13)(14:05:53:707): Parse Binary Inputs - Range 17 to 21 
+(Port 13)(14:05:53:709): Parse Binary Inputs - Range 23 to 23 
+(Port 13)(14:05:53:711): Parse Binary Inputs - Range 26 to 30 
+(Port 13)(14:05:53:713): Parse Binary Inputs - Range 59 to 60 
+(Port 13)(14:05:53:715): Parse Binary Inputs - Range 75 to 77 
+(Port 13)(14:05:53:717): Parse Binary Inputs - Range 82 to 84 
+(Port 13)(14:05:53:719): Parse Binary Output Status - Range 0 to 2 
+(Port 13)(14:05:53:721): Parse Binary Output Status - Range 86 to 86 
+(Port 13)(14:05:53:723): Parse Analog Inputs - Range 5 to 6
+(Port 13)(14:05:53:725): Parse Analog Inputs - Range 33 to 33
+(Port 13)(14:05:53:727): Parse Analog Inputs - Range 83 to 84
+(Port 13)(14:05:53:731): Parse Analog Output Status - Range 15 to 16
+(Port 13)(14:05:53:733): Parse Analog Output Status - Range 24 to 24
+(Port 13)(14:05:53:735): Parse Counter Input - Range 0 to 1
+(Port 13)(14:05:55:414):  
+(Port 13)(14:05:55:414): Event/Individual Point Poll - Reg B CL-6 Address 2
+(Port 13)(14:05:55:516)TX[150]: 05 64 81 C4 02 00 64 00 (ED 4D)-CRC
+C4 C4 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (91 2F)-CRC
+00 05 00 01 02 01 0C 00 0D 00 01 02 01 11 00 15 (45 C7)-CRC
+00 01 02 01 17 00 17 00 01 02 01 1A 00 1E 00 01 (14 C3)-CRC
+02 01 3B 00 3C 00 01 02 01 4B 00 4D 00 01 02 01 (1E BF)-CRC
+52 00 54 00 0A 02 01 00 00 02 00 0A 02 01 56 00 (00 68)-CRC
+56 00 1E 02 01 05 00 06 00 1E 02 01 21 00 21 00 (6E 52)-CRC
+1E 02 01 53 00 54 00 28 02 01 0F 00 10 00 28 02 (DF 8E)-CRC
+01 18 00 18 00 14 02 01 00 00 01 00 (92 E3)-CRC
+(Port 13)(14:05:55:722)RX[212]: 05 64 B7 44 64 00 02 00 (F5 AB)-CRC
+C3 C4 81 00 00 01 02 01 00 00 05 00 01 01 01 01 (D6 EA)-CRC
+01 01 01 02 01 0C 00 0D 00 81 81 01 02 01 11 00 (53 B9)-CRC
+15 00 81 01 81 01 01 01 02 01 17 00 17 00 81 01 (CB 4F)-CRC
+02 01 1A 00 1E 00 01 01 81 01 01 01 02 01 3B 00 (6A DF)-CRC
+3C 00 01 01 01 02 01 4B 00 4D 00 01 01 81 01 02 (64 99)-CRC
+01 52 00 54 00 01 01 01 0A 02 01 00 00 02 00 01 (9E C2)-CRC
+01 01 0A 02 01 56 00 56 00 01 1E 02 01 05 00 06 (66 C2)-CRC
+00 01 EC 02 01 00 00 1E 02 01 21 00 21 00 01 00 (3B A5)-CRC
+00 1E 02 01 53 00 54 00 01 00 00 01 00 00 28 02 (BC 92)-CRC
+01 0F 00 10 00 01 00 00 01 00 00 28 02 01 18 00 (78 B8)-CRC
+18 00 01 00 00 14 02 01 00 00 01 00 01 04 00 01 (AC DA)-CRC
+00 00 (FF FF)-CRC
+(Port 13)(14:05:55:722): Reg B CL-6
+(Port 13)(14:05:55:724): Parse Binary Inputs - Range 0 to 5 
+(Port 13)(14:05:55:726): Parse Binary Inputs - Range 12 to 13 
+(Port 13)(14:05:55:728): Parse Binary Inputs - Range 17 to 21 
+(Port 13)(14:05:55:730): Parse Binary Inputs - Range 23 to 23 
+(Port 13)(14:05:55:732): Parse Binary Inputs - Range 26 to 30 
+(Port 13)(14:05:55:734): Parse Binary Inputs - Range 59 to 60 
+(Port 13)(14:05:55:736): Parse Binary Inputs - Range 75 to 77 
+(Port 13)(14:05:55:738): Parse Binary Inputs - Range 82 to 84 
+(Port 13)(14:05:55:740): Parse Binary Output Status - Range 0 to 2 
+(Port 13)(14:05:55:742): Parse Binary Output Status - Range 86 to 86 
+(Port 13)(14:05:55:744): Parse Analog Inputs - Range 5 to 6
+(Port 13)(14:05:55:746): Parse Analog Inputs - Range 33 to 33
+(Port 13)(14:05:55:748): Parse Analog Inputs - Range 83 to 84
+(Port 13)(14:05:55:750): Parse Analog Output Status - Range 15 to 16
+(Port 13)(14:05:55:752): Parse Analog Output Status - Range 24 to 24
+(Port 13)(14:05:55:754): Parse Counter Input - Range 0 to 1
+(Port 13)(14:05:57:433):  
+(Port 13)(14:05:57:433): Event/Individual Point Poll - Reg B CL-6 Address 2
+(Port 13)(14:05:57:535)TX[150]: 05 64 81 C4 02 00 64 00 (ED 4D)-CRC
+C5 C5 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (05 0C)-CRC
+00 05 00 01 02 01 0C 00 0D 00 01 02 01 11 00 15 (45 C7)-CRC
+00 01 02 01 17 00 17 00 01 02 01 1A 00 1E 00 01 (14 C3)-CRC
+02 01 3B 00 3C 00 01 02 01 4B 00 4D 00 01 02 01 (1E BF)-CRC
+52 00 54 00 0A 02 01 00 00 02 00 0A 02 01 56 00 (00 68)-CRC
+56 00 1E 02 01 05 00 06 00 1E 02 01 21 00 21 00 (6E 52)-CRC
+1E 02 01 53 00 54 00 28 02 01 0F 00 10 00 28 02 (DF 8E)-CRC
+01 18 00 18 00 14 02 01 00 00 01 00 (92 E3)-CRC
+(Port 13)(14:05:57:743)RX[212]: 05 64 B7 44 64 00 02 00 (F5 AB)-CRC
+C4 C5 81 00 00 01 02 01 00 00 05 00 01 01 01 01 (13 29)-CRC
+01 01 01 02 01 0C 00 0D 00 81 81 01 02 01 11 00 (53 B9)-CRC
+15 00 81 01 81 01 01 01 02 01 17 00 17 00 81 01 (CB 4F)-CRC
+02 01 1A 00 1E 00 01 01 81 01 01 01 02 01 3B 00 (6A DF)-CRC
+3C 00 01 01 01 02 01 4B 00 4D 00 01 01 81 01 02 (64 99)-CRC
+01 52 00 54 00 01 01 01 0A 02 01 00 00 02 00 01 (9E C2)-CRC
+01 01 0A 02 01 56 00 56 00 01 1E 02 01 05 00 06 (66 C2)-CRC
+00 01 EC 02 01 00 00 1E 02 01 21 00 21 00 01 00 (3B A5)-CRC
+00 1E 02 01 53 00 54 00 01 00 00 01 00 00 28 02 (BC 92)-CRC
+01 0F 00 10 00 01 00 00 01 00 00 28 02 01 18 00 (78 B8)-CRC
+18 00 01 00 00 14 02 01 00 00 01 00 01 04 00 01 (AC DA)-CRC
+00 00 (FF FF)-CRC
+(Port 13)(14:05:57:743): Reg B CL-6
+(Port 13)(14:05:57:745): Parse Binary Inputs - Range 0 to 5 
+(Port 13)(14:05:57:747): Parse Binary Inputs - Range 12 to 13 
+(Port 13)(14:05:57:749): Parse Binary Inputs - Range 17 to 21 
+(Port 13)(14:05:57:751): Parse Binary Inputs - Range 23 to 23 
+(Port 13)(14:05:57:753): Parse Binary Inputs - Range 26 to 30 
+(Port 13)(14:05:57:755): Parse Binary Inputs - Range 59 to 60 
+(Port 13)(14:05:57:757): Parse Binary Inputs - Range 75 to 77 
+(Port 13)(14:05:57:759): Parse Binary Inputs - Range 82 to 84 
+(Port 13)(14:05:57:761): Parse Binary Output Status - Range 0 to 2 
+(Port 13)(14:05:57:763): Parse Binary Output Status - Range 86 to 86 
+(Port 13)(14:05:57:765): Parse Analog Inputs - Range 5 to 6
+(Port 13)(14:05:57:767): Parse Analog Inputs - Range 33 to 33
+(Port 13)(14:05:57:769): Parse Analog Inputs - Range 83 to 84
+(Port 13)(14:05:57:771): Parse Analog Output Status - Range 15 to 16
+(Port 13)(14:05:57:773): Parse Analog Output Status - Range 24 to 24
+(Port 13)(14:05:57:775): Parse Counter Input - Range 0 to 1
+(Port 13)(14:05:59:454):  
+(Port 13)(14:05:59:454): Event/Individual Point Poll - Reg B CL-6 Address 2
+(Port 13)(14:05:59:558)TX[150]: 05 64 81 C4 02 00 64 00 (ED 4D)-CRC
+C6 C6 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (B9 68)-CRC
+00 05 00 01 02 01 0C 00 0D 00 01 02 01 11 00 15 (45 C7)-CRC
+00 01 02 01 17 00 17 00 01 02 01 1A 00 1E 00 01 (14 C3)-CRC
+02 01 3B 00 3C 00 01 02 01 4B 00 4D 00 01 02 01 (1E BF)-CRC
+52 00 54 00 0A 02 01 00 00 02 00 0A 02 01 56 00 (00 68)-CRC
+56 00 1E 02 01 05 00 06 00 1E 02 01 21 00 21 00 (6E 52)-CRC
+1E 02 01 53 00 54 00 28 02 01 0F 00 10 00 28 02 (DF 8E)-CRC
+01 18 00 18 00 14 02 01 00 00 01 00 (92 E3)-CRC
+(Port 13)(14:05:59:780)RX[212]: 05 64 B7 44 64 00 02 00 (F5 AB)-CRC
+C5 C6 81 00 00 01 02 01 00 00 05 00 01 01 01 01 (B7 D6)-CRC
+01 01 01 02 01 0C 00 0D 00 81 81 01 02 01 11 00 (53 B9)-CRC
+15 00 81 01 81 01 01 01 02 01 17 00 17 00 81 01 (CB 4F)-CRC
+02 01 1A 00 1E 00 01 01 81 01 01 01 02 01 3B 00 (6A DF)-CRC
+3C 00 01 01 01 02 01 4B 00 4D 00 01 01 81 01 02 (64 99)-CRC
+01 52 00 54 00 01 01 01 0A 02 01 00 00 02 00 01 (9E C2)-CRC
+01 01 0A 02 01 56 00 56 00 01 1E 02 01 05 00 06 (66 C2)-CRC
+00 01 EC 02 01 00 00 1E 02 01 21 00 21 00 01 00 (3B A5)-CRC
+00 1E 02 01 53 00 54 00 01 00 00 01 00 00 28 02 (BC 92)-CRC
+01 0F 00 10 00 01 00 00 01 00 00 28 02 01 18 00 (78 B8)-CRC
+18 00 01 00 00 14 02 01 00 00 01 00 01 04 00 01 (AC DA)-CRC
+00 00 (FF FF)-CRC
+(Port 13)(14:05:59:781): Reg B CL-6
+(Port 13)(14:05:59:783): Parse Binary Inputs - Range 0 to 5 
+(Port 13)(14:05:59:785): Parse Binary Inputs - Range 12 to 13 
+(Port 13)(14:05:59:787): Parse Binary Inputs - Range 17 to 21 
+(Port 13)(14:05:59:789): Parse Binary Inputs - Range 23 to 23 
+(Port 13)(14:05:59:792): Parse Binary Inputs - Range 26 to 30 
+(Port 13)(14:05:59:795): Parse Binary Inputs - Range 59 to 60 
+(Port 13)(14:05:59:797): Parse Binary Inputs - Range 75 to 77 
+(Port 13)(14:05:59:799): Parse Binary Inputs - Range 82 to 84 
+(Port 13)(14:05:59:801): Parse Binary Output Status - Range 0 to 2 
+(Port 13)(14:05:59:805): Parse Binary Output Status - Range 86 to 86 
+(Port 13)(14:05:59:807): Parse Analog Inputs - Range 5 to 6
+(Port 13)(14:05:59:809): Parse Analog Inputs - Range 33 to 33
+(Port 13)(14:05:59:811): Parse Analog Inputs - Range 83 to 84
+(Port 13)(14:05:59:813): Parse Analog Output Status - Range 15 to 16
+(Port 13)(14:05:59:815): Parse Analog Output Status - Range 24 to 24
+(Port 13)(14:05:59:817): Parse Counter Input - Range 0 to 1
+(Port 13)(14:06:01:496):  
+(Port 13)(14:06:01:496): Event/Individual Point Poll - Reg B CL-6 Address 2
+(Port 13)(14:06:01:598)TX[150]: 05 64 81 C4 02 00 64 00 (ED 4D)-CRC
+C7 C7 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (2D 4B)-CRC
+00 05 00 01 02 01 0C 00 0D 00 01 02 01 11 00 15 (45 C7)-CRC
+00 01 02 01 17 00 17 00 01 02 01 1A 00 1E 00 01 (14 C3)-CRC
+02 01 3B 00 3C 00 01 02 01 4B 00 4D 00 01 02 01 (1E BF)-CRC
+52 00 54 00 0A 02 01 00 00 02 00 0A 02 01 56 00 (00 68)-CRC
+56 00 1E 02 01 05 00 06 00 1E 02 01 21 00 21 00 (6E 52)-CRC
+1E 02 01 53 00 54 00 28 02 01 0F 00 10 00 28 02 (DF 8E)-CRC
+01 18 00 18 00 14 02 01 00 00 01 00 (92 E3)-CRC
+(Port 13)(14:06:01:805)RX[212]: 05 64 B7 44 64 00 02 00 (F5 AB)-CRC
+C6 C7 81 00 00 01 02 01 00 00 05 00 01 01 01 01 (3B 6E)-CRC
+01 01 01 02 01 0C 00 0D 00 81 81 01 02 01 11 00 (53 B9)-CRC
+15 00 81 01 81 01 01 01 02 01 17 00 17 00 81 01 (CB 4F)-CRC
+02 01 1A 00 1E 00 01 01 81 01 01 01 02 01 3B 00 (6A DF)-CRC
+3C 00 01 01 01 02 01 4B 00 4D 00 01 01 81 01 02 (64 99)-CRC
+01 52 00 54 00 01 01 01 0A 02 01 00 00 02 00 01 (9E C2)-CRC
+01 01 0A 02 01 56 00 56 00 01 1E 02 01 05 00 06 (66 C2)-CRC
+00 01 EC 02 01 00 00 1E 02 01 21 00 21 00 01 00 (3B A5)-CRC
+00 1E 02 01 53 00 54 00 01 00 00 01 00 00 28 02 (BC 92)-CRC
+01 0F 00 10 00 01 00 00 01 00 00 28 02 01 18 00 (78 B8)-CRC
+18 00 01 00 00 14 02 01 00 00 01 00 01 04 00 01 (AC DA)-CRC
+00 00 (FF FF)-CRC
+(Port 13)(14:06:01:805): Reg B CL-6
+(Port 13)(14:06:01:808): Parse Binary Inputs - Range 0 to 5 
+(Port 13)(14:06:01:810): Parse Binary Inputs - Range 12 to 13 
+(Port 13)(14:06:01:812): Parse Binary Inputs - Range 17 to 21 
+(Port 13)(14:06:01:814): Parse Binary Inputs - Range 23 to 23 
+(Port 13)(14:06:01:816): Parse Binary Inputs - Range 26 to 30 
+(Port 13)(14:06:01:818): Parse Binary Inputs - Range 59 to 60 
+(Port 13)(14:06:01:820): Parse Binary Inputs - Range 75 to 77 
+(Port 13)(14:06:01:822): Parse Binary Inputs - Range 82 to 84 
+(Port 13)(14:06:01:824): Parse Binary Output Status - Range 0 to 2 
+(Port 13)(14:06:01:826): Parse Binary Output Status - Range 86 to 86 
+(Port 13)(14:06:01:828): Parse Analog Inputs - Range 5 to 6
+(Port 13)(14:06:01:830): Parse Analog Inputs - Range 33 to 33
+(Port 13)(14:06:01:832): Parse Analog Inputs - Range 83 to 84
+(Port 13)(14:06:01:834): Parse Analog Output Status - Range 15 to 16
+(Port 13)(14:06:01:836): Parse Analog Output Status - Range 24 to 24
+(Port 13)(14:06:01:838): Parse Counter Input - Range 0 to 1
