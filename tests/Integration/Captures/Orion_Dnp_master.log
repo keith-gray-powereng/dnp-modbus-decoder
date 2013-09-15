@@ -1,0 +1,330 @@
+----------- ** Capture Session Started 09/11/2013 16:08:24 ** ------------
+(Port 28)(23:08:39:158)[1]: Attempting to establish connection to 192.168.22.131
+(Port 28)(23:08:39:159): Error 107 on getpeername while connecting to host 192.168.22.131. Line: 228.
+(Port 28)(23:08:39:159)[1]: Closing socket.
+(Port 28)(23:08:39:160): Consecutive Failures from Device OrionLX-2: 3
+(Port 28)(23:08:39:160): Setting All Points for Device OrionLX-2: Offline
+(Port 28)(23:08:39:160)[1]: Couldn't establish connection to 192.168.22.131:20000. Retrying.
+(Port 28)(23:08:39:160)[1]: Waiting 30000 ms before reconnecting.
+(Port 28)(23:09:09:161)[1]: Attempting to establish connection to 192.168.22.131
+(Port 28)(23:09:09:163): Connection established to host 192.168.22.131.
+(Port 28)(23:09:09:265)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+F7 C7 01 3C 04 06 3C 03 06 3C 02 06 (26 3F)-CRC
+(Port 28)(23:09:09:274)RX[10]: 05 64 05 00 82 00 83 00 (46 04)-CRC
+(Port 28)(23:09:09:275): Response to Reset Link - Function Code 0
+(Port 28)(23:09:09:325):  
+(Port 28)(23:09:09:326): Event/Individual Point Poll - OrionLX-2 Address 131
+(Port 28)(23:09:09:332)TX[40]: 05 64 1F C4 83 00 82 00 (9C 74)-CRC
+F8 C8 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (86 5D)-CRC
+00 06 00 1E 02 01 00 00 03 00 (82 3A)-CRC
+(Port 28)(23:09:09:340)RX[292]: 05 64 FF 44 82 00 83 00 (32 32)-CRC
+78 E8 81 80 00 01 02 01 00 00 06 00 01 01 01 01 (51 46)-CRC
+01 01 01 1E 02 01 00 00 03 00 01 54 6A 01 02 6C (5C B5)-CRC
+01 8C 6A 01 21 00 02 02 28 01 00 04 00 01 50 4B (05 74)-CRC
+C8 0D 41 01 20 04 28 1B 00 00 00 01 59 6A 78 42 (5A 1E)-CRC
+C8 0D 41 01 01 00 01 02 6C 78 42 C8 0D 41 01 02 (F2 C1)-CRC
+00 01 8F 6A 78 42 C8 0D 41 01 00 00 01 57 6A 48 (64 AC)-CRC
+4A C8 0D 41 01 02 00 01 92 6A 48 4A C8 0D 41 01 (8F 41)-CRC
+03 00 01 21 00 50 4B C8 0D 41 01 00 00 01 59 6A (E5 9F)-CRC
+19 52 C8 0D 41 01 01 00 01 00 6C 19 52 C8 0D 41 (C1 DB)-CRC
+01 02 00 01 94 6A 19 52 C8 0D 41 01 00 00 01 56 (B7 DE)-CRC
+6A EA 59 C8 0D 41 01 01 00 01 02 6C EA 59 C8 0D (E7 EB)-CRC
+41 01 02 00 01 91 6A EA 59 C8 0D 41 01 00 00 01 (F0 86)-CRC
+54 6A BB 61 C8 0D 41 01 02 00 01 8E 6A BB 61 C8 (22 E6)-CRC
+0D 41 01 00 00 01 57 6A 8C 69 C8 0D 41 01 01 00 (79 2B)-CRC
+01 00 6C 8C 69 C8 0D 41 01 02 00 01 91 6A 8C 69 (67 CC)-CRC
+C8 0D 41 01 00 00 01 53 6A 5D (D0 5A)-CRC
+(Port 28)(23:09:09:347)RX[129]: 05 64 6E 44 82 00 83 00 (97 EE)-CRC
+B9 71 C8 0D 41 01 02 00 01 8E 6A 5D 71 C8 0D 41 (B2 91)-CRC
+01 00 00 01 54 6A 2E 79 C8 0D 41 01 01 00 01 03 (C9 52)-CRC
+6C 2E 79 C8 0D 41 01 02 00 01 8F 6A 2E 79 C8 0D (97 3E)-CRC
+41 01 00 00 01 50 6A FE 80 C8 0D 41 01 01 00 01 (BC 93)-CRC
+00 6C FE 80 C8 0D 41 01 00 00 01 54 6A D0 88 C8 (5D 60)-CRC
+0D 41 01 01 00 01 02 6C D0 88 C8 0D 41 01 02 00 (37 9E)-CRC
+01 8C 6A D0 88 C8 0D 41 01 (27 A3)-CRC
+(Port 28)(23:09:09:347): OrionLX-2
+(Port 28)(23:09:09:347): IIN: Device Restart
+(Port 28)(23:09:09:349): Parse Binary Inputs - Range 0 to 6 
+(Port 28)(23:09:09:351): Parse Analog Inputs - Range 0 to 3
+(Port 28)(23:09:09:353): Parse Object 2 Variation 2 Qualifier 28 Count 1  
+(Port 28)(23:09:09:354): Time: 09/11/2013  16:08:52.304 Local
+(Port 28)(23:09:09:354): Parse Binary Event - Point   4:  Value 0
+(Port 28)(23:09:09:356): Parse Object 32 Variation 4 Qualifier 28 Count 27  
+(Port 28)(23:09:09:357): Time: 09/11/2013  16:08:50.040 Local
+(Port 28)(23:09:09:357): Parse Analog Event - Point   0: Value 27225.000000
+(Port 28)(23:09:09:359): Time: 09/11/2013  16:08:50.040 Local
+(Port 28)(23:09:09:360): Parse Analog Event - Point   1: Value 27650.000000
+(Port 28)(23:09:09:363): Time: 09/11/2013  16:08:50.040 Local
+(Port 28)(23:09:09:364): Parse Analog Event - Point   2: Value 27279.000000
+(Port 28)(23:09:09:365): Time: 09/11/2013  16:08:52.040 Local
+(Port 28)(23:09:09:366): Parse Analog Event - Point   0: Value 27223.000000
+(Port 28)(23:09:09:367): Time: 09/11/2013  16:08:52.040 Local
+(Port 28)(23:09:09:368): Parse Analog Event - Point   2: Value 27282.000000
+(Port 28)(23:09:09:369): Time: 09/11/2013  16:08:52.304 Local
+(Port 28)(23:09:09:370): Parse Analog Event - Point   3: Value 33.000000
+(Port 28)(23:09:09:372): Time: 09/11/2013  16:08:54.041 Local
+(Port 28)(23:09:09:372): Parse Analog Event - Point   0: Value 27225.000000
+(Port 28)(23:09:09:379): Time: 09/11/2013  16:08:54.041 Local
+(Port 28)(23:09:09:379): Parse Analog Event - Point   1: Value 27648.000000
+(Port 28)(23:09:09:381): Time: 09/11/2013  16:08:54.041 Local
+(Port 28)(23:09:09:381): Parse Analog Event - Point   2: Value 27284.000000
+(Port 28)(23:09:09:383): Time: 09/11/2013  16:08:56.042 Local
+(Port 28)(23:09:09:383): Parse Analog Event - Point   0: Value 27222.000000
+(Port 28)(23:09:09:385): Time: 09/11/2013  16:08:56.042 Local
+(Port 28)(23:09:09:386): Parse Analog Event - Point   1: Value 27650.000000
+(Port 28)(23:09:09:387): Time: 09/11/2013  16:08:56.042 Local
+(Port 28)(23:09:09:388): Parse Analog Event - Point   2: Value 27281.000000
+(Port 28)(23:09:09:390): Time: 09/11/2013  16:08:58.043 Local
+(Port 28)(23:09:09:391): Parse Analog Event - Point   0: Value 27220.000000
+(Port 28)(23:09:09:395): Time: 09/11/2013  16:08:58.043 Local
+(Port 28)(23:09:09:395): Parse Analog Event - Point   2: Value 27278.000000
+(Port 28)(23:09:09:398): Time: 09/11/2013  16:09:00.044 Local
+(Port 28)(23:09:09:398): Parse Analog Event - Point   0: Value 27223.000000
+(Port 28)(23:09:09:403): Time: 09/11/2013  16:09:00.044 Local
+(Port 28)(23:09:09:403): Parse Analog Event - Point   1: Value 27648.000000
+(Port 28)(23:09:09:408): Time: 09/11/2013  16:09:00.044 Local
+(Port 28)(23:09:09:408): Parse Analog Event - Point   2: Value 27281.000000
+(Port 28)(23:09:09:409): Time: 09/11/2013  16:09:02.045 Local
+(Port 28)(23:09:09:410): Parse Analog Event - Point   0: Value 27219.000000
+(Port 28)(23:09:09:411): Time: 09/11/2013  16:09:02.045 Local
+(Port 28)(23:09:09:412): Parse Analog Event - Point   2: Value 27278.000000
+(Port 28)(23:09:09:413): Time: 09/11/2013  16:09:04.046 Local
+(Port 28)(23:09:09:414): Parse Analog Event - Point   0: Value 27220.000000
+(Port 28)(23:09:09:416): Time: 09/11/2013  16:09:04.046 Local
+(Port 28)(23:09:09:416): Parse Analog Event - Point   1: Value 27651.000000
+(Port 28)(23:09:09:418): Time: 09/11/2013  16:09:04.046 Local
+(Port 28)(23:09:09:418): Parse Analog Event - Point   2: Value 27279.000000
+(Port 28)(23:09:09:421): Time: 09/11/2013  16:09:06.046 Local
+(Port 28)(23:09:09:421): Parse Analog Event - Point   0: Value 27216.000000
+(Port 28)(23:09:09:424): Time: 09/11/2013  16:09:06.046 Local
+(Port 28)(23:09:09:424): Parse Analog Event - Point   1: Value 27648.000000
+(Port 28)(23:09:09:426): Time: 09/11/2013  16:09:08.048 Local
+(Port 28)(23:09:09:426): Parse Analog Event - Point   0: Value 27220.000000
+(Port 28)(23:09:09:428): Time: 09/11/2013  16:09:08.048 Local
+(Port 28)(23:09:09:429): Parse Analog Event - Point   1: Value 27650.000000
+(Port 28)(23:09:09:430): Time: 09/11/2013  16:09:08.048 Local
+(Port 28)(23:09:09:431): Parse Analog Event - Point   2: Value 27276.000000
+(Port 28)(23:09:09:442): Master Application Confirm at Address 131
+(Port 28)(23:09:09:448)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+F8 C8 00 (15 02)-CRC
+(Port 28)(23:09:09:856):  
+(Port 28)(23:09:09:857): Clear Restart Bit - OrionLX-2 Address 131
+(Port 28)(23:09:09:862)TX[21]: 05 64 0E C4 83 00 82 00 (BA B9)-CRC
+F9 C9 02 50 01 00 07 07 00 (5A 5C)-CRC
+(Port 28)(23:09:09:868)RX[17]: 05 64 0A 44 82 00 83 00 (06 FC)-CRC
+F9 C9 81 00 00 (DB 1B)-CRC
+(Port 28)(23:09:09:868): OrionLX-2
+(Port 28)(23:09:10:378):  
+(Port 28)(23:09:10:379): Disable Unsoliciteds - OrionLX-2 Address 131
+(Port 28)(23:09:10:385)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+FA CA 15 3C 04 06 3C 03 06 3C 02 06 (BA E2)-CRC
+(Port 28)(23:09:10:391)RX[17]: 05 64 0A 44 82 00 83 00 (06 FC)-CRC
+FA CA 81 04 00 (5A 43)-CRC
+(Port 28)(23:09:10:392): OrionLX-2
+(Port 28)(23:09:10:392): IIN: Class 2 Data Available
+(Port 28)(23:09:10:901):  
+(Port 28)(23:09:10:902): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:10:907)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+FB CB 01 3C 04 06 3C 03 06 3C 02 06 (57 7D)-CRC
+(Port 28)(23:09:10:914)RX[59]: 05 64 30 44 82 00 83 00 (2E C9)-CRC
+FB EB 81 00 00 20 04 28 03 00 00 00 01 53 6A A2 (D3 78)-CRC
+90 C8 0D 41 01 01 00 01 00 6C A2 90 C8 0D 41 01 (B7 20)-CRC
+02 00 01 8F 6A A2 90 C8 0D 41 01 (5F 4A)-CRC
+(Port 28)(23:09:10:914): OrionLX-2
+(Port 28)(23:09:10:916): Parse Object 32 Variation 4 Qualifier 28 Count 3  
+(Port 28)(23:09:10:917): Time: 09/11/2013  16:09:10.050 Local
+(Port 28)(23:09:10:917): Parse Analog Event - Point   0: Value 27219.000000
+(Port 28)(23:09:10:919): Time: 09/11/2013  16:09:10.050 Local
+(Port 28)(23:09:10:919): Parse Analog Event - Point   1: Value 27648.000000
+(Port 28)(23:09:10:921): Time: 09/11/2013  16:09:10.050 Local
+(Port 28)(23:09:10:921): Parse Analog Event - Point   2: Value 27279.000000
+(Port 28)(23:09:10:921): Master Application Confirm at Address 131
+(Port 28)(23:09:10:928)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+FB CB 00 (76 98)-CRC
+(Port 28)(23:09:12:969):  
+(Port 28)(23:09:12:969): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:12:975)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+FC CC 01 3C 04 06 3C 03 06 3C 02 06 (BA 00)-CRC
+(Port 28)(23:09:12:982)RX[59]: 05 64 30 44 82 00 83 00 (2E C9)-CRC
+FC EC 81 00 00 20 04 28 03 00 00 00 01 51 6A 72 (C6 E6)-CRC
+98 C8 0D 41 01 01 00 01 FD 6B 72 98 C8 0D 41 01 (F0 81)-CRC
+02 00 01 8E 6A 72 98 C8 0D 41 01 (3B CE)-CRC
+(Port 28)(23:09:12:982): OrionLX-2
+(Port 28)(23:09:12:983): Parse Object 32 Variation 4 Qualifier 28 Count 3  
+(Port 28)(23:09:12:984): Time: 09/11/2013  16:09:12.050 Local
+(Port 28)(23:09:12:984): Parse Analog Event - Point   0: Value 27217.000000
+(Port 28)(23:09:12:986): Time: 09/11/2013  16:09:12.050 Local
+(Port 28)(23:09:12:987): Parse Analog Event - Point   1: Value 27645.000000
+(Port 28)(23:09:12:988): Time: 09/11/2013  16:09:12.050 Local
+(Port 28)(23:09:12:989): Parse Analog Event - Point   2: Value 27278.000000
+(Port 28)(23:09:12:989): Master Application Confirm at Address 131
+(Port 28)(23:09:12:995)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+FC CC 00 (3F 53)-CRC
+(Port 28)(23:09:15:035):  
+(Port 28)(23:09:15:036): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:15:043)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+FD CD 01 3C 04 06 3C 03 06 3C 02 06 (D3 FA)-CRC
+(Port 28)(23:09:15:048)RX[59]: 05 64 30 44 82 00 83 00 (2E C9)-CRC
+FD ED 81 00 00 20 04 28 03 00 00 00 01 4E 6A 43 (D9 3F)-CRC
+A0 C8 0D 41 01 01 00 01 00 6C 43 A0 C8 0D 41 01 (7D C4)-CRC
+02 00 01 8C 6A 43 A0 C8 0D 41 01 (3D 39)-CRC
+(Port 28)(23:09:15:049): OrionLX-2
+(Port 28)(23:09:15:051): Parse Object 32 Variation 4 Qualifier 28 Count 3  
+(Port 28)(23:09:15:053): Time: 09/11/2013  16:09:14.051 Local
+(Port 28)(23:09:15:053): Parse Analog Event - Point   0: Value 27214.000000
+(Port 28)(23:09:15:055): Time: 09/11/2013  16:09:14.051 Local
+(Port 28)(23:09:15:055): Parse Analog Event - Point   1: Value 27648.000000
+(Port 28)(23:09:15:057): Time: 09/11/2013  16:09:14.051 Local
+(Port 28)(23:09:15:057): Parse Analog Event - Point   2: Value 27276.000000
+(Port 28)(23:09:15:057): Master Application Confirm at Address 131
+(Port 28)(23:09:15:063)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+FD CD 00 (C9 E1)-CRC
+(Port 28)(23:09:17:103):  
+(Port 28)(23:09:17:103): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:17:109)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+FE CE 01 3C 04 06 3C 03 06 3C 02 06 (11 B9)-CRC
+(Port 28)(23:09:17:116)RX[59]: 05 64 30 44 82 00 83 00 (2E C9)-CRC
+FE EE 81 00 00 20 04 28 03 00 00 00 01 51 6A 15 (85 58)-CRC
+A8 C8 0D 41 01 01 00 01 FF 6B 15 A8 C8 0D 41 01 (44 33)-CRC
+02 00 01 8B 6A 15 A8 C8 0D 41 01 (6F B3)-CRC
+(Port 28)(23:09:17:116): OrionLX-2
+(Port 28)(23:09:17:118): Parse Object 32 Variation 4 Qualifier 28 Count 3  
+(Port 28)(23:09:17:119): Time: 09/11/2013  16:09:16.053 Local
+(Port 28)(23:09:17:119): Parse Analog Event - Point   0: Value 27217.000000
+(Port 28)(23:09:17:123): Time: 09/11/2013  16:09:16.053 Local
+(Port 28)(23:09:17:123): Parse Analog Event - Point   1: Value 27647.000000
+(Port 28)(23:09:17:125): Time: 09/11/2013  16:09:16.053 Local
+(Port 28)(23:09:17:125): Parse Analog Event - Point   2: Value 27275.000000
+(Port 28)(23:09:17:125): Master Application Confirm at Address 131
+(Port 28)(23:09:17:131)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+FE CE 00 (AA 7B)-CRC
+(Port 28)(23:09:19:171):  
+(Port 28)(23:09:19:172): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:19:177)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+FF CF 01 3C 04 06 3C 03 06 3C 02 06 (78 43)-CRC
+(Port 28)(23:09:19:184)RX[17]: 05 64 0A 44 82 00 83 00 (06 FC)-CRC
+FF CF 81 00 00 (4D C5)-CRC
+(Port 28)(23:09:19:184): OrionLX-2
+(Port 28)(23:09:21:224):  
+(Port 28)(23:09:21:225): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:21:231)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+C0 C0 01 3C 04 06 3C 03 06 3C 02 06 (DD 68)-CRC
+(Port 28)(23:09:21:237)RX[35]: 05 64 1A 44 82 00 83 00 (C7 84)-CRC
+C0 E0 81 00 00 20 04 28 01 00 01 00 01 00 6C B7 (D7 78)-CRC
+B7 C8 0D 41 01 (68 BE)-CRC
+(Port 28)(23:09:21:238): OrionLX-2
+(Port 28)(23:09:21:239): Parse Object 32 Variation 4 Qualifier 28 Count 1  
+(Port 28)(23:09:21:240): Time: 09/11/2013  16:09:20.055 Local
+(Port 28)(23:09:21:240): Parse Analog Event - Point   1: Value 27648.000000
+(Port 28)(23:09:21:240): Master Application Confirm at Address 131
+(Port 28)(23:09:21:247)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+C0 C0 00 (33 96)-CRC
+(Port 28)(23:09:23:287):  
+(Port 28)(23:09:23:287): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:23:293)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+C1 C1 01 3C 04 06 3C 03 06 3C 02 06 (B4 92)-CRC
+(Port 28)(23:09:23:299)RX[35]: 05 64 1A 44 82 00 83 00 (C7 84)-CRC
+C1 E1 81 00 00 20 04 28 01 00 00 00 01 4E 6A 88 (63 31)-CRC
+BF C8 0D 41 01 (21 EB)-CRC
+(Port 28)(23:09:23:300): OrionLX-2
+(Port 28)(23:09:23:301): Parse Object 32 Variation 4 Qualifier 28 Count 1  
+(Port 28)(23:09:23:302): Time: 09/11/2013  16:09:22.056 Local
+(Port 28)(23:09:23:304): Parse Analog Event - Point   0: Value 27214.000000
+(Port 28)(23:09:23:304): Master Application Confirm at Address 131
+(Port 28)(23:09:23:310)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+C1 C1 00 (C5 24)-CRC
+(Port 28)(23:09:25:350):  
+(Port 28)(23:09:25:351): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:25:357)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+C2 C2 01 3C 04 06 3C 03 06 3C 02 06 (76 D1)-CRC
+(Port 28)(23:09:25:364)RX[59]: 05 64 30 44 82 00 83 00 (2E C9)-CRC
+C2 E2 81 00 00 20 04 28 03 00 00 00 01 50 6A 59 (85 46)-CRC
+C7 C8 0D 41 01 01 00 01 FF 6B 59 C7 C8 0D 41 01 (3D 93)-CRC
+02 00 01 8E 6A 59 C7 C8 0D 41 01 (46 10)-CRC
+(Port 28)(23:09:25:364): OrionLX-2
+(Port 28)(23:09:25:365): Parse Object 32 Variation 4 Qualifier 28 Count 3  
+(Port 28)(23:09:25:366): Time: 09/11/2013  16:09:24.057 Local
+(Port 28)(23:09:25:366): Parse Analog Event - Point   0: Value 27216.000000
+(Port 28)(23:09:25:367): Time: 09/11/2013  16:09:24.057 Local
+(Port 28)(23:09:25:368): Parse Analog Event - Point   1: Value 27647.000000
+(Port 28)(23:09:25:369): Time: 09/11/2013  16:09:24.057 Local
+(Port 28)(23:09:25:370): Parse Analog Event - Point   2: Value 27278.000000
+(Port 28)(23:09:25:370): Master Application Confirm at Address 131
+(Port 28)(23:09:25:376)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+C2 C2 00 (A6 BE)-CRC
+(Port 28)(23:09:27:416):  
+(Port 28)(23:09:27:417): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:27:422)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+C3 C3 01 3C 04 06 3C 03 06 3C 02 06 (1F 2B)-CRC
+(Port 28)(23:09:27:428)RX[35]: 05 64 1A 44 82 00 83 00 (C7 84)-CRC
+C3 E3 81 00 00 20 04 28 01 00 02 00 01 8B 6A 2A (C3 15)-CRC
+CF C8 0D 41 01 (54 69)-CRC
+(Port 28)(23:09:27:429): OrionLX-2
+(Port 28)(23:09:27:430): Parse Object 32 Variation 4 Qualifier 28 Count 1  
+(Port 28)(23:09:27:431): Time: 09/11/2013  16:09:26.058 Local
+(Port 28)(23:09:27:431): Parse Analog Event - Point   2: Value 27275.000000
+(Port 28)(23:09:27:431): Master Application Confirm at Address 131
+(Port 28)(23:09:27:437)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+C3 C3 00 (50 0C)-CRC
+(Port 28)(23:09:29:477):  
+(Port 28)(23:09:29:477): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:29:483)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+C4 C4 01 3C 04 06 3C 03 06 3C 02 06 (F2 56)-CRC
+(Port 28)(23:09:29:491)RX[46]: 05 64 25 44 82 00 83 00 (66 49)-CRC
+C4 E4 81 00 00 20 04 28 02 00 01 00 01 00 6C FB (1E B9)-CRC
+D6 C8 0D 41 01 02 00 01 8E 6A FB D6 C8 0D 41 01 (A3 86)-CRC
+(Port 28)(23:09:29:491): OrionLX-2
+(Port 28)(23:09:29:492): Parse Object 32 Variation 4 Qualifier 28 Count 2  
+(Port 28)(23:09:29:493): Time: 09/11/2013  16:09:28.059 Local
+(Port 28)(23:09:29:493): Parse Analog Event - Point   1: Value 27648.000000
+(Port 28)(23:09:29:494): Time: 09/11/2013  16:09:28.059 Local
+(Port 28)(23:09:29:495): Parse Analog Event - Point   2: Value 27278.000000
+(Port 28)(23:09:29:495): Master Application Confirm at Address 131
+(Port 28)(23:09:29:501)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+C4 C4 00 (19 C7)-CRC
+(Port 28)(23:09:31:541):  
+(Port 28)(23:09:31:542): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:31:548)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+C5 C5 01 3C 04 06 3C 03 06 3C 02 06 (9B AC)-CRC
+(Port 28)(23:09:31:554)RX[35]: 05 64 1A 44 82 00 83 00 (C7 84)-CRC
+C5 E5 81 00 00 20 04 28 01 00 02 00 01 89 6A CC (42 86)-CRC
+DE C8 0D 41 01 (C0 E0)-CRC
+(Port 28)(23:09:31:555): OrionLX-2
+(Port 28)(23:09:31:556): Parse Object 32 Variation 4 Qualifier 28 Count 1  
+(Port 28)(23:09:31:557): Time: 09/11/2013  16:09:30.060 Local
+(Port 28)(23:09:31:557): Parse Analog Event - Point   2: Value 27273.000000
+(Port 28)(23:09:31:557): Master Application Confirm at Address 131
+(Port 28)(23:09:31:563)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+C5 C5 00 (EF 75)-CRC
+(Port 28)(23:09:33:603):  
+(Port 28)(23:09:33:603): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:33:609)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+C6 C6 01 3C 04 06 3C 03 06 3C 02 06 (59 EF)-CRC
+(Port 28)(23:09:33:617)RX[46]: 05 64 25 44 82 00 83 00 (66 49)-CRC
+C6 E6 81 00 00 20 04 28 02 00 00 00 01 4B 6A 9D (AC C3)-CRC
+E6 C8 0D 41 01 01 00 01 02 6C 9D E6 C8 0D 41 01 (1A DF)-CRC
+(Port 28)(23:09:33:617): OrionLX-2
+(Port 28)(23:09:33:619): Parse Object 32 Variation 4 Qualifier 28 Count 2  
+(Port 28)(23:09:33:620): Time: 09/11/2013  16:09:32.061 Local
+(Port 28)(23:09:33:620): Parse Analog Event - Point   0: Value 27211.000000
+(Port 28)(23:09:33:621): Time: 09/11/2013  16:09:32.061 Local
+(Port 28)(23:09:33:622): Parse Analog Event - Point   1: Value 27650.000000
+(Port 28)(23:09:33:622): Master Application Confirm at Address 131
+(Port 28)(23:09:33:629)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+C6 C6 00 (8C EF)-CRC
+(Port 28)(23:09:35:669):  
+(Port 28)(23:09:35:669): Event Poll - OrionLX-2 Address 131
+(Port 28)(23:09:35:675)TX[24]: 05 64 11 C4 83 00 82 00 (99 85)-CRC
+C7 C7 01 3C 04 06 3C 03 06 3C 02 06 (30 15)-CRC
+(Port 28)(23:09:35:681)RX[46]: 05 64 25 44 82 00 83 00 (66 49)-CRC
+C7 E7 81 00 00 20 04 28 02 00 01 00 01 00 6C 6D (B1 7C)-CRC
+EE C8 0D 41 01 02 00 01 8E 6A 6D EE C8 0D 41 01 (B2 38)-CRC
+(Port 28)(23:09:35:682): OrionLX-2
+(Port 28)(23:09:35:683): Parse Object 32 Variation 4 Qualifier 28 Count 2  
+(Port 28)(23:09:35:684): Time: 09/11/2013  16:09:34.061 Local
+(Port 28)(23:09:35:684): Parse Analog Event - Point   1: Value 27648.000000
+(Port 28)(23:09:35:685): Time: 09/11/2013  16:09:34.061 Local
+(Port 28)(23:09:35:686): Parse Analog Event - Point   2: Value 27278.000000
+(Port 28)(23:09:35:686): Master Application Confirm at Address 131
+(Port 28)(23:09:35:692)TX[15]: 05 64 08 C4 83 00 82 00 (63 D2)-CRC
+C7 C7 00 (7A 5D)-CRC
