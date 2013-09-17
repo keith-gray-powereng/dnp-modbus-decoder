@@ -16,42 +16,44 @@ class SimpleTest(TestCase):
         #POC does not require a standard setup
         pass
         
+        #heads up, these numbers are signed
+        # a leading zero is needed to show positivity
     def test_sliceTestFail(self):
-        testWord = bitstring.Bits("0x0000F0000")
-        result = slice(testWord, 0, 2)
-        assert result == bitstring.Bits("0x0") , "slice somehow returned the correct result"
+        testWord = bitstring.Bits("0x00000000000F0000")
+        result = BitSlice.slice(testWord, 0, 2)
+        assert result.int == bitstring.Bits("0x0").int , "slice somehow returned the correct result ({})".format(result)
         
     def test_sliceTestPass(self):
-        testWord = bitstring.Bits("0x0000FF0000")
-        result = slice(testWord, 16, 8)
-        assert result == bitstring.Bits("0xFF") , "slice is pulling the wrong bits"    
+        testWord = bitstring.Bits("0x0000000000FF0000")
+        result = BitSlice.slice(testWord, 8, 16)
+        assert result.int == bitstring.Bits("0x0FF").int , "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0FF").int)   
         
     def test_sliceSequenceNum(self):
         testWord = bitstring.Bits("0x000000000000000E")
-        result = getSequence(testWord)
-        assert result == bitstring.Bits("0x7") , "get Sequence slice Failed"
+        result = BitSlice.getSequence(testWord)
+        assert result.int == bitstring.Bits("0x07").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x07").int)   
         
     def test_sliceConsequtiveFlag(self):
         testWord = bitstring.Bits("0x0000000000000020")
-        result = getConsequtiveFlag(testWord, )
-        assert result == bitstring.Bits("0x1")
+        result = BitSlice.getConsequtiveFlag(testWord, )
+        assert result.int == bitstring.Bits("0x01").int,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x01").int)   
         
     def test_sliceUnsolicitedFlag(self):
         testWord = bitstring.Bits("0x0000000000000010")
-        result = getUnsolicitedFlag(testWord)
-        assert result == bitstring.Bits("0x1")     
+        result = BitSlice.getUnsolicitedFlag(testWord)
+        assert result.int == bitstring.Bits("0x01").int,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x01").int)   
 
     def test_sliceFirstFlag(self):
         testWord = bitstring.Bits("0x0000000000000040")
-        result = getFirstFlag(testWord)
-        assert result == bitstring.Bits("0x1")  
+        result = BitSlice.getFirstFlag(testWord)
+        assert result.int == bitstring.Bits("0x01").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x01").int)   
 
     def test_sliceFinalFlag(self):
         testWord = bitstring.Bits("0x0000000000000080")
-        result = getFinalFlag(testWord)
-        assert result == bitstring.Bits("0x1") 
+        result = BitSlice.getFinalFlag(testWord)
+        assert result.int == bitstring.Bits("0x01").int,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x01").int)   
         
     def test_getFunctionCode(self):
         testWord = bitstring.Bits("0x000000000000FF00")
-        result = getFuncCode(testWord)
-        assert result == bitstring.Bits("0x1") 
+        result = BitSlice.getFuncCode(testWord)
+        assert result.int == bitstring.Bits("0x0FF").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0FF").int)   
