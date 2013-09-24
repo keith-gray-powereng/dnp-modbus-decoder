@@ -57,3 +57,13 @@ class SimpleTest(TestCase):
         testWord = bitstring.Bits("0x000000000000FF00")
         result = BitSlice.getFuncCode(testWord)
         assert result.int == bitstring.Bits("0x0FF").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0FF").int)   
+        
+    def test_getLSBCodeSet(self):
+        testWord = bitstring.Bits("0x00000000000F0000")
+        result = BitSlice.getLSBInternalIndications(testWord)
+        assert result.int == bitstring.Bits("0x0F").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0F").int)   
+        
+    def test_getMSBCodeSet(self):
+        testWord = bitstring.Bits("0x0000000000F00000")
+        result = BitSlice.getMSBInternalIndications(testWord)
+        assert result.int == bitstring.Bits("0x0F").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0F").int)   
