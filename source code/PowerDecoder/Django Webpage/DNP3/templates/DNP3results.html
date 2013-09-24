@@ -1,0 +1,49 @@
+{% extends "master_template.html" %}
+
+	{% block title %} 
+	DNP3 Results
+	{% endblock %}
+	
+	{% block header %}
+		<p style="text-indent: 3em; ">
+		<a href="http://powereng.com" target="_blank">
+		<img src="http://powereng.com/wp-content/themes/power/img/power-logo.png" width="171" height="51"></a>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp
+		<font size="7">Power Decoder</font></p>
+		</br> 
+
+	{% endblock %}
+	
+	{% block sidebar %}
+		<ul>
+			<li><a href = 'http://127.0.0.1:8000/Power/DNP3/DNP3/'>DNP3</a></li>
+			<li><a href = 'http://127.0.0.1:8000/Power/Modbus/Modbus/'>Modbus</a></li>
+			<li><a href = 'http://127.0.0.1:8000/Power/About/'>About</a></li>
+			<li><a href = 'http://127.0.0.1:8000/Power/Contact/'>Contact</a></li>			
+
+		</ul>
+	{% endblock %}
+	{% block content %}
+		<h2>DNP3 Message results</h2>
+		
+		<p>Thank you for using Power Decoder. <br>
+			These are your results...<br><br>
+			<strong><u>Original Message:</u></strong>  {{ originalMsg }}<br>
+			<strong><u>Decoded Message:</u></strong><br>
+			<ul>
+				{% for i in decodedStuff %}
+					{% if i != "" %}
+						<li>{{ i }}</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+			<br><br>
+			
+			Would you like to decode another message?
+			Click <a href = 'http://127.0.0.1:8000/Power/DNP3/DNP3/'>here</a>!
+		</p>
+	{% endblock %}
+	
+	{% block footer %}
+	{% endblock %}

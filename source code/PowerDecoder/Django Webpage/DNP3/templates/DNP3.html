@@ -1,0 +1,51 @@
+{% extends "master_template.html" %}
+
+	{% block title %} 
+	DNP3 Parser
+	{% endblock %}
+	
+	{% block header %}
+		<p style="text-indent: 3em; ">
+		<a href="http://powereng.com" target="_blank">
+		<img src="http://powereng.com/wp-content/themes/power/img/power-logo.png" width="171" height="51"></a>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp
+		<font size="7">Power Decoder</font></p>
+		</br> 
+
+	{% endblock %}
+	
+	{% block sidebar %}
+		<ul>
+			<li><a href = 'http://127.0.0.1:8000/Power/DNP3/DNP3/'>DNP3</a></li>
+			<li><a href = 'http://127.0.0.1:8000/Power/Modbus/Modbus/'>Modbus</a></li>
+			<li><a href = 'http://127.0.0.1:8000/Power/About/'>About</a></li>
+			<li><a href = 'http://127.0.0.1:8000/Power/Contact/'>Contact</a></li>			
+
+		</ul>
+	{% endblock %}
+	{% block content %}
+		<h2>DNP3 Parser</h2>
+		
+		<p>Welcome to your DNP3 protocol translator. <br>
+			You can either input your message from a local file or 
+			you can input your message manually.
+			<br><br>
+			
+			Upload your file (.txt)...
+			<form action = "http://127.0.0.1:8000/Power/DNP3/DNP3results/" method = "get">
+			<input type="file" name="datafile" size="40">
+			<br><br>
+			
+			Manually type your message here...
+			<br><br>
+			<input type = "text" name = "message" value = "Message...">
+			<br><br><br><br>
+			
+			<input type = "submit" value = "Decode Message(s)">
+			</form>
+		</p>
+	{% endblock %}
+	
+	{% block footer %}
+	{% endblock %}
