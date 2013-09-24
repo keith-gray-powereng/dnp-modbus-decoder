@@ -66,4 +66,36 @@ class SimpleTest(TestCase):
     def test_getMSBCodeSet(self):
         testWord = bitstring.Bits("0x0000000000F00000")
         result = BitSlice.getMSBInternalIndications(testWord)
-        assert result.int == bitstring.Bits("0x0F").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0F").int)   
+        assert result.int == bitstring.Bits("0x0F").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0F").int)  
+
+    def test_DataStartIsCorrect(self):
+        testWord = bitstring.Bits("0x0564B34483000100DF89")
+        result = BitSlice.DataLayerCorrect(testWord)
+        assert result , "The hex number is not interpreted right"
+        
+    def test_DataLayerLengthSliceGrabsRightBits(self):
+        testWord = bitstring.Bits("0x0564B34483000100DF89")
+        result = BitSlice.DataLayerLength(testWord)
+        assert result.uint == bitstring.Bits("0xB3").uint , "Did not grab correct length"
+        
+    def test_DataLayerControlSliceGrabsRightBits(self):
+        testWord = bitstring.Bits("0x0564B34483000100DF89")
+        result = BitSlice.DataLayerControl(testWord)
+        assert result.uint == bitstring.Bits("0x44").uint , "Did not grab right control Octet"
+        
+    def test_DataLayerSourceSliceGrabsRightBits(self):
+        testWord = bitstring.Bits("0x0564B34483000100DF89")
+        result = BitSlice.DataLayerSource(testWord)
+        assert result.uint == bitstring.Bits("0x0100").uint , "Did not Grab the right bits"
+        
+    def test_DataLayerDestinationSliceGrabsRightBits(self):
+        testWord = bitstring.Bits("0x0564B34483000100DF89")
+        result = BitSlice.DataLayerDestination(testWord)
+        assert result.uint == bitstring.Bits("0x8300").uint , "Did not Grab the right bits"
+    
+    def test_StripCRCRemovesCRCBits(self):
+        testWord = bitstring.Bits("0x0564B34483000100DF89")
+        result = BitSlice.StripCRCBits(testWord)
+        assert result.uint == bitstring.Bits("0x0564B34483000100").uint , "Did not Grab the right bits"
+        
+    
