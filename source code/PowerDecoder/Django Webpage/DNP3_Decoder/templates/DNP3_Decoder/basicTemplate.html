@@ -27,6 +27,8 @@ background-color: #FF681F;
 </tr>
 </table>
 
+{% block decodedOutput %}{% endblock decodedOutput%}
+
 <p>Input your DNP3 or Modbus message(s) in the textbox below or import it from a text file.</p>
 
 <form action="">
@@ -35,8 +37,8 @@ background-color: #FF681F;
 
 <br><strong>OR</strong><br><br>
 
-<form action="/decoder/dnp3/" method="get">
-<input type="text" name="message" value = "Enter message..."><br></br>
+<form action="/decoder/output/" method="get">
+<input type="text" name="msg" value = "Enter message..."><br></br>
 
 <input type="radio" name="prtcl" value="Auto">Auto-detect
 <input type="radio" name="prtcl" value="DNP" selected>DNP3

@@ -1,16 +1,13 @@
-{% extends "C:\Users\Owner\Desktop\PowerDecoder\DNP3_Decoder\templates\DNP3_Decoder\basicTemplate.html" %}
+{% extends "./DNP3_Decoder/basicTemplate.html" %}
 
 {% block decodedOutput %}
-{% if get.prtcl == "dnp3" %}
-	Call DNP3 parser
-{% elif get.prtcl == "modbus" %}
-	Call Modbus parser
-{% else %}
-	Call Auto parser
-	
-<strong><u>Decoded Message(s):</u></strong><br>
+<strong><u>Original Message: </u></strong>{{ originalMsg }}<br>
+<strong><u>Decoded Message:</u></strong><br>
 <ul>
-	<li>Decoded Message will display here</li>
-	<li>Because you see this, you're at <b>auto.html!</b></li>
+	{% for i in decodedStuff %}
+		{% if i != "" %}
+			<li>{{ i }}</li>
+		{% endif %}
+	{% endfor %}
 </ul>
 {% endblock decodedOutput %}
