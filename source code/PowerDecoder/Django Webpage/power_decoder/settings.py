@@ -1,4 +1,5 @@
-# Django settings for power_decoder project.
+
+# Django settings for PowerDecoder project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -9,17 +10,9 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
-    }
-}
+DATABASES = {}
+
+TEST_RUNNER = 'testing.DatabaselessTestRunner'
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -69,7 +62,6 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-	('assets', 'static')
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -84,7 +76,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '79&^+uu112m#a)n(x8ub=^p@*+yhpxqr#n#^a@4+02jq#=v!y='
+SECRET_KEY = 'utxrc^^g)8ijby!!62ep&cu-gmalskh=k9_6u82nq*4sofpc)7'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -95,46 +87,38 @@ TEMPLATE_LOADERS = (
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
+    #'django.contrib.sessions.middleware.SessionMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.contrib.auth.middleware.AuthenticationMiddleware',
+    #'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'power_decoder.urls'
+ROOT_URLCONF = 'PowerDecoder.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'power_decoder.wsgi.application'
+WSGI_APPLICATION = 'PowerDecoder.wsgi.application'
 
 TEMPLATE_DIRS = (
-	#'C:/Django-1.5/projects/power_decoder/templates',
-	'templates',
-	#'C:/Django-1.5/projects/power_decoder/DNP3/templates',
-	'DNP3/templates',
-	#'C:/Django-1.5/projects/power_decoder/Modbus/templates',
-	'Modbus/templates',
-	#'static/css',
-	
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
 
 INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
+    #'django.contrib.auth',
+    #'django.contrib.contenttypes',
+    #'django.contrib.sessions',
+    #'django.contrib.sites',
+    #'django.contrib.messages',
     'django.contrib.staticfiles',
+	'DNP3_Decoder',
+	'bitstring',
     # Uncomment the next line to enable the admin:
-     'django.contrib.admin',
+    # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-	'DNP3',
-	'Modbus',
 )
 
 # A sample logging configuration. The only tangible logging
