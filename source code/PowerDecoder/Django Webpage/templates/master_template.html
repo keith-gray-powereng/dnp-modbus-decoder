@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang = 'en'>
+	<head>
+		<title>{% block title %}My Master Sample Template{% endblock %}</title>
+		<link rel = "stylesheet" type = "text/css" href = "{% static "css/master_css.css" %}">
+		<link rel="icon" type="image/png" href= " {% static "images/favicon.ico" %}">
+	</head>
+	<body style = "background-image: url('http://www.cannoncorp.us/wp-content/uploads/2012/07/electrical-Medium.jpg'); background-repeat: 'no-repeat'; background-size: 'cover';">
+		</br></br></br></br></br></br>
+		<div id = "header"> 
+			{% block header %} <h1>This is the header portion of the page. </h1> {% endblock %}
+		</div>
+			<div id = "page">
+				<div id = "sidebar">
+					{% block sidebar %}
+					<ul>
+						<li><a href = '/DNP3/'>DNP3</a></li>
+						<li><a href = '/Modbus/'>Modbus</a></li>
+						<li><a href = '/about/'>About</a></li>
+						<li><a href = '/contact/'>Contact</a></li>
+					</ul>
+					{% endblock %}
+				</div>
+				<div id = "content">
+					{% block content %}This is the content area. Under construction.{% endblock %}	
+				</div>
+			</div>
+			<div id = "footer">
+				{% block footer %} {% endblock %}
+			</div>
+	</body>
+</html>

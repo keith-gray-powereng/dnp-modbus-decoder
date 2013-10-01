@@ -1,0 +1,13 @@
+{% extends "./DNP3_Decoder/basicTemplate.html" %}
+
+{% block decodedOutput %}
+<strong><u>Original Message: </u></strong>{{ originalMsg }}<br>
+<strong><u>Decoded Message:</u></strong><br>
+<ul>
+	{% for i in decodedStuff %}
+		{% if i != "" %}
+			<li>{{ i }}</li>
+		{% endif %}
+	{% endfor %}
+</ul>
+{% endblock decodedOutput %}

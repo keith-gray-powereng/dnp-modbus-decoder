@@ -1,0 +1,77 @@
+#body{ 
+	/*text-align: left;
+	height: 100%;
+	width: 100%;*/
+	background-image:url("http://www.iebmedia.com/images/art_images/IEB68_p28_2.jpg")no-repeat center center fixed;
+	background-image:-webkit-background-size: cover;
+	background-image:-moz-background-size: cover;
+	background-image:-o-background-size: cover;
+	background-size: cover;
+	position: fixed;
+	z-index: -1; 
+	background-color:#cccccc;
+	/*background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size: 100%; */
+	
+}
+
+#header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10%;
+	text-align: left;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #F08205 0%, #B01919 100%);
+
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #F08205 0%, #B01919 100%);
+
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #F08205 0%, #B01919 100%);
+
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F08205), color-stop(1, #B01919));
+
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #F08205 0%, #B01919 100%);
+
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #F08205 0%, #B01919 100%);
+	
+}
+
+#page{
+	width: 90%;
+	height: 64%;
+	text-align: left;
+	<!--margin: 2%;-->
+	background-color: green;
+}
+
+#sidebar{
+	float: left;
+	height: 100%;
+	width: 20%;
+	background-color: #3CB371;
+	border: 1px solid #000;
+}
+
+#content{
+	float:right;
+	width: 68%;
+	background-color: #778899;
+	border: 1px solid #f00;
+	padding: 5%; /*KEEP A CLOSE EYE ON THIS */
+}
+
+#footer{
+   position:absolute;
+   bottom:0;
+   left: 0;
+   width:100%;
+   height:10%;   /* Height of the footer */
+   background: #434343;
+}

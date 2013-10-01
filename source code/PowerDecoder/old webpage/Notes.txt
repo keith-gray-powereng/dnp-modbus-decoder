@@ -1,0 +1,27 @@
+			-NOTES ON DJANGO DEVELOPMENT-
+
+	Basic example: mysite(head)->polls
+
+-----IMPORTANT COMMANDS-----
+Starting a project-
+django-admin.py startproject MY_PROJECT
+
+Create an application and its basic files
+python manage.py startapp MY_APP
+
+Create database tables as specified in settings.py-
+python manage.py syncdb
+(Re-run this command to remake database tables after you make changes to their design)
+
+Convert python database basics into SQL automatically
+python manage.py sql MY_APP
+
+--QUESTIONS--
+Group- Are we shooting for one page with tabs or multiple pages?
+	-Probably depends on what I find
+
+--LOOK INTO LATER--
+Django comes with a default "collapse" class for hiding unnecesssary information
+
+They're talking about templates, so maybe use one to design the look of the site?
+
