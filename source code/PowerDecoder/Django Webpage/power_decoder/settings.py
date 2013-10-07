@@ -114,7 +114,7 @@ INSTALLED_APPS = (
     #'django.contrib.messages',
     'django.contrib.staticfiles',
 	'bitstring',
-    'testing',
+    #'testing',
     'DataLinkTranslator',
     'DNP3',
     'power_decoder'
