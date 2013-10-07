@@ -1,13 +1,6 @@
 
-"""
-This file will likely not run.
-Test are written first, and from these test, the actual functions are made
-"""
-
-#from django.test import TestCase
 from unittest import TestCase
 import bitstring
-#import POC
 import BitSlice
 import DataLinkTranslator
 
