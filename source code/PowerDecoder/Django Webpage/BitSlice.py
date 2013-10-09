@@ -80,3 +80,4 @@ def OH_Qualifier(input, response, seq = 0):
 # I'm going to re-evaluate what is going on, as this gets hella complicated
 #each DNP object parses differntly
 #data type codes can be found on page 170, and can be defined further in that section
+

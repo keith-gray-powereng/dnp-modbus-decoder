@@ -1,0 +1,181 @@
+----------- ** Capture Session Started 09/11/2013 14:59:11 ** ------------
+(Port 6)(19:59:13:438):  
+(Port 6)(19:59:13:438): Reset Remote Link - AlcadAT Address 1 
+(Port 6)(19:59:13:466)TX[10]: 05 64 05 C0 01 00 EF FF (7C 41)-CRC
+(Port 6)(19:59:14:499): Response Timeout for AlcadAT, waited: 1000
+(Port 6)(19:59:14:500): Consecutive Failures from Device AlcadAT: 13
+(Port 6)(19:59:14:500): Setting All Points for Device AlcadAT: Offline
+(Port 6)(19:59:15:521):  
+(Port 6)(19:59:15:522): Reset Remote Link - AlcadAT Address 1 
+(Port 6)(19:59:15:550)TX[10]: 05 64 05 C0 01 00 EF FF (7C 41)-CRC
+(Port 6)(19:59:16:582): Response Timeout for AlcadAT, waited: 1000
+(Port 6)(19:59:16:583): Consecutive Failures from Device AlcadAT: 14
+(Port 6)(19:59:16:583): Setting All Points for Device AlcadAT: Offline
+(Port 6)(19:59:17:604):  
+(Port 6)(19:59:17:604): Reset Remote Link - AlcadAT Address 1 
+(Port 6)(19:59:17:633)TX[10]: 05 64 05 C0 01 00 EF FF (7C 41)-CRC
+(Port 6)(19:59:18:665): Response Timeout for AlcadAT, waited: 1000
+(Port 6)(19:59:18:666): Consecutive Failures from Device AlcadAT: 15
+(Port 6)(19:59:18:666): Setting All Points for Device AlcadAT: Offline
+(Port 6)(19:59:19:687):  
+(Port 6)(19:59:19:687): Reset Remote Link - AlcadAT Address 1 
+(Port 6)(19:59:19:715)TX[10]: 05 64 05 C0 01 00 EF FF (7C 41)-CRC
+(Port 6)(19:59:20:748): Response Timeout for AlcadAT, waited: 1000
+(Port 6)(19:59:20:749): Consecutive Failures from Device AlcadAT: 16
+(Port 6)(19:59:20:749): Setting All Points for Device AlcadAT: Offline
+(Port 6)(19:59:21:771):  
+(Port 6)(19:59:21:772): Reset Remote Link - AlcadAT Address 1 
+(Port 6)(19:59:21:799)TX[10]: 05 64 05 C0 01 00 EF FF (7C 41)-CRC
+(Port 6)(19:59:21:811)RX[10]: 05 64 05 00 EF FF 01 00 (6B 84)-CRC
+(Port 6)(19:59:21:811): Response to Reset Link - Function Code 0
+(Port 6)(19:59:22:321):  
+(Port 6)(19:59:22:322): Disable Unsoliciteds - AlcadAT Address 1
+(Port 6)(19:59:22:357)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+E6 C6 15 3C 04 06 3C 03 06 3C 02 06 (EE 7D)-CRC
+(Port 6)(19:59:22:371)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+C3 C6 81 10 01 (62 70)-CRC
+(Port 6)(19:59:22:371): AlcadAT
+(Port 6)(19:59:22:371): IIN: Time Sync Request
+(Port 6)(19:59:22:372): IIN: Function Code not Implemented
+(Port 6)(19:59:22:884):  
+(Port 6)(19:59:22:884): Event/Individual Point Poll - AlcadAT Address 1
+(Port 6)(19:59:22:931)TX[49]: 05 64 26 C4 01 00 EF FF (B6 AF)-CRC
+E7 C7 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (EE 46)-CRC
+00 06 00 01 02 01 0C 00 0C 00 1E 02 01 06 00 08 (49 67)-CRC
+00 (FF FF)-CRC
+(Port 6)(19:59:22:967)RX[53]: 05 64 2A 44 EF FF 01 00 (A9 8D)-CRC
+C4 C7 81 10 00 01 02 00 00 06 01 01 01 01 01 01 (EB 0D)-CRC
+01 01 02 00 0C 0C 01 1E 02 00 06 08 01 0C 00 01 (67 0D)-CRC
+18 00 01 00 00 (9C 19)-CRC
+(Port 6)(19:59:22:967): AlcadAT
+(Port 6)(19:59:22:967): IIN: Time Sync Request
+(Port 6)(19:59:22:969): Parse Binary Inputs - Range 0 to 6 
+(Port 6)(19:59:22:971): Parse Binary Inputs - Range 12 to 12 
+(Port 6)(19:59:22:975): Parse Analog Inputs - Range 6 to 8
+(Port 6)(19:59:25:019):  
+(Port 6)(19:59:25:020): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:25:056)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+E8 C8 01 3C 04 06 3C 03 06 3C 02 06 (B0 E3)-CRC
+(Port 6)(19:59:25:070)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+C5 C8 81 10 00 (85 6D)-CRC
+(Port 6)(19:59:25:070): AlcadAT
+(Port 6)(19:59:25:070): IIN: Time Sync Request
+(Port 6)(19:59:27:114):  
+(Port 6)(19:59:27:115): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:27:150)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+E9 C9 01 3C 04 06 3C 03 06 3C 02 06 (D9 19)-CRC
+(Port 6)(19:59:27:165)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+C6 C9 81 10 00 (67 CA)-CRC
+(Port 6)(19:59:27:165): AlcadAT
+(Port 6)(19:59:27:165): IIN: Time Sync Request
+(Port 6)(19:59:29:209):  
+(Port 6)(19:59:29:209): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:29:245)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+EA CA 01 3C 04 06 3C 03 06 3C 02 06 (1B 5A)-CRC
+(Port 6)(19:59:29:260)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+C7 CA 81 10 00 (20 E3)-CRC
+(Port 6)(19:59:29:260): AlcadAT
+(Port 6)(19:59:29:261): IIN: Time Sync Request
+(Port 6)(19:59:31:304):  
+(Port 6)(19:59:31:304): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:31:340)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+EB CB 01 3C 04 06 3C 03 06 3C 02 06 (72 A0)-CRC
+(Port 6)(19:59:31:354)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+C8 CB 81 10 00 (93 9D)-CRC
+(Port 6)(19:59:31:354): AlcadAT
+(Port 6)(19:59:31:354): IIN: Time Sync Request
+(Port 6)(19:59:33:034):  
+(Port 6)(19:59:33:034): Event/Individual Point Poll - AlcadAT Address 1
+(Port 6)(19:59:33:083)TX[49]: 05 64 26 C4 01 00 EF FF (B6 AF)-CRC
+EC CC 01 3C 04 06 3C 03 06 3C 02 06 01 02 01 00 (8B 73)-CRC
+00 06 00 01 02 01 0C 00 0C 00 1E 02 01 06 00 08 (49 67)-CRC
+00 (FF FF)-CRC
+(Port 6)(19:59:33:118)RX[53]: 05 64 2A 44 EF FF 01 00 (A9 8D)-CRC
+C9 CC 81 10 00 01 02 00 00 06 01 01 01 01 01 01 (DF D8)-CRC
+01 01 02 00 0C 0C 01 1E 02 00 06 08 01 0C 00 01 (67 0D)-CRC
+18 00 01 00 00 (9C 19)-CRC
+(Port 6)(19:59:33:118): AlcadAT
+(Port 6)(19:59:33:119): IIN: Time Sync Request
+(Port 6)(19:59:33:122): Parse Binary Inputs - Range 0 to 6 
+(Port 6)(19:59:33:124): Parse Binary Inputs - Range 12 to 12 
+(Port 6)(19:59:33:126): Parse Analog Inputs - Range 6 to 8
+(Port 6)(19:59:35:170):  
+(Port 6)(19:59:35:171): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:35:207)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+ED CD 01 3C 04 06 3C 03 06 3C 02 06 (F6 27)-CRC
+(Port 6)(19:59:35:220)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+CA CD 81 10 00 (1D CF)-CRC
+(Port 6)(19:59:35:220): AlcadAT
+(Port 6)(19:59:35:220): IIN: Time Sync Request
+(Port 6)(19:59:37:264):  
+(Port 6)(19:59:37:265): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:37:300)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+EE CE 01 3C 04 06 3C 03 06 3C 02 06 (34 64)-CRC
+(Port 6)(19:59:37:314)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+CB CE 81 10 00 (5A E6)-CRC
+(Port 6)(19:59:37:314): AlcadAT
+(Port 6)(19:59:37:315): IIN: Time Sync Request
+(Port 6)(19:59:39:358):  
+(Port 6)(19:59:39:358): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:39:394)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+EF CF 01 3C 04 06 3C 03 06 3C 02 06 (5D 9E)-CRC
+(Port 6)(19:59:39:408)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+CC CF 81 10 00 (A0 CD)-CRC
+(Port 6)(19:59:39:408): AlcadAT
+(Port 6)(19:59:39:408): IIN: Time Sync Request
+(Port 6)(19:59:41:453):  
+(Port 6)(19:59:41:453): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:41:489)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+F0 C0 01 3C 04 06 3C 03 06 3C 02 06 (CB 42)-CRC
+(Port 6)(19:59:41:505)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+CD C0 81 10 00 (E3 CD)-CRC
+(Port 6)(19:59:41:506): AlcadAT
+(Port 6)(19:59:41:506): IIN: Time Sync Request
+(Port 6)(19:59:43:549):  
+(Port 6)(19:59:43:549): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:43:585)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+F1 C1 01 3C 04 06 3C 03 06 3C 02 06 (A2 B8)-CRC
+(Port 6)(19:59:43:599)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+CE C1 81 10 00 (01 6A)-CRC
+(Port 6)(19:59:43:599): AlcadAT
+(Port 6)(19:59:43:599): IIN: Time Sync Request
+(Port 6)(19:59:45:643):  
+(Port 6)(19:59:45:644): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:45:680)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+F2 C2 01 3C 04 06 3C 03 06 3C 02 06 (60 FB)-CRC
+(Port 6)(19:59:45:694)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+CF C2 81 10 00 (46 43)-CRC
+(Port 6)(19:59:45:694): AlcadAT
+(Port 6)(19:59:45:694): IIN: Time Sync Request
+(Port 6)(19:59:47:738):  
+(Port 6)(19:59:47:738): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:47:774)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+F3 C3 01 3C 04 06 3C 03 06 3C 02 06 (09 01)-CRC
+(Port 6)(19:59:47:788)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+D0 C3 81 10 00 (67 97)-CRC
+(Port 6)(19:59:47:789): AlcadAT
+(Port 6)(19:59:47:789): IIN: Time Sync Request
+(Port 6)(19:59:49:832):  
+(Port 6)(19:59:49:833): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:49:868)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+F4 C4 01 3C 04 06 3C 03 06 3C 02 06 (E4 7C)-CRC
+(Port 6)(19:59:49:881)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+D1 C4 81 10 00 (0B 62)-CRC
+(Port 6)(19:59:49:882): AlcadAT
+(Port 6)(19:59:49:882): IIN: Time Sync Request
+(Port 6)(19:59:51:926):  
+(Port 6)(19:59:51:926): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:51:962)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+F5 C5 01 3C 04 06 3C 03 06 3C 02 06 (8D 86)-CRC
+(Port 6)(19:59:51:979)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+D2 C5 81 10 00 (E9 C5)-CRC
+(Port 6)(19:59:51:979): AlcadAT
+(Port 6)(19:59:51:979): IIN: Time Sync Request
+(Port 6)(19:59:54:023):  
+(Port 6)(19:59:54:023): Event Poll - AlcadAT Address 1
+(Port 6)(19:59:54:059)TX[24]: 05 64 11 C4 01 00 EF FF (CB F8)-CRC
+F6 C6 01 3C 04 06 3C 03 06 3C 02 06 (4F C5)-CRC
+(Port 6)(19:59:54:073)RX[17]: 05 64 0A 44 EF FF 01 00 (2B 7C)-CRC
+D3 C6 81 10 00 (AE EC)-CRC
+(Port 6)(19:59:54:073): AlcadAT
+(Port 6)(19:59:54:073): IIN: Time Sync Request

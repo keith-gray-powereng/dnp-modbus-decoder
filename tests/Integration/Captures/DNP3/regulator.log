@@ -1,0 +1,397 @@
+----------- ** Capture Session Started 12/09/2011 14:10:21 ** ------------
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+F8 C8 05 29 02 28 01 00 10 00 00 80 00 (E8 57)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+F1 C8 81 00 00 29 02 28 01 00 10 00 00 80 00 (7E 25)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+F9 C9 05 29 02 28 01 00 10 00 00 80 00 (34 E4)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+F2 C9 81 00 00 29 02 28 01 00 10 00 00 80 00 (A6 A9)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+FA CA 05 29 02 28 01 00 10 00 00 80 00 (29 7D)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+FB CB 05 29 02 28 01 00 10 00 00 80 00 (F5 CE)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+F2 CB 81 00 00 29 02 28 01 00 10 00 00 80 00 (46 D4)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+FC CC 05 29 02 28 01 00 10 00 00 80 00 (6A 02)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+F3 CC 81 00 00 29 02 28 01 00 10 00 00 80 00 (8E 02)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+FD CD 05 29 02 28 01 00 10 00 00 80 00 (B6 B1)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+FE CE 05 29 02 28 01 00 10 00 00 80 00 (AB 28)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+F3 CE 81 00 00 29 02 28 01 00 10 00 00 80 00 (6E 7F)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+FF CF 05 29 02 28 01 00 10 00 00 80 00 (77 9B)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+F4 CF 81 00 00 29 02 28 01 00 10 00 00 80 00 (AF 06)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+C0 C0 05 29 02 28 01 00 10 00 00 80 00 (69 FB)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+C1 C1 05 29 02 28 01 00 10 00 00 80 00 (B5 48)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+F4 C1 81 00 00 29 02 28 01 00 10 00 00 80 00 (76 3A)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+C2 C2 05 29 02 28 01 00 10 00 00 80 00 (A8 D1)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+F5 C2 81 00 00 29 02 28 01 00 10 00 00 80 00 (7E 17)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+C3 C3 05 29 02 28 01 00 10 00 00 80 00 (74 62)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+C4 C4 05 29 02 28 01 00 10 00 00 80 00 (EB AE)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+F5 C4 81 00 00 29 02 28 01 00 10 00 00 80 00 (5E 91)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+C5 C5 05 29 02 28 01 00 10 00 00 80 00 (37 1D)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+F6 C5 81 00 00 29 02 28 01 00 10 00 00 80 00 (86 1D)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+C6 C6 05 29 02 28 01 00 10 00 00 80 00 (2A 84)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+F6 C6 81 00 00 29 02 28 01 00 10 00 00 80 00 (96 5E)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+C7 C7 05 29 02 28 01 00 10 00 00 80 00 (F6 37)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+C8 C8 05 29 02 28 01 00 10 00 00 80 00 (6D 50)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+F7 C8 81 00 00 29 02 28 01 00 10 00 00 80 00 (57 0C)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+C9 C9 05 29 02 28 01 00 10 00 00 80 00 (B1 E3)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+F7 C9 81 00 00 29 02 28 01 00 10 00 00 80 00 (A7 32)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+CA CA 05 29 02 28 01 00 10 00 00 80 00 (AC 7A)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+CB CB 05 29 02 28 01 00 10 00 00 80 00 (70 C9)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+F8 CB 81 00 00 29 02 28 01 00 10 00 00 80 00 (3D AF)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+CC CC 05 29 02 28 01 00 10 00 00 80 00 (EF 05)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+F8 CC 81 00 00 29 02 28 01 00 10 00 00 80 00 (ED 17)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+CD CD 05 29 02 28 01 00 10 00 00 80 00 (33 B6)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+CE CE 05 29 02 28 01 00 10 00 00 80 00 (2E 2F)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+F9 CE 81 00 00 29 02 28 01 00 10 00 00 80 00 (15 04)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+CF CF 05 29 02 28 01 00 10 00 00 80 00 (F2 9C)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+F9 CF 81 00 00 29 02 28 01 00 10 00 00 80 00 (E5 3A)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+D0 C0 05 29 02 28 01 00 10 00 00 80 00 (3D 3D)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+FA C0 81 00 00 29 02 28 01 00 10 00 00 80 00 (E4 8A)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+D1 C1 05 29 02 28 01 00 10 00 00 80 00 (E1 8E)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+FA C1 81 00 00 29 02 28 01 00 10 00 00 80 00 (14 B4)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+D2 C2 05 29 02 28 01 00 10 00 00 80 00 (FC 17)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+D3 C3 05 29 02 28 01 00 10 00 00 80 00 (20 A4)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+FB C3 81 00 00 29 02 28 01 00 10 00 00 80 00 (EC A7)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+D4 C4 05 29 02 28 01 00 10 00 00 80 00 (BF 68)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+FB C4 81 00 00 29 02 28 01 00 10 00 00 80 00 (3C 1F)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+D5 C5 05 29 02 28 01 00 10 00 00 80 00 (63 DB)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+D6 C6 05 29 02 28 01 00 10 00 00 80 00 (7E 42)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+FC C6 81 00 00 29 02 28 01 00 10 00 00 80 00 (ED 25)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+D7 C7 05 29 02 28 01 00 10 00 00 80 00 (A2 F1)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+FC C7 81 00 00 29 02 28 01 00 10 00 00 80 00 (1D 1B)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+D8 C8 05 29 02 28 01 00 10 00 00 80 00 (39 96)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+D9 C9 05 29 02 28 01 00 10 00 00 80 00 (E5 25)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+FD C9 81 00 00 29 02 28 01 00 10 00 00 80 00 (DC 49)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+DA CA 05 29 02 28 01 00 10 00 00 80 00 (F8 BC)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+FD CA 81 00 00 29 02 28 01 00 10 00 00 80 00 (CC 0A)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+DB CB 05 29 02 28 01 00 10 00 00 80 00 (24 0F)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+DC CC 05 29 02 28 01 00 10 00 00 80 00 (BB C3)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+FE CC 81 00 00 29 02 28 01 00 10 00 00 80 00 (C4 3E)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+DD CD 05 29 02 28 01 00 10 00 00 80 00 (67 70)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+FF CD 81 00 00 29 02 28 01 00 10 00 00 80 00 (2C 6E)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+DE CE 05 29 02 28 01 00 10 00 00 80 00 (7A E9)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+FE CE 81 00 00 29 02 28 01 00 10 00 00 80 00 (24 43)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+DF CF 05 29 02 28 01 00 10 00 00 80 00 (A6 5A)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+E0 C0 05 29 02 28 01 00 10 00 00 80 00 (B8 3A)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+C0 C0 81 00 00 29 02 28 01 00 10 00 00 80 00 (AE F5)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+E1 C1 05 29 02 28 01 00 10 00 00 80 00 (64 89)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+FF C1 81 00 00 29 02 28 01 00 10 00 00 80 00 (15 2F)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+E2 C2 05 29 02 28 01 00 10 00 00 80 00 (79 10)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+E3 C3 05 29 02 28 01 00 10 00 00 80 00 (A5 A3)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+C1 C3 81 00 00 29 02 28 01 00 10 00 00 80 00 (A6 D8)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+E4 C4 05 29 02 28 01 00 10 00 00 80 00 (3A 6F)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+C0 C4 81 00 00 29 02 28 01 00 10 00 00 80 00 (6E 0E)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+E5 C5 05 29 02 28 01 00 10 00 00 80 00 (E6 DC)-CRC
+(Port 23): No Response for Control
+(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC
+E6 C6 05 29 02 28 01 00 10 00 00 80 00 (FB 45)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 02 00 (A4 D8)-CRC
+C2 C6 81 00 00 29 02 28 01 00 10 00 00 80 00 (BE AF)-CRC
+(Port 23): TB#1 Reg A CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg B CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 03 00 64 00 (17 75)-CRC
+E7 C7 05 29 02 28 01 00 10 00 00 80 00 (27 F6)-CRC
+(Port 23)RX[27]: 05 64 14 44 64 00 03 00 (EA 73)-CRC
+C1 C7 81 00 00 29 02 28 01 00 10 00 00 80 00 (66 23)-CRC
+(Port 23): TB#1 Reg B CL-6
+(Port 23): Parse Object 41 Variation 2 Qualifier 28 Count 1  
+(Port 23): Analog Output Response
+(Port 23):  
+(Port 23): DNP TX Analog Command - VOLTAGEREDUCTION PERCENT @TB#1 Reg C CL-6 Point #16: Value -32768
+(Port 23)TX[25]: 05 64 12 C4 04 00 64 00 (7D A3)-CRC
+E8 C8 05 29 02 28 01 00 10 00 00 80 00 (BC 91)-CRC
