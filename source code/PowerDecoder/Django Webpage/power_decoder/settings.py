@@ -62,7 +62,8 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-	('assets', 'static')
+    ('assets', 'static')
+
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -102,9 +103,9 @@ ROOT_URLCONF = 'power_decoder.urls'
 WSGI_APPLICATION = 'power_decoder.wsgi.application'
 
 TEMPLATE_DIRS = (
-	'templates',
-	'DNP3/templates',
-	'Modbus/templates',
+    'templates',
+    'DNP3/templates',
+    'Modbus/templates'
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -117,8 +118,12 @@ INSTALLED_APPS = (
     #'django.contrib.sites',
     #'django.contrib.messages',
     'django.contrib.staticfiles',
-	'DNP3',
-	'bitstring',
+    'DNP3_Decoder',
+    'bitstring',
+    'testing',
+    'DataLinkTranslator',
+    'DNP3',
+    'power_decoder'
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:

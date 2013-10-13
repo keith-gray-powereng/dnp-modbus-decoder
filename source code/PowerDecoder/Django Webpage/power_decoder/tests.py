@@ -1,10 +1,9 @@
 
-#from django.test import TestCase
 from unittest import TestCase
 from Report import Report
 import bitstring
-#import POC
 import BitSlice
+import DataLinkTranslator
 
 class SimpleTest(TestCase):
     def setUp(self):
@@ -66,33 +65,34 @@ class SimpleTest(TestCase):
 
     def test_DataStartIsCorrect(self):
         testWord = bitstring.Bits("0x0564B34483000100DF89")
-        result = BitSlice.DataLayerCorrect(testWord)
+        result = DataLinkTranslator.DataLayerCorrect(testWord)
         assert result , "The hex number is not interpreted right"
         
     def test_DataLayerLengthSliceGrabsRightBits(self):
         testWord = bitstring.Bits("0x0564B34483000100DF89")
-        result = BitSlice.DataLayerLength(testWord)
+        result = DataLinkTranslator.DataLayerLength(testWord)
         assert result.uint == bitstring.Bits("0xB3").uint , "Did not grab correct length"
         
     def test_DataLayerControlSliceGrabsRightBits(self):
         testWord = bitstring.Bits("0x0564B34483000100DF89")
-        result = BitSlice.DataLayerControl(testWord)
+        result = DataLinkTranslator.DataLayerControl(testWord)
         assert result.uint == bitstring.Bits("0x44").uint , "Did not grab right control Octet"
         
     def test_DataLayerSourceSliceGrabsRightBits(self):
         testWord = bitstring.Bits("0x0564B34483000100DF89")
-        result = BitSlice.DataLayerSource(testWord)
+        result = DataLinkTranslator.DataLayerSource(testWord)
         assert result.uint == bitstring.Bits("0x0100").uint , "Did not Grab the right bits"
         
     def test_DataLayerDestinationSliceGrabsRightBits(self):
         testWord = bitstring.Bits("0x0564B34483000100DF89")
-        result = BitSlice.DataLayerDestination(testWord)
+        result = DataLinkTranslator.DataLayerDestination(testWord)
         assert result.uint == bitstring.Bits("0x8300").uint , "Did not Grab the right bits"
     
     def test_StripCRCRemovesCRCBits(self):
         testWord = bitstring.Bits("0x0564B34483000100DF89")
-        result = BitSlice.StripCRCBits(testWord)
+        result = DataLinkTranslator.StripCRCBits(testWord)
         assert result.uint == bitstring.Bits("0x0564B34483000100").uint , "Did not Grab the right bits"
+        
         
     def test_PresentationObjectLayersCorrectly(self):
         baseTestObject = Report("Test1", "This should be the description", "DATADATADATADATA")
@@ -102,5 +102,5 @@ class SimpleTest(TestCase):
         assert baseTestObject.title == "Test1"
         assert baseTestObject.Next[0].title == "Test2"
         assert baseTestObject.Next[0].Next[0].title == "Test3" 
-
+        
     
