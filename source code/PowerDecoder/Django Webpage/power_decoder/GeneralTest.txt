@@ -1,0 +1,30 @@
+For some reason, I can only push to the master branch.
+Any other branch is considered...
+error: src refspec BaseTests does not match any.
+error: failed to push some refs to 'https://github.com/xrabohrok/dnp-modbus-dec
+der.git'
+
+make sure your workflow is something like:
+//get on the right branch
+git checkout <existing branch>
+or
+git checkout -b <branch thats about to exist, or exists only on remote>
+
+//get latest updates
+git pull <name of remote, probably "origin"> <name of current branch> //to get latest version of that branch
+
+do your work
+
+//save your work at a good place
+git add .    //adds files to commit
+git add -u   //if there are files that should be removed
+git commit -m "Commit message -initials"
+
+//send up commited work to remote
+git push <name of remote, probably origin> head
+
+remember that the master branch is stuff that we have given the customer, and
+dev is stuff we ourselves have determined to be good and working
+you should not be push/pulling from other branches to master or dev
+finished feature branches are merged back into dev
+finished parts of dev are merged into master upon release

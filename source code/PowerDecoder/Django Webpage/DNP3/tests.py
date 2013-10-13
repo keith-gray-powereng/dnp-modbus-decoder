@@ -1,9 +1,4 @@
 
-"""
-This file will likely not run.
-Test are written first, and from these test, the actual functions are made
-"""
-
 #from django.test import TestCase
 from unittest import TestCase
 from Report import Report
@@ -99,7 +94,6 @@ class SimpleTest(TestCase):
         result = BitSlice.StripCRCBits(testWord)
         assert result.uint == bitstring.Bits("0x0564B34483000100").uint , "Did not Grab the right bits"
         
-        
     def test_PresentationObjectLayersCorrectly(self):
         baseTestObject = Report("Test1", "This should be the description", "DATADATADATADATA")
         baseTestObject.AddNext(Report("Test2", "This is another description", "more data"))
@@ -108,5 +102,3 @@ class SimpleTest(TestCase):
         assert baseTestObject.title == "Test1"
         assert baseTestObject.Next[0].title == "Test2"
         assert baseTestObject.Next[0].Next[0].title == "Test3" 
-        
-    
