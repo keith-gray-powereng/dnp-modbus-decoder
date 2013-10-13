@@ -1,12 +1,14 @@
-#Bit-Slice.py
+#BitSlice.py
 
 import bitstring
 
 #startBit must be a bitstring, preferrably a BitArray
+'''slice gets the bits specified by counting from the least signifigant bit, as this is sometimes easier
+for starting from msb, use bistring slice ([]) notation'''
 def slice(input,length, startBit):
     
     #generate "length" filter
-    filter = bitstring.BitArray(length=64)
+    filter = bitstring.BitArray(length=len(input))
     bitFilter = ""
     for i in range(0, length):
         bitFilter += "1"
@@ -18,8 +20,8 @@ def slice(input,length, startBit):
     filter.overwrite(bitFilter, startBit)
     filter.reverse()
     
-    print (filter)
-    print (input)
+    #print (filter)
+    #print (input)
     
     return (filter & input) >> startBit
     
@@ -50,10 +52,10 @@ def getFuncCode(input):
     
 #only for responses
 def getLSBInternalIndications(input):
-    return slice(input, 8, 16)
+    return slice(input, 4, 16)
     
 def getMSBInternalIndications(input):
-    return slice(input, 8, 24)
+    return slice(input, 4, 20)
     
 #everything after will need to take a 16 bit displacement if it is a response, and if it isn't, not.
 

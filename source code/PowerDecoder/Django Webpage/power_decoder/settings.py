@@ -118,7 +118,6 @@ INSTALLED_APPS = (
     #'django.contrib.sites',
     #'django.contrib.messages',
     'django.contrib.staticfiles',
-    'DNP3_Decoder',
     'bitstring',
     'testing',
     'DataLinkTranslator',
