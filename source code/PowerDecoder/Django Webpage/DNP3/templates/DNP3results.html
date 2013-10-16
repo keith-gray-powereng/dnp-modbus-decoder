@@ -3,7 +3,7 @@
 	{% block title %} 
 	DNP3 Results
 	{% endblock %}
-	
+<!--
 	{% block header %}
 		<p style="text-indent: 3em; ">
 		<a href="http://powereng.com" target="_blank">
@@ -14,7 +14,7 @@
 		</br> 
 
 	{% endblock %}
-	
+-->
 	{% block sidebar %}
 		<ul>
 			<li><a href = 'http://127.0.0.1:8000/Power/DNP3/DNP3/'>DNP3</a></li>
@@ -28,16 +28,9 @@
 		<h2>DNP3 Message results</h2>
 		
 		<p>Thank you for using Power Decoder. <br>
-			These are your results...<br><br>
-			<strong><u>Original Message:</u></strong>  {{ originalMsg }}<br>
-			<strong><u>Decoded Message:</u></strong><br>
-			<ul>
-				{% for i in decodedStuff %}
-					{% if i != "" %}
-						<li>{{ i }}</li>
-					{% endif %}
-				{% endfor %}
-			</ul>
+			These are your results...<br>
+			{{outty}}<br>
+			Web tool goes here Andy...
 			<br><br>
 			
 			Would you like to decode another message?

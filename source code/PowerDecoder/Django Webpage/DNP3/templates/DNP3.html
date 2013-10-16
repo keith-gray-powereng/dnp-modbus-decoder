@@ -3,7 +3,7 @@
 	{% block title %} 
 	DNP3 Parser
 	{% endblock %}
-	
+<!--
 	{% block header %}
 		<p style="text-indent: 3em; ">
 		<a href="http://powereng.com" target="_blank">
@@ -14,7 +14,7 @@
 		</br> 
 
 	{% endblock %}
-	
+-->
 	{% block sidebar %}
 		<ul>
 			<li><a href = 'http://127.0.0.1:8000/Power/DNP3/DNP3/'>DNP3</a></li>
@@ -25,25 +25,39 @@
 		</ul>
 	{% endblock %}
 	{% block content %}
-		<h2>DNP3 Parser</h2>
+		<h2 class = "yellow">DNP3 Parser</h2>
 		
-		<p>Welcome to your DNP3 protocol translator. <br>
+		<p class = "orange">Welcome to your DNP3 protocol translator. <br>
 			You can either input your message from a local file or 
 			you can input your message manually.
 			<br><br>
 			
 			Upload your file (.txt)...
-			<form action = "http://127.0.0.1:8000/Power/DNP3/DNP3results/" method = "get">
-			<input type="file" name="datafile" size="40">
+			<form action = "http://127.0.0.1:8000/Power/DNP3/DNP3results/" onsubmit = "return valueCheck()" method = "get">
+			<input type="file" id = "inputByFile" name="inputByFile" size="40">
 			<br><br>
 			
-			Manually type your message here...
-			<br><br>
-			<input type = "text" name = "message" value = "Message...">
+			<p class = "orange">Manually type your message here...</p>
+			
+			<input type = "text" id = "inputByText" name = "inputByText">
 			<br><br><br><br>
 			
-			<input type = "submit" value = "Decode Message(s)">
+			<input type = "submit"  value = "Decode Message(s)">
 			</form>
+			<script type = "text/javascript">
+				function valueCheck(){
+					var x = document.getElementById("inputByFile").value;
+					var y = document.getElementById("inputByText").value;
+					if (x == '' && (!y.match(/\S/))){
+						alert("No value was inputted to parse.");
+						return false;
+					}
+					else{
+						alert("Appropiate value has been inserted.");
+						return true;
+					}
+				}
+			</script>
 		</p>
 	{% endblock %}
 	

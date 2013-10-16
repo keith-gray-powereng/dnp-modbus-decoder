@@ -6,10 +6,18 @@
 		<link rel = "stylesheet" type = "text/css" href = "{% static "css/master_css.css" %}">
 		<link rel="icon" type="image/png" href= " {% static "images/favicon.ico" %}">
 	</head>
-	<body style = "background-image: url('http://www.cannoncorp.us/wp-content/uploads/2012/07/electrical-Medium.jpg'); background-repeat: 'no-repeat'; background-size: 'cover';">
-		</br></br></br></br></br></br>
+<!--	<body style = "background-image: url('http://www.cannoncorp.us/wp-content/uploads/2012/07/electrical-Medium.jpg'); background-repeat: 'no-repeat'; background-size: 'cover';">-->
+	<body> 	
+	</br></br></br></br></br></br>
 		<div id = "header"> 
-			{% block header %} <h1>This is the header portion of the page. </h1> {% endblock %}
+			<p style="text-indent: 3em; ">
+			<a href="http://powereng.com" target="_blank">
+			<img src="http://powereng.com/wp-content/themes/power/img/power-logo.png" width="171" height="51"></a>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			&nbsp&nbsp
+			<font size="7">Power Decoder</font></p>
+
+			<!--{% block header %} <h1>This is the header portion of the page. </h1> {% endblock %}-->
 		</div>
 			<div id = "page">
 				<div id = "sidebar">
@@ -29,5 +37,6 @@
 			<div id = "footer">
 				{% block footer %} {% endblock %}
 			</div>
+
 	</body>
 </html>
