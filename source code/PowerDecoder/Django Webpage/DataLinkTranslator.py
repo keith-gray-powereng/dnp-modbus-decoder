@@ -27,6 +27,7 @@ def DataLayerDestination(testWord):
     #two octets, 6 from the left
     return testWord[32:48]
     
+'''Removes Bits Where CRC would be (does not detect if they are there)'''
 def StripCRCBits(testWord):
     #CRC is the last 16 bits
     if(type(testWord) == bitstring.Bits):
