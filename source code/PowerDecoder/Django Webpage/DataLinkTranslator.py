@@ -8,7 +8,7 @@ def DataLayerCorrect(testWord):
     #print (testWord[0:16].hex)
     return testWord[0:16].uint == bitstring.BitArray('0x0564').uint
         
-'''Gets fragment length'''
+'''Gets Message length, in octets'''
 def DataLayerLength(testWord):
     # one octet, 2 octets from left
     return testWord[16:24]
