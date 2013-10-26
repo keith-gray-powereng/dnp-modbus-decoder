@@ -3,7 +3,7 @@
 	{% block title %} 
 	Contacting the team
 	{% endblock %}
-	
+<!--
 	{% block header %}
 		<p style="text-indent: 3em; ">
 		<a href="http://powereng.com" target="_blank">
@@ -13,33 +13,27 @@
 		<font size="7">Power Decoder</font></p>
 		</br> 
 	{% endblock %}
-	
-	{% block sidebar %}
-		<ul>
-			<li><a href = 'http://127.0.0.1:8000/Power/DNP3/DNP3/'>DNP3</a></li>
-			<li><a href = 'http://127.0.0.1:8000/Power/Modbus/Modbus/'>Modbus</a></li>
-			<li><a href = 'http://127.0.0.1:8000/Power/About/'>About</a></li>
-			<li><a href = 'http://127.0.0.1:8000/Power/Contact/'>Contact</a></li>			
-		</ul>
-	{% endblock %}
-	{% block content %}
-	<h2>Contacting the Power Team</h2>
-	<p>For any questions or clarifications please contact us at: <br><br>
+-->
 
-	Westin Breger: <br>
-	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp <i>translation module lead</i> <br>
+	{% block content %}
+	<h2 class = "yellow">Contacting the Power Team</h2>
+	<p class = "orange">For any questions or clarifications please contact us at: <br><br>
+	{% load staticfiles %}
+	<div id = "subheader"> <p class = "red"> Westin Breger: </p> </div> 
+	<img src = "{% static "images/Westin.png" %}" alt = "Westin image" height = "15%" width = "20%"/>
+	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp <i><p class = "orange">translation module lead</p></i> 
 	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp 
-	<a href="mailto:wbreger@siue.edu">wbreger@siue.edu</a> <br><br>
-	Andy Holdener:<br>
-	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp <i> web tool and graphics lead </i><br>
+	<a href="mailto:wbreger@siue.edu">wbreger@siue.edu</a> <br>
+	<div id = "subheader"><p class = "red">Andy Holdener:</p></div>
+	<img src = "{% static "images/Andy.jpg" %}" alt = "Andy image" height = "15%" width = "20%"/>	
+	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp <i> <p class = "orange">web tool and graphics lead</p> </i>
 	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp 
-	<a href="mailto:aholden@siue.edu">aholden@siue.edu</a><br><br>
-	Stephen Jarnagin:<br>
-	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp <i> web page and site lead </i><br>
+	<a href="mailto:aholden@siue.edu">aholden@siue.edu</a><br>
+	<div id = "subheader"><p class = "red">Stephen Jarnagin:</p> </div>
+	<img src = "{% static "images/Stephen.jpg" %}" alt = "Stephen image" height = "15%" width = "20%"/>
+	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp <i> <p class = "orange">web page and site lead</p> </i>
 	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp	
 	<a href="mailto:sjarnag@siue.edu">sjarnag@siue.edu</a><br>
 	</p>
 	{% endblock %}
 	
-	{% block footer %}
-	{% endblock %}

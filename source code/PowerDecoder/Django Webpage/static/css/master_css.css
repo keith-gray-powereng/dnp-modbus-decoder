@@ -1,28 +1,39 @@
-#background{ 
+#html{ 
 	
 	height: 100%;
 	width: 100%;
-	background-image:url("http://www.cannoncorp.us/wp-content/uploads/2012/07/electrical-Medium.jpg")no-repeat center center fixed;
-	background-image:-webkit-background-size: cover;
-	background-image:-moz-background-size: cover;
-	background-image:-o-background-size: cover;
+	background: url(http://www.cannoncorp.us/wp-content/uploads/2012/07/electrical-Medium.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
-	position: fixed;
+	/*position: fixed;
 	z-index: -1; 
 	background-color:#cccccc;
-	/*background-repeat:no-repeat;
+	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-size: 100%; */
 	
 }
 
 #header{
-	position: fixed;
+	/*position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 12%;
 	text-align: left;
+	z-index: 100000;*/
+	
+	position:fixed;
+	top:0px; 
+	left: 0px;
+	margin:auto; 
+	z-index:100000; 
+	width:100%;
+	height: 10%;
+	opacity: .95;
+	
 	/* IE10 Consumer Preview */ 
 	background-image: -ms-linear-gradient(top, #F08205 0%, #B01919 100%);
 
@@ -46,7 +57,7 @@
 
 #page{
 	width: 90%;
-	height: 64%;
+	height: 100%;
 	text-align: left;
 	overflow: auto;
 
@@ -54,17 +65,47 @@
 
 #sidebar{
 	float: left;
+	position: relative;
+	overflow-y: auto;
+	text-align: left;
 	height: 100%;
 	width: 20%;
-	background-color: #3CB371;
+	/*background-color: #3CB371;*/
+	background-image: linear-gradient(bottom, rgb(200,200,200) 30%, rgb(45,53,77) 72%);
+	background-image: -o-linear-gradient(bottom, rgb(200,200,200) 30%, rgb(45,53,77) 72%);
+	background-image: -moz-linear-gradient(bottom, rgb(200,200,200) 30%, rgb(45,53,77) 72%);
+	background-image: -webkit-linear-gradient(bottom, rgb(200,200,200) 30%, rgb(45,53,77) 72%);
+	background-image: -ms-linear-gradient(bottom, rgb(200,200,200) 30%, rgb(45,53,77) 72%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.3, rgb(200,200,200)),
+		color-stop(0.72, rgb(45,53,77))
+	);
+	/*background-image: url("images/content7.jpg");*/
 	border: 1px solid #000;
-	overflow: invisible;
+	/*overflow: invisible;*/
 }
 
 #content{
 	float:right;
 	width: 68%;
-	background-color: #778899;
+	/*background-color: #778899;*/
+	background-image: linear-gradient(bottom, rgb(99,125,125) 30%, rgb(33,71,48) 58%);
+	background-image: -o-linear-gradient(bottom, rgb(99,125,125) 30%, rgb(33,71,48) 58%);
+	background-image: -moz-linear-gradient(bottom, rgb(99,125,125) 30%, rgb(33,71,48) 58%);
+	background-image: -webkit-linear-gradient(bottom, rgb(99,125,125) 30%, rgb(33,71,48) 58%);
+	background-image: -ms-linear-gradient(bottom, rgb(99,125,125) 30%, rgb(33,71,48) 58%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.3, rgb(99,125,125)),
+		color-stop(0.58, rgb(33,71,48))
+	);
 	border: 1px solid #f00;
 	padding: 3%; /*KEEP A CLOSE EYE ON THIS */
 	overflow:invisible;
@@ -76,6 +117,101 @@
    /*bottom:0;*/
    left: 0;
    width:100%;
-   height:3.3%;   /* Height of the footer */
+   height:7%;   /* Height of the footer */
    background: #434343;
+   opacity: .8;
+}
+
+#footerText{
+	font-size:12pt;
+	color: white;
+	text-align: center;
+}
+
+#bg {
+	position:absolute; 
+	top:-20%; 
+	left:-20%; 
+	width:200%; 
+	height:200%;
+}
+
+#subheader{
+	font-weight: bold;
+	font-size: 16pt;
+}
+
+#images{
+	width: 20%;
+	height: 20%;
+}
+
+#slideshow, img.bgM {
+	min-height: 100%;
+	min-width: 100%;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:-9999;
+}
+
+#reference{
+	/*font-weight: bold;*/
+	font-size: 16pt;
+	font-family: Times New Roman;
+	color: White;
+}
+
+#menuHeader{
+	font-weight: bold;
+	font-size:18pt;
+	font-family: Serif;
+	color: White;
+}
+
+p.orange::selection {
+	background:#c2660d; 
+	color:#fff;
+}
+
+p.orange::-moz-selection {
+	background:#c2660d; 
+	color:#fff;
+}
+
+p.orange::-webkit-selection {
+	background:#c2660d; 
+	color:#fff;
+}
+
+p.red::selection {
+	background:#EC0033; 
+	color:#fff;
+}
+
+p.red::-moz-selection {
+	background:#EC0033; 
+	color:#fff;
+}
+
+p.red::-webkit-selection {
+	background:#EC0033; 
+	color:#fff;
+}
+
+h2.yellow::selection {
+	background:#00BF32; 
+	color:#fff;
+}
+
+h2.yellow::-moz-selection {
+	background:#00BF32; 
+	color:#fff;
+}
+
+h2.yellow::-webkit-selection {
+	background:#00BF32; 
+	color:#fff;
 }

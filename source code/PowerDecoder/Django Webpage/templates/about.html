@@ -3,32 +3,28 @@
 	{% block title %}
 	About the Power Decoder 
 	{% endblock %}
-	
+<!--
 	{% block header %}
 		<p style="text-indent: 3em; ">
 		<a href="http://powereng.com" target="_blank">
 		<img src="http://powereng.com/wp-content/themes/power/img/power-logo.png" width="171" height="51"></a>
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		&nbsp&nbsp
-		<font size="7">Power Decoder</font></p>
+		<font size="6">Power Decoder</font></p>
 		</br> 
 	{% endblock %}
-	
-	{% block sidebar %}
-		<ul>
-			<li><a href = 'http://127.0.0.1:8000/Power/DNP3/DNP3/'>DNP3</a></li>
-			<li><a href = 'http://127.0.0.1:8000/Power/Modbus/Modbus/'>Modbus</a></li>
-			<li><a href = 'http://127.0.0.1:8000/Power/About/'>About</a></li>
-			<li><a href = 'http://127.0.0.1:8000/Power/Contact/'>Contact</a></li>			
-		</ul>
-	{% endblock %}
+-->
 	
 	{% block content %}
-	<h2>What is the Power Decoder</h2>
-	<p>
-	<font size = "4"> <b>Our Task:</b></font>
-	<br>&nbsp&nbsp&nbsp&nbsp&nbsp
-    In the course of servicing power transmission equipment, 
+	<h2 class = "yellow">What is the Power Decoder?</h2>
+	<hr></hr>
+	<br>
+	
+	<div id = "subheader">
+		<p class = "red">Our Task:</p>
+	</div>
+	
+    <p class = "orange">In the course of servicing power transmission equipment, 
 	a POWER engineer may have to interpret raw information 
 	that the machine in question is broadcasting.  
 	It is our job to create a program that will make this task  
@@ -38,12 +34,13 @@
 	where our program can then process. Once our application 
 	finishes translating the users inputted data, it will display a 
 	graph of data points, arranged by transmission times, that tells the 
-	user detailed information about each message in the input file.
-	<br><br>
+	user detailed information about each message in the input file.</p>
 	
-	<font size = "4"><b>Why is automatician needed?</b></font>
-	<br>&nbsp&nbsp&nbsp&nbsp&nbsp
-	During the integration among the electrical devices, 
+	<div id = "subheader">
+	<p class = "red">Why is automatician needed?</p>
+	</div>
+	
+	<p class = "orange">During the integration among the electrical devices, 
 	the devices use network protocols to transmit the error messages 
 	that can occur, between or among the devices being integrated, to the engineer.
 	Once the POWER Engineer receives the message, he must manually decode
@@ -62,16 +59,15 @@
 	by itself, but when this issue is compounded by multiple errors being
 	communicated by not just one device but multiple devices, the time
 	it takes to solve a problem can escalate into a hour or more rather than
-	a few minutes.
-	<br><br>
+	a few minutes.</p>
+
+	<div id = "subheader">
+	<p class = "red">The solution:</p>
+	</div>
 	
-	<font size = "4"><b>The solution:</b></font>
-	<br>&nbsp&nbsp&nbsp&nbsp&nbsp
-	Our product will solve this problem by automatically translating these
+	<p class = "orange">Our product will solve this problem by automatically translating these
 	messages for the POWER Engineer and displaying detailed information
 	about each message to the engineer.  These messages can then be broken down
-	into individual portions where the engineer can identify the core issue of the message. 
+	into individual portions where the engineer can identify the core issue of the message.</p> 
 	{% endblock %}
 	
-	{% block footer %}
-	{% endblock %}
