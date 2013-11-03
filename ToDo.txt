@@ -1,3 +1,0 @@
-License must be edited to be more personalized
-
-Trac is incoming, Stefik must sign off on it before Greg will set it up, and even then it is not a guarantee. Investigating.
