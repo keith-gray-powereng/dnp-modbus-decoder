@@ -108,24 +108,20 @@ class SimpleTest(TestCase):
         primaryRef = "0"
         secondaryRef = "209"
         originalValue = []
-        originalValue.append("This attribute provides the secure authentication version supported by the outstation.")
+        originalValue.append('Device Attributes :: Secure authentication version :: Attrib :: This attribute provides the secure authentication version supported by the outstation. :: Attribute data type code :: UNIT8 :: Length :: UNIT8 :: Secure authentication version :: UINTn ::  :: ')
         dictionary = dictScriptV2.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
         #print('\n\n')
         #print(originalValue)
         #print(testValue)
         assert testValue == originalValue
-        #assertEqual(originalValue, testValue, msg = None)        
-        #if testValue == originalValue:
-        #    print("True")
-        #else:
-        #    print("False")
+
 
     def test_DictionaryMidIndex(self):
         primaryRef = "0"
         secondaryRef = "242"
         originalValue = []
-        originalValue.append("This attribute is the version code of the manufacturer's device software.  The contents of the attribute is a free form string that is formatted according to the manufacturer's normal practice.  ")
+        originalValue.append("Device Attributes :: Device manufacturer's software version :: Attrib :: This attribute is the version code of the manufacturer's device software.  The contents of the attribute is a free form string that is formatted according to the manufacturer's normal practice.   :: Attribute data type code :: UNIT8 :: Length :: UNIT8 :: Manufacturer's software version string. :: VSTRn ::  :: ")
         dictionary = dictScriptV2.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
         #print('\n\n')
@@ -137,16 +133,19 @@ class SimpleTest(TestCase):
         primaryRef = "0"
         secondaryRef = "255"
         originalValue = []
-        originalValue.append("This is a special attribute that is used to retrieve a list of all of the device attribute variation numbers supported by the outstation at a specified index- and the properties of those attributes.  This object has a variable length that depends on the count of attribute variations supported by the outstation.")
+        originalValue.append('Device Attributes :: List of attribute variations :: Attrib :: This is a special attribute that is used to retrieve a list of all of the device attribute variation numbers supported by the outstation at a specified index- and the properties of those attributes.  This object has a variable length that depends on the count of attribute variations supported by the outstation. :: Attribute data type code :: UNIT8 :: Length :: UNIT8 :: Data Elements :: SET of n :: Attribute variation number :: UINT8 :: Attribute properties :: BSTR8 ::  :: ')
         dictionary = dictScriptV2.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
+        #print('\n\n')
+        #print(originalValue)
+        #print(testValue)        
         assert testValue == originalValue
 
     def test_DictionaryBadIndex(self):
         primaryRef = "121"
         secondaryRef = "1"
         originalValue = []
-        originalValue.append("This object is used to report the value of a security statistic after the count has changed. See 11.9.10 for a description of a Security Statistic Point Type. See 7.5.2.2 for details of the point indexes permitted for this object and when the statistics are incremented. Outstations shall not allow this object to be assigned to no class- or to static Class 0. Variation 2 objects contain a 32-bit- unsigned integer count value and a timestamp.")
+        originalValue.append('Security Statistic :: 32-bit with flag :: Static :: This object is used to report the current value of a security statistic. See 11.9.10 for a description of a Security Statistic Point Type. See 7.5.2.2 for details of the point indexes permitted for this object and when the statistics are incremented. Variation 1 objects contain a 32-bit- unsigned integer count value.  :: Flag Octet :: BSTR8 ::Bit 0: ONLINE :: Bit 1: RESTART :: Bit 2: COMM_LOST :: Bit 3: REMOTE_FORCED :: Bit 4: LOCAL_FORCED :: Bit 5: Reserved- always 0 :: Bit 6: DISCONTINUITY :: Bit 7: Reserved- always 0 :: Association ID :: UINT16 :: Count value :: UINT32 ::  :: ')
         dictionary = dictScriptV2.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
         assert testValue != originalValue

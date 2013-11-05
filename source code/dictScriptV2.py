@@ -33,7 +33,15 @@ def buildDict():
 		#variation reference
 		variationPos = lineX[1]
 		#rule description, can be anything in the line, but at the moment is simply the description
-		value = lineX[5]
+		count = 1
+		for x in lineX:
+			if count > 2: 
+				value += str(lineX[count-1]) + " :: " 
+				count += 1
+			else:
+				value = ""
+				count += 1
+		#value = lineX[5]
 		#Assign the value to the subdictionary with the variation reference
 		dict2[variationPos] = value
 		#assign the values of the subdictionary to x,y for appending to the primary dictionary
