@@ -19,11 +19,12 @@ def buildDict():
 
 	#open the file
 	listDict = csv.reader(open("DNP3 data object libraryV2.csv"))
+	#listDict = raw.read().decode("utf-8-sig").encode("utf-8")	
 	#create the primary dictionary which will hold the current group
 	Dict = defaultdict(dict)
 	#rule count
 	#count = 1
-	for row in listDict:		
+	for row in listDict:
 		#create the subdictionary for the current variation of the group
 		dict2 = dict()
 		#pass the value for the values of the row
