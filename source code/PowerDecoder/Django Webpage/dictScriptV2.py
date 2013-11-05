@@ -1,4 +1,4 @@
-import csv
+﻿import csv
 from collections import defaultdict
 
 """This is a script for creating the two diminsional dictionary that will hold the 
@@ -61,7 +61,7 @@ def buildDict():
 	
 	#method 2, works but only references the subset key, primary key is absent.
 	#FIXED, WORKS for both primary and subkey
-	listDict = csv.reader(open("DNP3 data object library.csv"))
+	listDict = csv.reader(open("DNP3 data object libraryV2.csv", encoding='UTF8'))
 	Dict = defaultdict(dict)
 	count = 1
 	for row in listDict:
@@ -71,8 +71,8 @@ def buildDict():
 		#variationPos = listDict[count][1]
 		#value = listDict[count][3]
 		if count < 217:
-			print('\n\n')
-			print(count)
+			#print(count)
+			#print('\n\n')
 			lineX = row
 			groupPos = lineX[0]
 			variationPos = lineX[1]
@@ -81,7 +81,7 @@ def buildDict():
 			((x,y),) = dict2.items()
 			Dict[groupPos].setdefault(x,[]).append(y)
 			count = count + 1
-			print(row)
+			#print(row)
 		
 	print(count)
 	return Dict
