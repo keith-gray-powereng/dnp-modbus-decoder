@@ -1,0 +1,74 @@
+<!--Content:  Webpage
+	Focus:  Describing the product and its purpose
+	Format:  Uses html format with background css and references
+			 built in django functionality for inheriting template designs.
+	Note: Django built in functionality will always have particular references of {'percentage sign' content you want 'percentage sign'}
+		  Also, the built in functionality for overriding portions of the master template start with the previously
+		  mention block {'percentage sign' content 'percentage sign'} but contain a keyword block and a variable for the beginning of the portion to be overriden and 
+		  a keyword endblock for the end of the portion.  
+		  An example of this would be {'percentage sign' block title 'percentage sign'} content goes here {'percentage sign' endblock 'percentage sign'}
+ -->
+ <!--Inherit the master template-->
+{% extends "master_template.html" %}
+	<!--Set the title of the webpage-->
+	{% block title %}
+	About the Power Decoder 
+	{% endblock %}
+	
+	<!--Title of the content-->
+	{% block content %}
+	<h2 class = "yellow">What is the Power Decoder?</h2>
+	<hr></hr>
+	<br>
+	<!--The following is simply content, following the pattern of: subheader, content, repeat, for a total of three times-->
+	<div id = "subheader">
+		<p class = "red">Our Task:</p>
+	</div>
+	
+    <p class = "orange">In the course of servicing power transmission equipment, 
+	a POWER engineer may have to interpret raw information 
+	that the machine in question is broadcasting.  
+	It is our job to create a program that will make this task  
+	easier by quickly and accurately translating the information 
+	into organized and readable points of data.  The input for our 
+	application will come from a log file captured or by user submission  
+	where our program can then process. Once our application 
+	finishes translating the users inputted data, it will display a 
+	graph of data points, arranged by transmission times, that tells the 
+	user detailed information about each message in the input file.</p>
+	
+	<div id = "subheader">
+	<p class = "red">Why is automatician needed?</p>
+	</div>
+	
+	<p class = "orange">During the integration among the electrical devices, 
+	the devices use network protocols to transmit the error messages 
+	that can occur, between or among the devices being integrated, to the engineer.
+	Once the POWER Engineer receives the message, he must manually decode
+	this it using a set of predefined, but not universally standardized, tables.
+	These tables contain the meanings for all messages that can be generated from
+	the current set of devices.  Another method of translating the messages requires
+	the use of a hardware interpreter that is available to the engineer.
+	The problem is that this device is limited in its quantity and is not 
+	readily available to the majority of the engineers in the field.  
+	<br>&nbsp&nbsp&nbsp&nbsp&nbsp
+	This leaves manual translation as the main method for decoding the messages.
+	For the POWER Engineer, this takes approximately ten minutes due to the size
+	of the table and obscurity of the format it is in.  This is the core of the
+	problem which our product, the decoder, is being created to solve for POWER
+	Engineers.  The time it takes to translate the error message may be minimal
+	by itself, but when this issue is compounded by multiple errors being
+	communicated by not just one device but multiple devices, the time
+	it takes to solve a problem can escalate into a hour or more rather than
+	a few minutes.</p>
+
+	<div id = "subheader">
+	<p class = "red">The solution:</p>
+	</div>
+	
+	<p class = "orange">Our product will solve this problem by automatically translating these
+	messages for the POWER Engineer and displaying detailed information
+	about each message to the engineer.  These messages can then be broken down
+	into individual portions where the engineer can identify the core issue of the message.</p> 
+	{% endblock %}
+<!--End of webpage-->

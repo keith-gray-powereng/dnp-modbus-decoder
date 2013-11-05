@@ -1,0 +1,34 @@
+<!--Content:  Webpage
+	Focus:  Displaying the results from the modbus parser and user input.
+	Format:  Uses html format with background css and references
+			 built in django functionality for inheriting template designs.
+	Note: Django built in functionality will always have particular references of {'percentage sign' content you want 'percentage sign'}
+		  Also, the built in functionality for overriding portions of the master template start with the previously
+		  mention block {'percentage sign' content 'percentage sign'} but contain a keyword block and a variable for the beginning of the portion to be overriden and 
+		  a keyword endblock for the end of the portion.  
+		  An example of this would be {'percentage sign' block title 'percentage sign'} content goes here {'percentage sign' endblock 'percentage sign'}
+ -->
+ <!--Inherit the master template-->
+{% extends "master_template.html" %}
+	<!--Set the title of the webpage-->
+	{% block title %} 
+	Modbus Results
+	{% endblock %}
+
+	{% block content %}
+		<!--Title of the contents-->
+		<h2>Modbus Results</h2>
+		<!--Display and description of your message-->
+		<p>Thank you for using Power Decoder. <br>
+			These are your results...<br>
+			<!--Functionality:  Tool that displays the decoded message in a layered effect.-->
+			Web tool goes here Andy...
+			<br><br>
+			<!--Functionality: Tool that hyperlinks back to the previous page for new message decoding-->
+			If you wish to continue decoding with another Modbus message, <br>
+			click <a href = 'http://127.0.0.1:8000/Power/Modbus/Modbus/'>here</a>!
+
+		</p>
+	{% endblock %}
+	
+<!--End of webpage-->

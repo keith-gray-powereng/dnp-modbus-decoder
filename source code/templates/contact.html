@@ -1,0 +1,44 @@
+<!--Content:  Webpage
+	Focus:  Shows a list of contact references for users 
+	Format:  Uses html format with background css and references
+			 built in django functionality for inheriting template designs.
+	Note: Django built in functionality will always have particular references of {'percentage sign' content you want 'percentage sign'}
+		  Also, the built in functionality for overriding portions of the master template start with the previously
+		  mention block {'percentage sign' content 'percentage sign'} but contain a keyword block and a variable for the beginning of the portion to be overriden and 
+		  a keyword endblock for the end of the portion.  
+		  An example of this would be {'percentage sign' block title 'percentage sign'} content goes here {'percentage sign' endblock 'percentage sign'}
+ -->
+ <!--Inherit the master template-->
+{% extends "master_template.html" %}
+	<!--Set the title of the webpage-->
+	{% block title %} 
+	Contacting the team
+	{% endblock %}
+
+	<!--Set the title of the content for the webpage-->
+	{% block content %}
+	<h2 class = "yellow">Contacting the Power Team</h2>
+	<p class = "orange">For any questions or clarifications please contact us at: <br><br>
+	<!--load the images from the static files-->
+	{% load staticfiles %}
+	<!--PATTERN REFERENCE: Name, Picture, Description of the individual with a built in email hyperlink
+	Occurs three times-->
+	<div id = "subheader"> <p class = "red"> Westin Breger: </p> </div> 
+	<img src = "{% static "images/Westin.png" %}" alt = "Westin image" height = "15%" width = "20%"/>
+	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp <i><p class = "orange">translation module lead</p></i> 
+	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp 
+	<a href="mailto:wbreger@siue.edu">wbreger@siue.edu</a> <br>
+	<div id = "subheader"><p class = "red">Andy Holdener:</p></div>
+	<img src = "{% static "images/Andy.jpg" %}" alt = "Andy image" height = "15%" width = "20%"/>	
+	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp <i> <p class = "orange">web tool and graphics lead</p> </i>
+	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp 
+	<a href="mailto:aholden@siue.edu">aholden@siue.edu</a><br>
+	<div id = "subheader"><p class = "red">Stephen Jarnagin:</p> </div>
+	<img src = "{% static "images/Stephen.jpg" %}" alt = "Stephen image" height = "15%" width = "20%"/>
+	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp <i> <p class = "orange">web page and site lead</p> </i>
+	&nbsp&nbsp&nbsp	&nbsp&nbsp&nbsp	
+	<a href="mailto:sjarnag@siue.edu">sjarnag@siue.edu</a><br>
+	</p>
+	{% endblock %}
+	
+<!--End of webpage-->

@@ -1,0 +1,60 @@
+<!--Content:  Webpage
+	Focus:  Page that can load user input and parse it while transitioning to a results page for the modbus protocol.
+	Format:  Uses html format with background css and references
+			 built in django functionality for inheriting template designs.
+	Note: Django built in functionality will always have particular references of {'percentage sign' content you want 'percentage sign'}
+		  Also, the built in functionality for overriding portions of the master template start with the previously
+		  mention block {'percentage sign' content 'percentage sign'} but contain a keyword block and a variable for the beginning of the portion to be overriden and 
+		  a keyword endblock for the end of the portion.  
+		  An example of this would be {'percentage sign' block title 'percentage sign'} content goes here {'percentage sign' endblock 'percentage sign'}
+ -->
+ <!--Inherit the master template-->
+ {% extends "master_template.html" %}
+
+	<!--Set the title for the webpage-->
+	{% block title %} 
+	Modbus Parser
+	{% endblock %}
+
+	{% block content %}
+		<!--Title of the content-->
+		<h2 class = "yellow">Modbus Parser</h2> 
+		<p class = "orange">Welcome to your Modbus protocol translator. <br>
+			You can either input your message from a local file or 
+			you can input your message manually.
+			<br><br>
+			<!--Functionality: Load the user file for parsing-->
+			Upload your file (.txt)...
+			<form action = "http://127.0.0.1:8000/Power/Modbus/modbusResults/" onsubmit = "return valueCheck()" method = "get">
+			<input type="file" id = "inputByFile" name="inputByFile" size="40">
+			<br><br>
+			<!--Functionality: Allow the user to type in their message here-->
+			<p class = "orange"> Manually type your message here... </p>
+			<input type = "text" id = "inputByText" name = "inputByText">
+			<!--Functionality: Allow the user to submit their decision, call error check for NULL values-->
+			<br><br><br><br>
+			<input type = "submit" value = "Decode Message(s)">
+			</form>
+		</p>
+		
+		<!--Null Check for user inputs using javascript
+			This is done through ascertaining the values of both the file upload and the 
+			message box.  Once both are determined to be empty, return an alert.  
+			Triggered by the submit button.-->
+		<script type = "text/javascript">
+		function valueCheck(){
+			var x = document.getElementById("inputByFile").value;
+			var y = document.getElementById("inputByText").value;
+			if (x == '' && (!y.match(/\S/))){
+				alert("No value was inputted to parse.");
+				return false;
+			}
+			else{
+				alert("Appropiate value has been inserted.");
+				return true;
+			}
+		}
+		</script>
+	{% endblock %}
+	
+<!--End of webpage-->

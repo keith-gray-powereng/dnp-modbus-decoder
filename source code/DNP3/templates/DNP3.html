@@ -1,0 +1,63 @@
+<!--Content:  Webpage
+	Focus:  Allowing the user to either upload/type their message under DNP3 protocol, the decode the message, and transition to the next page
+	Format:  Uses html format with background css and references
+			 built in django functionality for inheriting template designs.
+	Note: Django built in functionality will always have particular references of {'percentage sign' content you want 'percentage sign'}
+		  Also, the built in functionality for overriding portions of the master template start with the previously
+		  mention block {'percentage sign' content 'percentage sign'} but contain a keyword block and a variable for the beginning of the portion to be overriden and 
+		  a keyword endblock for the end of the portion.  
+		  An example of this would be {'percentage sign' block title 'percentage sign'} content goes here {'percentage sign' endblock 'percentage sign'}
+ -->
+ <!--Inherit the master template-->
+{% extends "master_template.html" %}
+
+	<!--Set the title of the webpage-->
+	{% block title %} 
+	DNP3 Parser
+	{% endblock %}
+
+	{% block content %}
+		<!--Title of the content-->
+		<h2 class = "yellow">DNP3 Parser</h2>
+		
+		<p class = "orange">Welcome to your DNP3 protocol translator. <br>
+			You can either input your message from a local file or 
+			you can input your message manually.
+			<br><br>
+			
+			Upload your file (.txt)...
+			<form action = "http://127.0.0.1:8000/Power/DNP3/DNP3results/" onsubmit = "return valueCheck()" method = "get">
+			<!--Functionality: Load the user file for parsing-->			
+			<input type="file" id = "inputByFile" name="inputByFile" size="40">
+			<br><br>
+			
+			<p class = "orange">Manually type your message here...</p>
+			<!--Functionality: Allow the user to type in their message here-->			
+			<input type = "text" id = "inputByText" name = "inputByText">
+			<br><br><br><br>
+			<!--Functionality: Allow the user to submit their decision, call error check for NULL values-->			
+			<input type = "submit"  value = "Decode Message(s)">
+			</form>
+			
+			<!--Null Check for user inputs using javascript
+			This is done through ascertaining the values of both the file upload and the 
+			message box.  Once both are determined to be empty, return an alert.  
+			Triggered by the submit button.-->
+			<script type = "text/javascript">
+				function valueCheck(){
+					var x = document.getElementById("inputByFile").value;
+					var y = document.getElementById("inputByText").value;
+					if (x == '' && (!y.match(/\S/))){
+						alert("No value was inputted to parse.");
+						return false;
+					}
+					else{
+						alert("Appropiate value has been inserted.");
+						return true;
+					}
+				}
+			</script>
+		</p>
+	{% endblock %}
+	
+	<!--End of webpage-->
