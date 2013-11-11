@@ -24,31 +24,39 @@ def buildDict():
 	#rule count
 	#count = 1
 	for row in listDict:		
-		#create the subdictionary for the current variation of the group
+		#pull parts
 		dict2 = dict()
-		#pass the value for the values of the row
 		lineX = row
-		#group reference
+		
+		#entries
 		groupPos = lineX[0]
-		#variation reference
 		variationPos = lineX[1]
-		#rule description, can be anything in the line, but at the moment is simply the description
-		count = 1
-		for x in lineX:
-			if count > 2: 
-				value += str(lineX[count-1]) + " :: " 
-				count += 1
-			else:
-				value = ""
-				count += 1
-		#value = lineX[5]
+		GroupName = lineX[2]
+		VariationName = lineX[3]
+		type = lineX[4]
+		description = lineX[5]
+
+		#pull attributes
+		attribs = []
+		place = 4
+		while place + 2 < len(lineX):
+			place += 2
+			if place + 1 < len(lineX):
+				attribs.append((lineX[place] + " " , lineX[place + 1]))
+			
+
 		#Assign the value to the subdictionary with the variation reference
-		dict2[variationPos] = value
-		#assign the values of the subdictionary to x,y for appending to the primary dictionary
-		((x,y),) = dict2.items()
-		#append the x, y values to the primary dictionary
-		Dict[groupPos].setdefault(x,[]).append(y)
-		#count = count + 1
+		dict2["group"] = groupPos + " "
+		dict2["variationPos"] = variationPos + " "
+		dict2["GroupName"] = GroupName + " "
+		dict2["VariationName"] = VariationName + " "
+		dict2["type"] = type + " "
+		dict2["description"] = description + " "
+		
+		dict2["attributes"] = list(attribs)
+		
+		Dict[groupPos][variationPos] = dict2
+		
 	return Dict
 
 
