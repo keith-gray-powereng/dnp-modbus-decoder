@@ -7,22 +7,31 @@ from collections import defaultdict
 
 
 def buildDict():
-	"""Function call when you want to create the dictionary, use 'item = buildDict()', the item returned will
-	be a 2d dictionary where you can reference the data using item["0"]["209"] to return the description of that file.
-	Primary key is the group
-	Secondary key is the variation
-	Therefore, you would have something like...
-	d1 = {0:{209:1, 210:1, 211:1, 212:1...254:1}, 1:{1:1, 2:1}...end of dict}
-	The 0 is the group reference and primary key.
-	The 209 is the variation reference and secondary key.
-	The 1 is the value of that variation reference."""
+	"""function to build type dictionary,
+	
+	to get at a type with the returned dictionary, use
+	returnedDict["groupNum"]["variationNum"]
+	
+	such as
+	returnedDict["1"]["2"]
+	
+	keys are:
+	group
+	variation
+	groupName
+	variationName
+	type
+	description
+	attributes
+	
+	attributes are 2 long tuples, (name , type)
+	"""
 
 	#open the file
 	listDict = csv.reader(open("DNP3 data object libraryV2.csv"))
 	#create the primary dictionary which will hold the current group
 	Dict = defaultdict(dict)
-	#rule count
-	#count = 1
+
 	for row in listDict:		
 		#pull parts
 		dict2 = dict()
@@ -47,9 +56,9 @@ def buildDict():
 
 		#Assign the value to the subdictionary with the variation reference
 		dict2["group"] = groupPos + " "
-		dict2["variationPos"] = variationPos + " "
-		dict2["GroupName"] = GroupName + " "
-		dict2["VariationName"] = VariationName + " "
+		dict2["variation"] = variationPos + " "
+		dict2["groupName"] = GroupName + " "
+		dict2["variationName"] = VariationName + " "
 		dict2["type"] = type + " "
 		dict2["description"] = description + " "
 		
