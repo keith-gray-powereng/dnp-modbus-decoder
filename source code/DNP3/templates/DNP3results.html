@@ -23,8 +23,14 @@
 		<p>Thank you for using Power Decoder. <br>
 			These are your results...<br>
 			<!--Functionality:  Tool that displays the decoded message in a layered effect.-->			
-			{{outty}}<br>
-			Web tool goes here Andy...
+			<strong><u>Decoded Message(s):</u></strong><br>
+			<ul>
+				{% for i in decodedStuff %}
+					{% if i != "" %}
+						<li>{{ i }}</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
 			<br><br>
 			<!--Functionality: Tool that hyperlinks back to the previous page for new message decoding-->			
 			Would you like to decode another message?

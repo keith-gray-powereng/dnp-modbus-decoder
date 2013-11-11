@@ -12,6 +12,7 @@
 {% extends "master_template.html" %}
 
 	<!--Set the title of the webpage-->
+{% load static %}
 	{% block title %} 
 	DNP3 Parser
 	{% endblock %}
@@ -33,9 +34,10 @@
 			
 			<p class = "orange">Manually type your message here...</p>
 			<!--Functionality: Allow the user to type in their message here-->			
-			<input type = "text" id = "inputByText" name = "inputByText">
-			<br><br><br><br>
+			<textarea id = "inputByText" name = "inputByText" rows="8" cols="75"></textarea>
+			<br><br><br>
 			<!--Functionality: Allow the user to submit their decision, call error check for NULL values-->			
+			<input type="hidden" id = "fileContents" name="fileContents" value="">
 			<input type = "submit"  value = "Decode Message(s)">
 			</form>
 			
@@ -52,12 +54,13 @@
 						return false;
 					}
 					else{
-						alert("Appropiate value has been inserted.");
+						//alert("Appropiate value has been inserted.");
 						return true;
 					}
 				}
 			</script>
 		</p>
+		<script type = "text/javascript" src = "{% static "js/fileInput.js" %}"></script>
 	{% endblock %}
 	
 	<!--End of webpage-->
