@@ -30,7 +30,7 @@ def buildDict():
 	#open the file
 	listDict = csv.reader(open("DNP3 data object libraryV2.csv"))
 	#create the primary dictionary which will hold the current group
-	Dict = defaultdict(dict)
+	Dict = dict()
 
 	for row in listDict:		
 		#pull parts
@@ -45,6 +45,10 @@ def buildDict():
 		type = lineX[4]
 		description = lineX[5]
 
+		#I have no idea how this was working before without this.  This way is more proper...
+		if not groupPos in Dict:
+			Dict[groupPos] = dict()
+		
 		#pull attributes
 		attribs = []
 		place = 4
