@@ -1,3 +1,9 @@
+/*Content:  CSS file
+	Focus:  Developing divs to better format the page
+	Format:  Follows standard CSS design.
+ */
+ /*Set the design of the HTML as a whole
+   Mostly the size of the background, currently not in use.*/
 #html{ 
 	
 	height: 100%;
@@ -15,7 +21,7 @@
 	background-size: 100%; */
 	
 }
-
+/* Set the design of the header div, sets the color gradient effect*/
 #header{
 	/*position: fixed;
 	top: 0;
@@ -31,7 +37,7 @@
 	margin:auto; 
 	z-index:100000; 
 	width:100%;
-	height: 10%;
+	height: 15%;
 	opacity: .95;
 	
 	/* IE10 Consumer Preview */ 
@@ -55,6 +61,7 @@
 	
 }
 
+/* Sets the design of the content and how it fits on the page*/
 #page{
 	width: 90%;
 	height: 100%;
@@ -63,6 +70,7 @@
 
 }
 
+/* Sets the design of the sidebar div and how it fits on the left side of the page*/
 #sidebar{
 	float: left;
 	position: relative;
@@ -89,6 +97,7 @@
 	/*overflow: invisible;*/
 }
 
+/* Sets the design of the content div and how big the font is.*/
 #content{
 	float:right;
 	width: 68%;
@@ -111,6 +120,7 @@
 	overflow:invisible;
 }
 
+/* Sets the design for the footer div and fixes it to the bottom of the page*/
 #footer{
    position:fixed;
    bottom: 0;
@@ -128,6 +138,7 @@
 	text-align: center;
 }
 
+/* Background image, currently not in use*/
 #bg {
 	position:absolute; 
 	top:-20%; 
@@ -136,16 +147,19 @@
 	height:200%;
 }
 
+/* Div meant for content instead of using the <h> tags*/
 #subheader{
 	font-weight: bold;
 	font-size: 16pt;
 }
 
+/* Image div, currently not in use*/
 #images{
 	width: 20%;
 	height: 20%;
 }
 
+/* Div that sets the images that will be used in the rotating background.*/
 #slideshow, img.bgM {
 	min-height: 100%;
 	min-width: 100%;
@@ -157,6 +171,7 @@
 	z-index:-9999;
 }
 
+/* Div meant to alter the font of the content.  Currently not in use.*/
 #reference{
 	/*font-weight: bold;*/
 	font-size: 16pt;
@@ -164,6 +179,7 @@
 	color: White;
 }
 
+/* Div meant to set the tone of the left sidebar. Currently not in use.*/
 #menuHeader{
 	font-weight: bold;
 	font-size:18pt;
@@ -171,46 +187,55 @@
 	color: White;
 }
 
+/* Alters the color presented when highlighting the content.*/
 p.orange::selection {
 	background:#c2660d; 
 	color:#fff;
 }
 
+/* Alters the color presented when highlighting the content.*/
 p.orange::-moz-selection {
 	background:#c2660d; 
 	color:#fff;
 }
 
+/* Alters the color presented when highlighting the content.*/
 p.orange::-webkit-selection {
 	background:#c2660d; 
 	color:#fff;
 }
 
+/* Alters the color presented when highlighting the content.*/
 p.red::selection {
 	background:#EC0033; 
 	color:#fff;
 }
 
+/* Alters the color presented when highlighting the content.*/
 p.red::-moz-selection {
 	background:#EC0033; 
 	color:#fff;
 }
 
+/* Alters the color presented when highlighting the content.*/
 p.red::-webkit-selection {
 	background:#EC0033; 
 	color:#fff;
 }
 
+/* Alters the color presented when highlighting the content.*/
 h2.yellow::selection {
 	background:#00BF32; 
 	color:#fff;
 }
 
+/* Alters the color presented when highlighting the content.*/
 h2.yellow::-moz-selection {
 	background:#00BF32; 
 	color:#fff;
 }
 
+/* Alters the color presented when highlighting the content.*/
 h2.yellow::-webkit-selection {
 	background:#00BF32; 
 	color:#fff;

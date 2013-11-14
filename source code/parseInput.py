@@ -2,7 +2,7 @@
 """Takes the user's input or specified text file and breaks it down into a list
 of the individual messages (whether DNP3 or Modbus) which is then returned.
 NOTE: if both input and a specified text file are provided, this module will
-attempt to use the file first, but will default to the input if file input fails"""
+attempt to use the textbox input first, but will use the input otherwise."""
 from string import hexdigits
 
 badExit = "" #what to return if bad file name
