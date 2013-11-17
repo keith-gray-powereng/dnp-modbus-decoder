@@ -1,1 +1,1 @@
-source files, code, that sort of thing goes here
+assets go here

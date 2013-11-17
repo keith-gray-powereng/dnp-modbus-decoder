@@ -1,0 +1,19 @@
+/*Content:  CSS file
+	Focus:  Adding images to the collapsible list objects
+	Format:  Follows standard CSS design.
+ */
+/*Default picture (basic square)*/
+.collapsibleList li{
+  list-style-image:url('../images/button.png');
+  cursor:auto;
+}
+/*Opened picture (square with a subtraction sign)*/
+li.collapsibleListOpen{
+  list-style-image:url('../images/button-open.png');
+  cursor:pointer;
+}
+/*Closed picture (square with an addition sign)*/
+li.collapsibleListClosed{
+  list-style-image:url('../images/button-closed.png');
+  cursor:pointer;
+}

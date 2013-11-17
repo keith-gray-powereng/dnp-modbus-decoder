@@ -7,49 +7,69 @@ from collections import defaultdict
 
 
 def buildDict():
-	"""Function call when you want to create the dictionary, use 'item = buildDict()', the item returned will
-	be a 2d dictionary where you can reference the data using item["0"]["209"] to return the description of that file.
-	Primary key is the group
-	Secondary key is the variation
-	Therefore, you would have something like...
-	d1 = {0:{209:1, 210:1, 211:1, 212:1...254:1}, 1:{1:1, 2:1}...end of dict}
-	The 0 is the group reference and primary key.
-	The 209 is the variation reference and secondary key.
-	The 1 is the value of that variation reference."""
+	"""function to build type dictionary,
+	
+	to get at a type with the returned dictionary, use
+	returnedDict["groupNum"]["variationNum"]
+	
+	such as
+	returnedDict["1"]["2"]
+	
+	keys are:
+	group
+	variation
+	groupName
+	variationName
+	type
+	description
+	attributes
+	
+	attributes are 2 long tuples, (name , type)
+	"""
 
 	#open the file
 	listDict = csv.reader(open("DNP3 data object libraryV2.csv"))
-	#listDict = raw.read().decode("utf-8-sig").encode("utf-8")	
 	#create the primary dictionary which will hold the current group
-	Dict = defaultdict(dict)
-	#rule count
-	#count = 1
-	for row in listDict:
-		#create the subdictionary for the current variation of the group
+	Dict = dict()
+
+	for row in listDict:		
+		#pull parts
 		dict2 = dict()
-		#pass the value for the values of the row
 		lineX = row
-		#group reference
+		
+		#entries
 		groupPos = lineX[0]
-		#variation reference
 		variationPos = lineX[1]
-		#rule description, can be anything in the line, but at the moment is simply the description
-		count = 1
-		for x in lineX:
-			if count > 2: 
-				value += str(lineX[count-1]) + " :: " 
-				count += 1
-			else:
-				value = ""
-				count += 1
-		#value = lineX[5]
+		GroupName = lineX[2]
+		VariationName = lineX[3]
+		type = lineX[4]
+		description = lineX[5]
+
+		#I have no idea how this was working before without this.  This way is more proper...
+		if not groupPos in Dict:
+			Dict[groupPos] = dict()
+		
+		#pull attributes
+		attribs = []
+		place = 4
+		while place + 2 < len(lineX):
+			place += 2
+			if place + 1 < len(lineX):
+				attribs.append((lineX[place] + " " , lineX[place + 1]))
+			
+
 		#Assign the value to the subdictionary with the variation reference
-		dict2[variationPos] = value
-		#assign the values of the subdictionary to x,y for appending to the primary dictionary
-		((x,y),) = dict2.items()
-		#append the x, y values to the primary dictionary
-		Dict[groupPos].setdefault(x,[]).append(y)
-		#count = count + 1
+		dict2["group"] = groupPos + " "
+		dict2["variation"] = variationPos + " "
+		dict2["groupName"] = GroupName + " "
+		dict2["variationName"] = VariationName + " "
+		dict2["type"] = type + " "
+		dict2["description"] = description + " "
+		
+		dict2["attributes"] = list(attribs)
+		
+		Dict[groupPos][variationPos] = dict2
+		
 	return Dict
 
 

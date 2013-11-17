@@ -2,7 +2,8 @@
 	Focus:  Displaying the results of the DNP3 parser to the user.
 	Format:  Uses html format with background css and references
 			 built in django functionality for inheriting template designs.
-	Note: Django built in functionality will always have particular references of {'percentage sign' content you want 'percentage sign'}
+	Note: Django built in functionality will always have particular references of {'percentage sign' content you
+		  want 'percentage sign'}
 		  Also, the built in functionality for overriding portions of the master template start with the previously
 		  mention block {'percentage sign' content 'percentage sign'} but contain a keyword block and a variable for the beginning of the portion to be overriden and 
 		  a keyword endblock for the end of the portion.  
@@ -11,6 +12,7 @@
  <!--Inherit the master template-->
 {% extends "master_template.html" %}
 
+{% load static %}
 	<!--Set the title of the webpage-->
 	{% block title %} 
 	DNP3 Results
@@ -20,21 +22,31 @@
 		<!--Title of the contents-->	
 		<h2>DNP3 Message results</h2>
 		<!--Display and description of your message-->		
-		<p>Thank you for using Power Decoder. <br>
-			These are your results...<br>
-			<!--Functionality:  Tool that displays the decoded message in a layered effect.-->			
-			<strong><u>Decoded Message(s):</u></strong><br>
-			<ul>
-				{% for i in decodedStuff %}
-					{% if i != "" %}
-						<li>{{ i }}</li>
-					{% endif %}
-				{% endfor %}
+			<!--Functionality:  Tool that displays the decoded message in a layered effect.-->		
+			<script type="text/javascript" src="{% static "js/CollapsibleLists.js" %}"></script>
+			<link rel = "stylesheet" type = "text/css" href = "{% static "css/collapsibleLists.css" %}">
+			<h3><strong><u>Decoded Message(s):</u></strong></h3>
+			<ul class="collapsibleList" id="decodedMessagesList">
+				<li>
+				{{ originalMsg }}
+					<ul>
+					{% for i in decodedStuff %}
+						{% if i != "" %}
+							<li>{{ i }}</li>
+						{% endif %}
+					{% endfor %}
+					</ul>
+				</li>
 			</ul>
 			<br><br>
-			<!--Functionality: Tool that hyperlinks back to the previous page for new message decoding-->			
+			
+			<!--Functionality: Tool that hyperlinks back to the previous page for new message decoding-->		
 			Would you like to decode another message?
 			Click <a href = 'http://127.0.0.1:8000/Power/DNP3/DNP3/'>here</a>!
 		</p>
+		
+		<script type="text/javascript">
+			CollapsibleLists.apply();
+		</script>
 	{% endblock %}
 	<!--End of webpage-->
