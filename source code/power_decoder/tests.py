@@ -51,9 +51,9 @@ class SimpleTest(TestCase):
         assert result.int == bitstring.Bits("0x01").int,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x01").int)   
         
     def test_getFunctionCode(self):
-        testWord = bitstring.Bits("0x000000000000FF00")
+        testWord = bitstring.Bits("0x000000000000FA00")
         result = BitSlice.getFuncCode(testWord)
-        assert result.int == bitstring.Bits("0x0FF").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0FF").int)   
+        assert result.int == bitstring.Bits("0x0FA").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0FF").int)   
         
     def test_getLSBCodeSet(self):
         testWord = bitstring.Bits("0x00000000000F0000")
