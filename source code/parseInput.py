@@ -88,4 +88,8 @@ def parseData(data, fileContents):
 				status = 'm'
 			else: #if whitespace or other character, it's ignored
 				continue
+				
+		if m != "":
+			messages.append( (m,c) )
+			
 	return messages
