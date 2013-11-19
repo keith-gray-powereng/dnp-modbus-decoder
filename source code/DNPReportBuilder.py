@@ -22,13 +22,17 @@ class DNPReportBuilder:
         hexMessage = []
         #turn into bitstrings
         for i in message:
-            arr = BitArray(hex = i.replace(" ", ""))
-            hexMessage.append(arr.reverse())
+            value = BitArray(hex = i.replace(" ", ""))
+            hexMessage.append(value)
+            
+            
+        for i in hexMessage:
+            print (i)
         
         #verify correctness
         if not DataLinkTranslator.DataLayerCorrect(hexMessage[0]):
             self.out.AddNext(Report("ERROR", "This message is not verifyably DNP3, or may be malformed", message[0]))
-            return
+            return Report("Invalid Message", "", "")
         
         #remove CRC bits for everything
         for i in hexMessage:
@@ -78,7 +82,8 @@ class DNPReportBuilder:
                 baseLayer.Next[-1].AddNext(temp)
                 
             fragment += 1
-            
+           
+        print (self.out)
         return self.out
         
 

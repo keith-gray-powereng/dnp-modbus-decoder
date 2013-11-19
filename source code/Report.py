@@ -24,7 +24,8 @@ def printReport(report, depth):
     for i in range(0, depth):
         space += "  "
         
-    print ((space + "Title: {}\n" + space + "Description: {}\n" + space + "Data: {}\n").format(report.title, report.description, report.data))
-    
-    for i in report.Next:
-        printReport(i, depth + 1)
+    if not report == None:
+        print ((space + "Title: {}\n" + space + "Description: {}\n" + space + "Data: {}\n").format(report.title, report.description, report.data))
+        
+        for i in report.Next:
+            printReport(i, depth + 1)
