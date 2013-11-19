@@ -56,7 +56,8 @@ class DNPReportBuilder:
         self.reciever = DataLinkTranslator.DataLayerDestination(hexMessage[0][:])
         self.out.AddNext(Report("Message Reciever", "ID for Reciever", str(self.reciever.hex)))
         
-        
+        #you failed to strip the transport layer, Westin.
+        #you failed to strip the transport layer, Westin.
         
         
         fragment = 1
@@ -86,6 +87,7 @@ class DNPReportBuilder:
         print (self.out)
         return self.out
         
+        #http://www.kepware.com/Support_Center/SupportDocuments/DNP3_Control_Relay_Output_Block.pdf
 
         
         
