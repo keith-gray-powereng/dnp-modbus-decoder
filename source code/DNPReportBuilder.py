@@ -1,6 +1,8 @@
 from Report import Report
 import DataLinkTranslator
 from bitstring import BitArray
+from BitSlice import *
+from translators import *
 
 
 class DNPReportBuilder:
@@ -13,14 +15,15 @@ class DNPReportBuilder:
     
     '''Translates message into a displayable report
     I am expecting "message" to be a list of hex numbers, preferrably strings'''
-    def translate(self, message):
+    def translate(self, message, request):
         # data link layer is first
         #it will be chunk 0 
         
         hexMessage = []
         #turn into bitstrings
         for i in message:
-            hexMessage.append(BitArray(hex = i.replace(" ", "")))
+            arr = BitArray(hex = i.replace(" ", ""))
+            hexMessage.append(arr.reverse())
         
         #verify correctness
         if not DataLinkTranslator.DataLayerCorrect(hexMessage[0]):
@@ -49,14 +52,36 @@ class DNPReportBuilder:
         self.reciever = DataLinkTranslator.DataLayerDestination(hexMessage[0][:])
         self.out.AddNext(Report("Message Reciever", "ID for Reciever", str(self.reciever.hex)))
         
+        
+        
+        
         fragment = 1
-        while fragment < len(hexMessage) :
-            #transport function
+        baseLayer = self.out
+        while fragment < len(hexMessage)-1 :
+            bucket = []
+            #requests contain no actual data
+            #just outlines for what is expected in responses
+            if request:
+                bucket.append(Report("Object Header", "Prefix information on Application layer", ""))
+                flags = getAppRequestHeader(hexMessage[fragment])
+                for i in flags:
+                    bucket[-1].Next.append(i)
+                bucket.append(translateFuncCode(getFuncCode(hexMessage[fragment])))
+                #skip internal indications
+                
             
-            #actual app message translation
+            baseLayer.AddNext(Report("Application Fragment {}".format(fragment -1), "", ""))
+            for i in bucket:
+                temp = i
+                if not isinstance(i, Report):
+                    temp = Report(i,"","")
+                baseLayer.Next[-1].AddNext(temp)
+                
             fragment += 1
             
         return self.out
         
 
+        
+        
             
