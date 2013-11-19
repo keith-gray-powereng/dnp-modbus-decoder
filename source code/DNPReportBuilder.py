@@ -8,7 +8,7 @@ from translators import *
 class DNPReportBuilder:
 
     def dummyData(self):
-        return ["05 64 12 C4 02 00 64 00 FF B7", "F8 C8 05 29 02 28 01 00 10 00 00 80 00 E8 57", "05 64 14 44 64 00 02 00 A4 D8", "F1 C8 81 00 00 29 02 28 01 00 10 00 00 80 00 7E 25"]
+        return ["05 64 12 C4 02 00 64 00 FF B7", "F8 C8 05 29 02 28 01 00 10 00 00 80 00 E8 57"]
     
     def __init__(self):
         self.out = Report("Message", "", "")
@@ -61,7 +61,7 @@ class DNPReportBuilder:
         
         fragment = 1
         baseLayer = self.out
-        while fragment < len(hexMessage)-1 :
+        while fragment < len(hexMessage) :
             bucket = []
             #requests contain no actual data
             #just outlines for what is expected in responses

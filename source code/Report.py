@@ -19,7 +19,7 @@ class Report:
 always start with depth of zero
 
 Feel free to ape the basic implementation, though'''      
-def printReport(report, depth):
+def printReport(report, depth = 0):
     space = ""
     for i in range(0, depth):
         space += "  "

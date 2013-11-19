@@ -58,11 +58,11 @@ def getFuncCode(input):
 #only for responses
 '''(Application layer) Part one of Error Codes ''' 
 def getLSBInternalIndications(input):
-    return slice(input, 4, 16)
+    return input[16:24]
 
 '''(Application layer) Part two of Error Codes'''     
 def getMSBInternalIndications(input):
-    return slice(input, 4, 20)
+    return input[24:32]
 
 #seq is the multiple of object parsed, zero indexed
 #Object Header = Object Type (group, variation), Qualifier Field, Range Field
