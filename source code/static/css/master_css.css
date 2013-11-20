@@ -83,15 +83,15 @@
 		linear,
 		left top,
 		left bottom,
-		color-stop(0, #2B8691),
-		color-stop(1, #33EEFF)
+		color-stop(0, #FF6229),
+		color-stop(1, #FCFCFC)
 	);
-	background-image: -o-linear-gradient(bottom, #2B8691 0%, #33EEFF 100%);
-	background-image: -moz-linear-gradient(bottom, #2B8691 0%, #33EEFF 100%);
-	background-image: -webkit-linear-gradient(bottom, #2B8691 0%, #33EEFF 100%);
-	background-image: -ms-linear-gradient(bottom, #2B8691 0%, #33EEFF 100%);
-	background-image: linear-gradient(to bottom, #2B8691 0%, #33EEFF 100%);
-
+	background-image: -o-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: -moz-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: -webkit-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: -ms-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: linear-gradient(to bottom, #FF6229 0%, #FCFCFC 100%);
+	border: 1px solid #f00;
 		/*background-image: url("images/content7.jpg");
 	border: 1px solid #000;
 	/*overflow: invisible;*/
@@ -120,15 +120,14 @@
 		linear,
 		left top,
 		left bottom,
-		color-stop(0, #2B8691),
-		color-stop(1, #33EEFF)
+		color-stop(0, #FF6229),
+		color-stop(1, #FCFCFC)
 	);
-	background-image: -o-linear-gradient(bottom, #2B8691 0%, #33EEFF 100%);
-	background-image: -moz-linear-gradient(bottom, #2B8691 0%, #33EEFF 100%);
-	background-image: -webkit-linear-gradient(bottom, #2B8691 0%, #33EEFF 100%);
-	background-image: -ms-linear-gradient(bottom, #2B8691 0%, #33EEFF 100%);
-	background-image: linear-gradient(to bottom, #2B8691 0%, #33EEFF 100%);
-
+	background-image: -o-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: -moz-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: -webkit-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: -ms-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: linear-gradient(to bottom, #FF6229 0%, #FCFCFC 100%);
 	border: 1px solid #f00;
 	padding: 3%; /*KEEP A CLOSE EYE ON THIS */
 	overflow:invisible;
