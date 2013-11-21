@@ -8,7 +8,7 @@ from translators import *
 class DNPReportBuilder:
 
     def dummyData(self):
-        return ["05 64 12 C4 02 00 64 00 FF B7", "F8 C8 05 29 02 28 01 00 10 00 00 80 00 E8 57"]
+        return ["05 64 12 C4 02 00 64 00 FF B7", "F8 C8 05 29 02 28 01 00 10 00 00 80 00 E8 57", "05 64 14 44 64 00 02 00 A4 D8", "F1 C8 81 00 00 29 02 28 01 00 10 00 00 80 00 7E 25"]
     
     def __init__(self):
         self.out = Report("Message", "", "")
@@ -30,7 +30,8 @@ class DNPReportBuilder:
         hexMessages = []
         temp = []
         for i in hexMessageIN:
-            if i[0:4].hex == BitArray("0x0564").hex:
+            print (i[0:16].hex)
+            if i[0:16].hex == BitArray("0x0564").hex:
                 if len(temp) > 0:
                     hexMessages.append(list(temp))
                 temp = []
@@ -38,11 +39,18 @@ class DNPReportBuilder:
         if len(temp) > 0:
             hexMessages.append(list(temp))
            
+        allMessages = Report("All Messages", "The entirity of the message", "")
+        messageCount = -1
         for hexMessage in hexMessages:
+        
+            messageCount += 1
+            thisMessage = Report("Message {}".format(messageCount), "", "")
+            
+            
             #verify correctness
             try:
                 if not DataLinkTranslator.DataLayerCorrect(hexMessage[0]):
-                    self.out.AddNext(Report("ERROR", "This message is not verifyably DNP3, or may be malformed", message[0]))
+                    thisMessage.AddNext(Report("ERROR", "This message is not verifyably DNP3, or may be malformed", message[0]))
                     return Report("Invalid Message", "", "")
             except:
                 return Report("Invalid Input", "", "")
@@ -52,29 +60,29 @@ class DNPReportBuilder:
                 i = DataLinkTranslator.StripCRCBits(i)
             
             #Get message length
-            self.length = DataLinkTranslator.DataLayerLength(hexMessage[0][:])
-            self.MessageLength = self.length.uint
-            self.out.AddNext(Report("Message length", "Number of octets this message contains that are not CRC related", str(self.length.uint)))
+            thisMessage.length = DataLinkTranslator.DataLayerLength(hexMessage[0][:])
+            thisMessage.MessageLength = thisMessage.length.uint
+            thisMessage.AddNext(Report("Message length", "Number of octets this message contains that are not CRC related", str(thisMessage.length.uint)))
             
             #Get Control Field
             control = DataLinkTranslator.DataLayerControl(hexMessage[0][:])
-            self.out.AddNext(Report("Message Control Data", "Function opertaions and qualifiers", str(control.hex)))
+            thisMessage.AddNext(Report("Message Control Data", "Function opertaions and qualifiers", str(control.hex)))
             #todo: break into specific parts, lookup function
             
             #message sender
-            self.sender = DataLinkTranslator.DataLayerSource(hexMessage[0][:])
-            self.out.AddNext(Report("Message Sender", "ID for sender", str (self.sender.hex)))
+            thisMessage.sender = DataLinkTranslator.DataLayerSource(hexMessage[0][:])
+            thisMessage.AddNext(Report("Message Sender", "ID for sender", str (thisMessage.sender.hex)))
             
             #message reciever
-            self.reciever = DataLinkTranslator.DataLayerDestination(hexMessage[0][:])
-            self.out.AddNext(Report("Message Reciever", "ID for Reciever", str(self.reciever.hex)))
+            thisMessage.reciever = DataLinkTranslator.DataLayerDestination(hexMessage[0][:])
+            thisMessage.AddNext(Report("Message Reciever", "ID for Reciever", str(thisMessage.reciever.hex)))
             
             #you failed to strip the transport layer, Westin.
             #you failed to strip the transport layer, Westin.
             
             
             fragment = 1
-            baseLayer = self.out
+            baseLayer = thisMessage
             while fragment < len(hexMessage) :
                 bucket = []
                 #requests contain no actual data
@@ -96,9 +104,11 @@ class DNPReportBuilder:
                     baseLayer.Next[-1].AddNext(temp)
                     
                 fragment += 1
+                
+            allMessages.AddNext(thisMessage)
                
-            print (self.out)
-            return self.out
+        print (allMessages)
+        return allMessages
         
         #http://www.kepware.com/Support_Center/SupportDocuments/DNP3_Control_Relay_Output_Block.pdf
 
