@@ -66,8 +66,8 @@ class DNPReportBuilder:
             
             #Get Control Field
             control = DataLinkTranslator.DataLayerControl(hexMessage[0][:])
-            thisMessage.AddNext(Report("Message Control Data", "Function opertaions and qualifiers", str(control.hex)))
-            #todo: break into specific parts, lookup function
+            thisMessage.AddNext(Report("Message Control Data", "Function operations and qualifiers", str(control.hex)))
+            thisMessage.Next[-1].AddNext(DataLinkTranslator.DataLayerControlReport(control))
             
             #message sender
             thisMessage.sender = DataLinkTranslator.DataLayerSource(hexMessage[0][:])
