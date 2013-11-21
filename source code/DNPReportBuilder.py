@@ -16,9 +16,7 @@ class DNPReportBuilder:
     '''Translates message into a displayable report
     I am expecting "message" to be a list of hex numbers, preferrably strings'''
     def translate(self, message, request):
-        # data link layer is first
-        #it will be chunk 0 
-        
+
         hexMessageIN = []
         #turn into bitstrings
         for i in message:
@@ -45,8 +43,7 @@ class DNPReportBuilder:
         
             messageCount += 1
             thisMessage = Report("Message {}".format(messageCount), "", "")
-            
-            
+                       
             #verify correctness
             try:
                 if not DataLinkTranslator.DataLayerCorrect(hexMessage[0]):
@@ -77,13 +74,20 @@ class DNPReportBuilder:
             thisMessage.reciever = DataLinkTranslator.DataLayerDestination(hexMessage[0][:])
             thisMessage.AddNext(Report("Message Reciever", "ID for Reciever", str(thisMessage.reciever.hex)))
             
-            #you failed to strip the transport layer, Westin.
-            #you failed to strip the transport layer, Westin.
+            #message transport layer
+            thisMessage.transport = ""
+            if hexMessage[1][0]:
+                thisMessage.transport += " FINAL "
+            if hexMessage[1][1]:
+                thisMessage.transport += " FIRST "
+            thisMessage.AddNext(Report("Transport Function", "Links together large messages in sequence", (thisMessage.transport + "Seq {}").format(hexMessage[1][2:8].uint)))
+            hexMessage[1] = hexMessage[1][8:]
             
-            
+            #technically a block, so sue me
             fragment = 1
             baseLayer = thisMessage
             while fragment < len(hexMessage) :
+            
                 bucket = []
                 #requests contain no actual data
                 #just outlines for what is expected in responses
@@ -93,15 +97,15 @@ class DNPReportBuilder:
                     for i in flags:
                         bucket[-1].Next.append(i)
                     bucket.append(translateFuncCode(getFuncCode(hexMessage[fragment])))
-                    #skip internal indications
+                    #skip internal indications, does not exist in requests
                     
-                
-                baseLayer.AddNext(Report("Application Fragment {}".format(fragment -1), "", ""))
                 for i in bucket:
                     temp = i
                     if not isinstance(i, Report):
                         temp = Report(i,"","")
                     baseLayer.Next[-1].AddNext(temp)
+                    
+                baseLayer.AddNext(Report("Application Fragment {}".format(fragment -1), "", ""))
                     
                 fragment += 1
                 

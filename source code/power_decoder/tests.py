@@ -136,10 +136,10 @@ class SimpleTest(TestCase):
         originalValue = 'This is a special attribute that is used to retrieve a list of all of the device attribute variation numbers supported by the outstation at a specified index- and the properties of those attributes.  This object has a variable length that depends on the count of attribute variations supported by the outstation. '
         dictionary = dictScriptV2.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
-        print('\n\n')
-        print(originalValue)
-        print('\n\n')
-        print(testValue["description"])        
+        #print('\n\n')
+        #print(originalValue)
+        #print('\n\n')
+        #print(testValue["description"])        
         assert testValue["description"] == originalValue
 
     def test_DictionaryBadIndex(self):
