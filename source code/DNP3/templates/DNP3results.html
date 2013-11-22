@@ -26,18 +26,7 @@
 			<script type="text/javascript" src="{% static "js/CollapsibleLists.js" %}"></script>
 			<link rel = "stylesheet" type = "text/css" href = "{% static "css/collapsibleLists.css" %}">
 			<h3><strong><u>Decoded Message(s):</u></strong></h3>
-			<ul class="collapsibleList" id="decodedMessagesList">
-				<li>
-				{{ originalMsg }}
-					<ul>
-					{% for i in decodedStuff %}
-						{% if i != "" %}
-							<li>{{ i }}</li>
-						{% endif %}
-					{% endfor %}
-					</ul>
-				</li>
-			</ul>
+			{{ decodedStuff | safe }}
 			<br><br>
 			
 			<!--Functionality: Tool that hyperlinks back to the previous page for new message decoding-->		

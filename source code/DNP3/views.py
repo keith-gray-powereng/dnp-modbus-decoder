@@ -6,7 +6,9 @@ from django.shortcuts import render_to_response
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
 import POC #Contains our DNP3 decoder module
-import parseInput
+from parseInput import parseData
+from listBuild import *
+from DNPReportBuilder import *
 import BitSlice
 
 def test(request):
@@ -22,14 +24,21 @@ def DNP3results(request):
 	userData = request.GET['inputByText']
 	userFileContents = request.GET['fileContents']
 	
-	messages = parseInput.parseData(userData, userFileContents) #passing input into parseData to strip out the messages (and get rid of extra data)
+	messages = parseData(userData, userFileContents) #passing input into parseData to strip out the messages (and get rid of extra data)
 	if messages != "": #example message = "05 64 05 C0 01 00 0A 00"
-		decodedObj = POC.DNP3(messages[0][0]) #just passes first message for now(TEMPORARY)
+		#decodedObj = POC.DNP3(messages[0][0]) #just passes first message for now(TEMPORARY)
+		decodedReports = []
+		reportBuilder = DNPReportBuilder()
+		#for msg in messages: #Decoding each message and getting Report objects back
+			#decodedReports.append( reportBuilder.translate(msg[0], msg[2]) )
+		decodedReports = reportBuilder.translate(messages, True)
+		#Convert Report list to HTML collapsible list
+		outty = makeCollapsibleList(decodedReports)
 	else:
-		decodedObj = ['Failed to parse out any messages']
+		outty = 'Failed to parse out any messages'
 		
-	outty = []
-	for i in decodedObj:
-		outty.append(str(i))
-	return render(request, 'DNP3results.html', {'decodedStuff':outty, 'originalMsg':messages[0][0]})
+	#outty = []
+	#for i in decodedReports:
+		#outty.append(str(i))
+	return render(request, 'DNP3results.html', {'decodedStuff':outty}) #not using originalMessage for now
 	

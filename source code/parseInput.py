@@ -49,7 +49,8 @@ def parseData(data, fileContents):
 							byteCount += 1
 						i += 1
 					
-					messages.append( (m, c, request) )
+					#messages.append( (m, c, request) )
+					messages.append(m)
 					m = ""
 					c = ""
 					i = msg.find("\n", i) + 1
@@ -63,7 +64,8 @@ def parseData(data, fileContents):
 					i += 1
 			#end while (msg)
 			if m != "":
-				messages.append( (m,c, request) ) #pushing message and crc as a tuple
+				#messages.append( (m,c, request) ) #pushing message and crc as a tuple
+				messages.append(m)
 		#end if
 	#end while
 	
@@ -90,7 +92,8 @@ def parseData(data, fileContents):
 			elif letter in nxt_msg_chars: #ends current message or crc and begins next message
 				if m == "" and c == "":
 					continue #if both m and c are empty, doesn't add either to messages
-				messages.append( (m,c,request) )
+				#messages.append( (m,c,request) )
+				messages.append(m)
 				m = ""
 				c = ""
 				status = 'm'
@@ -98,6 +101,7 @@ def parseData(data, fileContents):
 				continue
 				
 		if m != "":
-			messages.append( (m,c,request) )
+			#messages.append( (m,c,request) )
+			messages.append(m)
 			
 	return messages
