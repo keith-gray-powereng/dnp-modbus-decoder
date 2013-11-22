@@ -28,41 +28,41 @@ def slice(input,length, startBit):
 '''(Application layer) Isolates sequence bits from application layer segment'''    
 def getSequence(input):
     #print ("seq")
-    return slice(input, 4, 1)    
+    return input[4:8]
 
 '''(Application layer) Isolates bit declaring requests for confirmation''' 
 def getConfirmationFlag(input):
     #print ("conseq")
-    return slice(input,1, 5)
+    return input[2:3]
 
 '''(Application layer) Isolates bit declaring if request is unsolicited'''     
 def getUnsolicitedFlag(input):
     #print ("unsol")
-    return slice(input, 1, 4)
+    return input[3:4]
 
 '''(Application layer) Bit declaring if it is the first fragment'''     
 def getFirstFlag(input):
     #print ("first")
-    return slice(input, 1, 6)
+    return input[0:1]
 
 '''(Application layer) Bit declaring if it is final fragment''' 
 def getFinalFlag(input):
     #print ("final")
-    return slice(input, 1, 7)
+    return input[1:2]
     
 '''(Application layer) Declares what action should be done with data enclosed'''     
 def getFuncCode(input):
     #print ("func")
-    return slice(input, 8,8)
+    return input[8:16]
     
 #only for responses
 '''(Application layer) Part one of Error Codes ''' 
 def getLSBInternalIndications(input):
-    return slice(input, 4, 16)
+    return input[16:24]
 
 '''(Application layer) Part two of Error Codes'''     
 def getMSBInternalIndications(input):
-    return slice(input, 4, 20)
+    return input[24:32]
 
 #seq is the multiple of object parsed, zero indexed
 #Object Header = Object Type (group, variation), Qualifier Field, Range Field

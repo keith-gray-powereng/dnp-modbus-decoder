@@ -1,6 +1,8 @@
 from Report import Report
 import DataLinkTranslator
 from bitstring import BitArray
+from BitSlice import *
+from translators import *
 
 
 class DNPReportBuilder:
@@ -13,50 +15,107 @@ class DNPReportBuilder:
     
     '''Translates message into a displayable report
     I am expecting "message" to be a list of hex numbers, preferrably strings'''
-    def translate(self, message):
-        # data link layer is first
-        #it will be chunk 0 
-        
-        hexMessage = []
+    def translate(self, message, request):
+
+        hexMessageIN = []
         #turn into bitstrings
         for i in message:
-            hexMessage.append(BitArray(hex = i.replace(" ", "")))
-        
-        #verify correctness
-        if not DataLinkTranslator.DataLayerCorrect(hexMessage[0]):
-            self.out.AddNext(Report("ERROR", "This message is not verifyably DNP3, or may be malformed", message[0]))
-            return
-        
-        #remove CRC bits for everything
-        for i in hexMessage:
-            i = DataLinkTranslator.StripCRCBits(i)
-        
-        #Get message length
-        self.length = DataLinkTranslator.DataLayerLength(hexMessage[0][:])
-        self.MessageLength = self.length.uint
-        self.out.AddNext(Report("Message length", "Number of octets this message contains that are not CRC related", str(self.length.uint)))
-        
-        #Get Control Field
-        control = DataLinkTranslator.DataLayerControl(hexMessage[0][:])
-        self.out.AddNext(Report("Message Control Data", "Function opertaions and qualifiers", str(control.hex)))
-        #todo: break into specific parts, lookup function
-        
-        #message sender
-        self.sender = DataLinkTranslator.DataLayerSource(hexMessage[0][:])
-        self.out.AddNext(Report("Message Sender", "ID for sender", str (self.sender.hex)))
-        
-        #message reciever
-        self.reciever = DataLinkTranslator.DataLayerDestination(hexMessage[0][:])
-        self.out.AddNext(Report("Message Reciever", "ID for Reciever", str(self.reciever.hex)))
-        
-        fragment = 1
-        while fragment < len(hexMessage) :
-            #transport function
+            value = BitArray(hex = i.replace(" ", ""))
+            hexMessageIN.append(value)
             
-            #actual app message translation
-            fragment += 1
-            
-        return self.out
+           
+        #detect multiple messages
+        hexMessages = []
+        temp = []
+        for i in hexMessageIN:
+            print (i[0:16].hex)
+            if i[0:16].hex == BitArray("0x0564").hex:
+                if len(temp) > 0:
+                    hexMessages.append(list(temp))
+                temp = []
+            temp.append(i)
+        if len(temp) > 0:
+            hexMessages.append(list(temp))
+           
+        allMessages = Report("All Messages", "The entirity of the message", "")
+        messageCount = -1
+        for hexMessage in hexMessages:
         
+            messageCount += 1
+            thisMessage = Report("Message {}".format(messageCount), "", "")
+                       
+            #verify correctness
+            try:
+                if not DataLinkTranslator.DataLayerCorrect(hexMessage[0]):
+                    thisMessage.AddNext(Report("ERROR", "This message is not verifyably DNP3, or may be malformed", message[0]))
+                    return Report("Invalid Message", "", "")
+            except:
+                return Report("Invalid Input", "", "")
+                
+            #remove CRC bits for everything
+            for i in hexMessage:
+                i = DataLinkTranslator.StripCRCBits(i)
+            
+            #Get message length
+            thisMessage.length = DataLinkTranslator.DataLayerLength(hexMessage[0][:])
+            thisMessage.MessageLength = thisMessage.length.uint
+            thisMessage.AddNext(Report("Message length", "Number of octets this message contains that are not CRC related", str(thisMessage.length.uint)))
+            
+            #Get Control Field
+            control = DataLinkTranslator.DataLayerControl(hexMessage[0][:])
+            thisMessage.AddNext(Report("Message Control Data", "Function operations and qualifiers", str(control.hex)))
+            thisMessage.Next[-1].AddNext(DataLinkTranslator.DataLayerControlReport(control))
+            
+            #message sender
+            thisMessage.sender = DataLinkTranslator.DataLayerSource(hexMessage[0][:])
+            thisMessage.AddNext(Report("Message Sender", "ID for sender", str (thisMessage.sender.hex)))
+            
+            #message reciever
+            thisMessage.reciever = DataLinkTranslator.DataLayerDestination(hexMessage[0][:])
+            thisMessage.AddNext(Report("Message Reciever", "ID for Reciever", str(thisMessage.reciever.hex)))
+            
+            #message transport layer
+            thisMessage.transport = ""
+            if hexMessage[1][0]:
+                thisMessage.transport += " FINAL "
+            if hexMessage[1][1]:
+                thisMessage.transport += " FIRST "
+            thisMessage.AddNext(Report("Transport Function", "Links together large messages in sequence", (thisMessage.transport + "Seq {}").format(hexMessage[1][2:8].uint)))
+            hexMessage[1] = hexMessage[1][8:]
+            
+            #technically a block, so sue me
+            fragment = 1
+            baseLayer = thisMessage
+            while fragment < len(hexMessage) :
+            
+                bucket = []
+                #requests contain no actual data
+                #just outlines for what is expected in responses
+                if request:
+                    bucket.append(Report("Object Header", "Prefix information on Application layer", ""))
+                    flags = getAppRequestHeader(hexMessage[fragment])
+                    for i in flags:
+                        bucket[-1].Next.append(i)
+                    bucket.append(translateFuncCode(getFuncCode(hexMessage[fragment])))
+                    #skip internal indications, does not exist in requests
+                    
+                for i in bucket:
+                    temp = i
+                    if not isinstance(i, Report):
+                        temp = Report(i,"","")
+                    baseLayer.Next[-1].AddNext(temp)
+                    
+                baseLayer.AddNext(Report("Application Fragment {}".format(fragment -1), "", ""))
+                    
+                fragment += 1
+                
+            allMessages.AddNext(thisMessage)
+               
+        print (allMessages)
+        return allMessages
+        
+        #http://www.kepware.com/Support_Center/SupportDocuments/DNP3_Control_Relay_Output_Block.pdf
 
+        
+        
             

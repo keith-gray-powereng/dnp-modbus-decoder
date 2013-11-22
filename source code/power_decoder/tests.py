@@ -16,54 +16,56 @@ class SimpleTest(TestCase):
         #heads up, these numbers are signed
         # a leading zero is needed to show positivity
     def test_sliceTestFail(self):
-        testWord = bitstring.Bits("0x00000000000F0000")
+        testWord = bitstring.BitArray("0x00000000000F0000")
+        testWord.reverse()
         result = BitSlice.slice(testWord, 0, 2)
-        assert result.int == bitstring.Bits("0x0").int , "slice somehow returned the correct result ({})".format(result)
+        assert result.uint == bitstring.BitArray("0x0").uint , "slice somehow returned the correct result ({})".format(result)
         
-    def test_sliceTestPass(self):
-        testWord = bitstring.Bits("0x0000000000FF0000")
-        result = BitSlice.slice(testWord, 8, 16)
-        assert result.int == bitstring.Bits("0x0FF").int , "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0FF").int)   
+    def test_sliceStartbits(self):
+        testWord = bitstring.BitArray(hex = "05640000000000000000000000000000")
+        result = testWord[0:16]
+        assert result.uint == bitstring.BitArray("0x0564").uint , "slice is pulling the wrong bits ({}, {})".format(result.uint, bitstring.BitArray("0x564").uint)   
         
-    def test_sliceSequenceNum(self):
-        testWord = bitstring.Bits("0x000000000000000E")
+    def test_AHsliceSequenceNum(self):
+        testWord = bitstring.BitArray("0x0F0000000000000")
         result = BitSlice.getSequence(testWord)
-        assert result.int == bitstring.Bits("0x07").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x07").int)   
+        assert result.uint == bitstring.BitArray("0xF").uint ,  "slice is pulling the wrong bits ({}, {})".format(result.uint, bitstring.BitArray("0xF").uint)   
         
-    def test_sliceConsequtiveFlag(self):
-        testWord = bitstring.Bits("0x0000000000000020")
-        result = BitSlice.getConsequtiveFlag(testWord, )
-        assert result.int == bitstring.Bits("0x01").int,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x01").int)   
+    def test_AHsliceConfirmationlag(self):
+        testWord = bitstring.BitArray("0x20000000000000000")
+        result = BitSlice.getConfirmationFlag(testWord)
+        accepted = bitstring.BitArray("0x1")
+        assert result.uint == accepted.uint,  "slice is pulling the wrong bits ({}, {})".format(result.uint, accepted.uint)   
         
-    def test_sliceUnsolicitedFlag(self):
-        testWord = bitstring.Bits("0x0000000000000010")
+    def test_AHsliceUnsolicitedFlag(self):
+        testWord = bitstring.BitArray("0x1000000000000000")
         result = BitSlice.getUnsolicitedFlag(testWord)
-        assert result.int == bitstring.Bits("0x01").int,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x01").int)   
+        assert result.uint == bitstring.BitArray("0x1").uint,  "slice is pulling the wrong bits ({}, {})".format(result.uint, bitstring.BitArray("0x1").uint)   
 
-    def test_sliceFirstFlag(self):
-        testWord = bitstring.Bits("0x0000000000000040")
+    def test_AHsliceFirstFlag(self):
+        testWord = bitstring.BitArray("0x8000000000000040")
         result = BitSlice.getFirstFlag(testWord)
-        assert result.int == bitstring.Bits("0x01").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x01").int)   
+        assert result.uint == bitstring.BitArray("0x1").uint ,  "slice is pulling the wrong bits ({}, {})".format(result.uint, bitstring.BitArray("0x1").uint)   
 
-    def test_sliceFinalFlag(self):
-        testWord = bitstring.Bits("0x0000000000000080")
+    def test_AHsliceFinalFlag(self):
+        testWord = bitstring.BitArray("0x4000000000000080")
         result = BitSlice.getFinalFlag(testWord)
-        assert result.int == bitstring.Bits("0x01").int,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x01").int)   
+        assert result.uint == bitstring.BitArray("0x1").uint,  "slice is pulling the wrong bits ({}, {})".format(result.uint, bitstring.BitArray("0x1").uint)   
         
-    def test_getFunctionCode(self):
-        testWord = bitstring.Bits("0x000000000000FA00")
+    def test_AHgetFunctionCode(self):
+        testWord = bitstring.BitArray("0x00FF000000000000")
         result = BitSlice.getFuncCode(testWord)
-        assert result.int == bitstring.Bits("0x0FA").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0FF").int)   
+        assert result.uint == bitstring.BitArray("0xFF").uint ,  "slice is pulling the wrong bits ({}, {})".format(result.uint, bitstring.BitArray("0xFA").uint)   
         
     def test_getLSBCodeSet(self):
-        testWord = bitstring.Bits("0x00000000000F0000")
+        testWord = bitstring.BitArray("0x0000FF00000000000")
         result = BitSlice.getLSBInternalIndications(testWord)
-        assert result.int == bitstring.Bits("0x0F").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0F").int)   
+        assert result.uint == bitstring.BitArray("0xFF").uint ,  "slice is pulling the wrong bits ({}, {})".format(result.uint, bitstring.BitArray("0xF").uint)   
         
     def test_getMSBCodeSet(self):
-        testWord = bitstring.Bits("0x0000000000F00000")
+        testWord = bitstring.BitArray("0x000000FF0000000000")
         result = BitSlice.getMSBInternalIndications(testWord)
-        assert result.int == bitstring.Bits("0x0F").int ,  "slice is pulling the wrong bits ({}, {})".format(result.int, bitstring.Bits("0x0F").int)  
+        assert result.uint == bitstring.BitArray("0xFF").uint ,  "slice is pulling the wrong bits ({}, {})".format(result.uint, bitstring.Bits("0xF").uint)  
 
     def test_DataStartIsCorrect(self):
         testWord = bitstring.Bits("0x0564B34483000100DF89")
@@ -134,10 +136,10 @@ class SimpleTest(TestCase):
         originalValue = 'This is a special attribute that is used to retrieve a list of all of the device attribute variation numbers supported by the outstation at a specified index- and the properties of those attributes.  This object has a variable length that depends on the count of attribute variations supported by the outstation. '
         dictionary = dictScriptV2.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
-        print('\n\n')
-        print(originalValue)
-        print('\n\n')
-        print(testValue["description"])        
+        #print('\n\n')
+        #print(originalValue)
+        #print('\n\n')
+        #print(testValue["description"])        
         assert testValue["description"] == originalValue
 
     def test_DictionaryBadIndex(self):
