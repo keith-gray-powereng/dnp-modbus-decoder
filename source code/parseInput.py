@@ -33,6 +33,9 @@ def parseData(data, fileContents):
 		elif i != (INVALID+1) and msg[i] == "[": # or msg[i:i+2] == "X:": #looking for TX[/RX[ or TX:/RX:
 			c = "" #temporary crc
 			m = "" #temporary msg
+			request = True
+			if msg[i-2] == "R": #TX = request, otherwise RX = recieve
+				request = False
 			bytes = int(msg[i+1:(msg.find("]", i))]) * 2
 			byteCount = 0
 			i = msg.find(":", i) + 1
@@ -46,7 +49,7 @@ def parseData(data, fileContents):
 							byteCount += 1
 						i += 1
 					
-					messages.append( (m, c) )
+					messages.append( (m, c, request) )
 					m = ""
 					c = ""
 					i = msg.find("\n", i) + 1
@@ -60,7 +63,7 @@ def parseData(data, fileContents):
 					i += 1
 			#end while (msg)
 			if m != "":
-				messages.append( (m,c) ) #pushing message and crc as a tuple
+				messages.append( (m,c, request) ) #pushing message and crc as a tuple
 		#end if
 	#end while
 	
@@ -71,8 +74,13 @@ def parseData(data, fileContents):
 		seperator_chars = ['-', '/', '_', '(']
 		nxt_msg_chars = ['\n', '\r', ',']
 		status = 'm'
+		request = True
 		for letter in msg:
-			if letter in hexdigits: #if the current letter is a hex digit, it adds it to 'c' or 'm'
+			if letter == "T":
+				request = True
+			elif letter == "R":
+				request = False
+			elif letter in hexdigits: #if the current letter is a hex digit, it adds it to 'c' or 'm'
 				if status == 'm': #add to message
 					m += letter
 				else: #add to crc
@@ -82,7 +90,7 @@ def parseData(data, fileContents):
 			elif letter in nxt_msg_chars: #ends current message or crc and begins next message
 				if m == "" and c == "":
 					continue #if both m and c are empty, doesn't add either to messages
-				messages.append( (m,c) )
+				messages.append( (m,c,request) )
 				m = ""
 				c = ""
 				status = 'm'
@@ -90,6 +98,6 @@ def parseData(data, fileContents):
 				continue
 				
 		if m != "":
-			messages.append( (m,c) )
+			messages.append( (m,c,request) )
 			
 	return messages
