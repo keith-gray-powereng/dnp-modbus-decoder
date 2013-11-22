@@ -4,7 +4,7 @@
  */
 /*Default picture (basic square)*/
 .collapsibleList li{
-  list-style-image:url('../images/button.png');
+  list-style-image:url('../images/button3.png');
   cursor:auto;
 }
 /*Opened picture (square with a subtraction sign)*/
