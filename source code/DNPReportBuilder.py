@@ -37,20 +37,24 @@ class DNPReportBuilder:
         if len(temp) > 0:
             hexMessages.append(list(temp))
            
-        allMessages = Report("All Messages", "The entirity of the message", "")
+        allMessages = Report("All Messages", "The entirity of the message", "", "")
         messageCount = -1
+        index = -1
         for hexMessage in hexMessages:
-        
+            index += 1
             messageCount += 1
-            thisMessage = Report("Message {}".format(messageCount), "", "")
+            hexString = ""
+            for msg in hexMessage:
+                hexString += msg.hex + ', '
+            thisMessage = Report("Message {}".format(messageCount), "", "", hexString)
                        
             #verify correctness
             try:
                 if not DataLinkTranslator.DataLayerCorrect(hexMessage[0]):
-                    thisMessage.AddNext(Report("ERROR", "This message is not verifyably DNP3, or may be malformed", message[0]))
-                    return Report("Invalid Message", "", "")
+                    thisMessage.AddNext(Report("ERROR", "This message is not verifyably DNP3, or may be malformed", message[0]), "")
+                    return Report("Invalid Message", "", "", "")
             except:
-                return Report("Invalid Input", "", "")
+                return Report("Invalid Input", "", "", "")
                 
             #remove CRC bits for everything
             for i in hexMessage:
@@ -59,20 +63,20 @@ class DNPReportBuilder:
             #Get message length
             thisMessage.length = DataLinkTranslator.DataLayerLength(hexMessage[0][:])
             thisMessage.MessageLength = thisMessage.length.uint
-            thisMessage.AddNext(Report("Message length", "Number of octets this message contains that are not CRC related", str(thisMessage.length.uint)))
+            thisMessage.AddNext(Report("Message length", "Number of octets this message contains that are not CRC related", str(thisMessage.length.uint), ""))
             
             #Get Control Field
             control = DataLinkTranslator.DataLayerControl(hexMessage[0][:])
-            thisMessage.AddNext(Report("Message Control Data", "Function operations and qualifiers", str(control.hex)))
+            thisMessage.AddNext(Report("Message Control Data", "Function operations and qualifiers", str(control.hex), ""))
             thisMessage.Next[-1].AddNext(DataLinkTranslator.DataLayerControlReport(control))
             
             #message sender
             thisMessage.sender = DataLinkTranslator.DataLayerSource(hexMessage[0][:])
-            thisMessage.AddNext(Report("Message Sender", "ID for sender", str (thisMessage.sender.hex)))
+            thisMessage.AddNext(Report("Message Sender", "ID for sender", str (thisMessage.sender.hex), ""))
             
             #message reciever
             thisMessage.reciever = DataLinkTranslator.DataLayerDestination(hexMessage[0][:])
-            thisMessage.AddNext(Report("Message Reciever", "ID for Reciever", str(thisMessage.reciever.hex)))
+            thisMessage.AddNext(Report("Message Reciever", "ID for Reciever", str(thisMessage.reciever.hex), ""))
             
             #message transport layer
             thisMessage.transport = ""
@@ -80,7 +84,7 @@ class DNPReportBuilder:
                 thisMessage.transport += " FINAL "
             if hexMessage[1][1]:
                 thisMessage.transport += " FIRST "
-            thisMessage.AddNext(Report("Transport Function", "Links together large messages in sequence", (thisMessage.transport + "Seq {}").format(hexMessage[1][2:8].uint)))
+            thisMessage.AddNext(Report("Transport Function", "Links together large messages in sequence", (thisMessage.transport + "Seq {}").format(hexMessage[1][2:8].uint), ""))
             hexMessage[1] = hexMessage[1][8:]
             
             #technically a block, so sue me
@@ -91,8 +95,8 @@ class DNPReportBuilder:
                 bucket = []
                 #requests contain no actual data
                 #just outlines for what is expected in responses
-                if request:
-                    bucket.append(Report("Object Header", "Prefix information on Application layer", ""))
+                if request[index]:
+                    bucket.append(Report("Object Header", "Prefix information on Application layer", "", ""))
                     flags = getAppRequestHeader(hexMessage[fragment])
                     for i in flags:
                         bucket[-1].Next.append(i)
@@ -102,10 +106,10 @@ class DNPReportBuilder:
                 for i in bucket:
                     temp = i
                     if not isinstance(i, Report):
-                        temp = Report(i,"","")
+                        temp = Report(i,"","","")
                     baseLayer.Next[-1].AddNext(temp)
                     
-                baseLayer.AddNext(Report("Application Fragment {}".format(fragment -1), "", ""))
+                baseLayer.AddNext(Report("Application Fragment {}".format(fragment -1), "", "", ""))
                     
                 fragment += 1
                 

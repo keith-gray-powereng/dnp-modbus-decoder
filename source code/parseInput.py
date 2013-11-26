@@ -24,7 +24,9 @@ def parseData(data, fileContents):
 	bytes = 0
 	byteCount = 0
 	gotCrc = True
+	request = True
 	messages = [] #Message type? #Use two indexes per message, first=message, second=CRC (or nothing if no CRC given)
+	requests = []
 	#First tries to parse the input as if it were setup like a normal capture file log.
 	while i < len(msg)-2 and i != INVALID: #iterating through msg to find each message and CRC codes
 		i = msg.find("X", i) + 1
@@ -33,7 +35,6 @@ def parseData(data, fileContents):
 		elif i != (INVALID+1) and msg[i] == "[": # or msg[i:i+2] == "X:": #looking for TX[/RX[ or TX:/RX:
 			c = "" #temporary crc
 			m = "" #temporary msg
-			request = True
 			if msg[i-2] == "R": #TX = request, otherwise RX = recieve
 				request = False
 			bytes = int(msg[i+1:(msg.find("]", i))]) * 2
@@ -51,6 +52,7 @@ def parseData(data, fileContents):
 					
 					#messages.append( (m, c, request) )
 					messages.append(m)
+					requests.append(request)
 					m = ""
 					c = ""
 					i = msg.find("\n", i) + 1
@@ -66,6 +68,7 @@ def parseData(data, fileContents):
 			if m != "":
 				#messages.append( (m,c, request) ) #pushing message and crc as a tuple
 				messages.append(m)
+				requests.append(request)
 		#end if
 	#end while
 	
@@ -73,10 +76,10 @@ def parseData(data, fileContents):
 	if len(messages) == 0:
 		c = "" #temporary crc
 		m = "" #temporary msg
-		seperator_chars = ['-', '/', '_', '(']
-		nxt_msg_chars = ['\n', '\r', ',']
-		status = 'm'
 		request = True
+		seperator_chars = ['-', '/', '_', '(']
+		nxt_msg_chars = ['\n', '\r', ',', ')']
+		status = 'm'
 		for letter in msg:
 			if letter == "T":
 				request = True
@@ -94,6 +97,7 @@ def parseData(data, fileContents):
 					continue #if both m and c are empty, doesn't add either to messages
 				#messages.append( (m,c,request) )
 				messages.append(m)
+				requests.append(request)
 				m = ""
 				c = ""
 				status = 'm'
@@ -103,5 +107,6 @@ def parseData(data, fileContents):
 		if m != "":
 			#messages.append( (m,c,request) )
 			messages.append(m)
+			requests.append(request)
 			
-	return messages
+	return (messages, requests)

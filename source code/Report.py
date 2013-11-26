@@ -5,12 +5,14 @@ class Report:
         self.title = ""
         self.description = ""
         self.data = ""
-        
-    def __init__(self, Title, Description, Data):
+        self.raw = ""
+
+    def __init__(self, Title, Description, Data, Raw=""):
         self.Next = []
         self.title = Title
         self.description = Description
         self.data = Data
+        self.raw = Raw
         
     def AddNext(self, ob):
         self.Next.append(ob)

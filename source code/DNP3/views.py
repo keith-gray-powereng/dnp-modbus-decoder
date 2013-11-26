@@ -26,12 +26,11 @@ def DNP3results(request):
 	
 	messages = parseData(userData, userFileContents) #passing input into parseData to strip out the messages (and get rid of extra data)
 	if messages != "": #example message = "05 64 05 C0 01 00 0A 00"
-		#decodedObj = POC.DNP3(messages[0][0]) #just passes first message for now(TEMPORARY)
 		decodedReports = []
 		reportBuilder = DNPReportBuilder()
 		#for msg in messages: #Decoding each message and getting Report objects back
 			#decodedReports.append( reportBuilder.translate(msg[0], msg[2]) )
-		decodedReports = reportBuilder.translate(messages, True)
+		decodedReports = reportBuilder.translate(messages[0], messages[1])
 		#Convert Report list to HTML collapsible list
 		outty = makeCollapsibleList(decodedReports)
 	else:
