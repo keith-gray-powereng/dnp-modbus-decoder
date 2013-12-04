@@ -9,7 +9,6 @@ import POC #Contains our DNP3 decoder module
 import parseInput
 import BitSlice
 
-
 def test(request):
 	name = "Stephen Jarnagin"
 	html = "<html><body>Welcome %s, your test for basic html return worked. </body></html>" % name
@@ -32,5 +31,5 @@ def DNP3results(request):
 	outty = []
 	for i in decodedObj:
 		outty.append(str(i))
-	return render(request, 'DNP3results.html', {'decodedStuff':outty})
+	return render(request, 'DNP3results.html', {'decodedStuff':outty, 'originalMsg':messages[0][0]})
 	

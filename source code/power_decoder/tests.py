@@ -5,6 +5,7 @@ import bitstring
 import BitSlice
 import DataLinkTranslator
 import dictScriptV2
+import parseInput
 
 class SimpleTest(TestCase):
     def setUp(self):
@@ -107,45 +108,65 @@ class SimpleTest(TestCase):
     def test_DictionaryFirstIndex(self):
         primaryRef = "0"
         secondaryRef = "209"
-        originalValue = []
-        originalValue.append('Device Attributes :: Secure authentication version :: Attrib :: This attribute provides the secure authentication version supported by the outstation. :: Attribute data type code :: UNIT8 :: Length :: UNIT8 :: Secure authentication version :: UINTn ::  :: ')
+        originalValue = 'This attribute provides the secure authentication version supported by the outstation. '
         dictionary = dictScriptV2.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
         #print('\n\n')
         #print(originalValue)
         #print(testValue)
-        assert testValue == originalValue
+        assert testValue["description"] == originalValue
 
 
     def test_DictionaryMidIndex(self):
         primaryRef = "0"
         secondaryRef = "242"
-        originalValue = []
-        originalValue.append("Device Attributes :: Device manufacturer's software version :: Attrib :: This attribute is the version code of the manufacturer's device software.  The contents of the attribute is a free form string that is formatted according to the manufacturer's normal practice.   :: Attribute data type code :: UNIT8 :: Length :: UNIT8 :: Manufacturer's software version string. :: VSTRn ::  :: ")
+        originalValue = [('Attribute data type code ', 'UNIT8'), ('Length ', 'UNIT8'), ("Manufacturer's software version string. ", 'VSTRn')]
         dictionary = dictScriptV2.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
         #print('\n\n')
         #print(originalValue)
         #print(testValue)
-        assert testValue == originalValue
+        assert testValue["attributes"] == originalValue
 
     def test_DictionaryLastIndex(self):
         primaryRef = "0"
         secondaryRef = "255"
-        originalValue = []
-        originalValue.append('Device Attributes :: List of attribute variations :: Attrib :: This is a special attribute that is used to retrieve a list of all of the device attribute variation numbers supported by the outstation at a specified index- and the properties of those attributes.  This object has a variable length that depends on the count of attribute variations supported by the outstation. :: Attribute data type code :: UNIT8 :: Length :: UNIT8 :: Data Elements :: SET of n :: Attribute variation number :: UINT8 :: Attribute properties :: BSTR8 ::  :: ')
+        originalValue = 'This is a special attribute that is used to retrieve a list of all of the device attribute variation numbers supported by the outstation at a specified index- and the properties of those attributes.  This object has a variable length that depends on the count of attribute variations supported by the outstation. '
         dictionary = dictScriptV2.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
-        #print('\n\n')
-        #print(originalValue)
-        #print(testValue)        
-        assert testValue == originalValue
+        print('\n\n')
+        print(originalValue)
+        print('\n\n')
+        print(testValue["description"])        
+        assert testValue["description"] == originalValue
 
     def test_DictionaryBadIndex(self):
-        primaryRef = "121"
+        primaryRef = "122"
         secondaryRef = "1"
-        originalValue = []
-        originalValue.append('Security Statistic :: 32-bit with flag :: Static :: This object is used to report the current value of a security statistic. See 11.9.10 for a description of a Security Statistic Point Type. See 7.5.2.2 for details of the point indexes permitted for this object and when the statistics are incremented. Variation 1 objects contain a 32-bit- unsigned integer count value.  :: Flag Octet :: BSTR8 ::Bit 0: ONLINE :: Bit 1: RESTART :: Bit 2: COMM_LOST :: Bit 3: REMOTE_FORCED :: Bit 4: LOCAL_FORCED :: Bit 5: Reserved- always 0 :: Bit 6: DISCONTINUITY :: Bit 7: Reserved- always 0 :: Association ID :: UINT16 :: Count value :: UINT32 ::  :: ')
+        originalValue = 'This object is used to report the current value of a security statistic. See 11.9.10 for a description of a Security Statistic Point Type. See 7.5.2.2 for details of the point indexes permitted for this object and when the statistics are incremented. Variation 1 objects contain a 32-bit- unsigned integer count value.  '
         dictionary = dictScriptV2.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
-        assert testValue != originalValue
+        assert testValue["description"] != originalValue
+		
+    def test_ParseLogFile(self):
+        logFile = "----------- ** Capture Session Started 12//09//2011 14:10:21 ** ------------\n" \
+            + "(Port 23): No Response for Control\n" \
+            + "(Port 23): Response Timeout for TB#1 Reg B CL-6, waited: 1000\n" \
+            + "(Port 23):  \n" \
+            + "(Port 23): DNP TX Analog Command - VOLTREDUCTION PERCENT @TB#1 Reg A CL-6 Point #16: Value -32768\n" \
+            + "(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC\n" \
+            + "F8 C8 05 29 02 28 01 00 10 00 00 80 00 (E8 57)-CRC\n"
+        parsedData = parseInput.parseData(logFile, "")
+        result = [("056412C402006400","FFB7"),("F8C80529022801001000008000","E857")]
+        assert result == parsedData
+
+    def test_ParseSimpleInput(self):
+        inputData = "05 64 05 C0 01 00 0A 00 (E0 8C), 05 64 12 C4 02 00 64 00 (FF B7)"
+        parsedData = parseInput.parseData("" , inputData)
+        result = [("056405C001000A00","E08C"), ("056412C402006400","FFB7")]
+        assert result == parsedData
+
+    def test_ParseTwoInputs(self): #when both inputs present, it should use the first one (if not empty)
+        parsedData = parseInput.parseData("1", "2")
+        result = "1"
+        assert result == parsedData[0][0]
