@@ -1,35 +1,36 @@
-"""File: listBuild"""
-"""Takes the user's input or specified text file and breaks it down into a list
-of the individual messages (whether DNP3 or Modbus) which is then returned.
-NOTE: if both input and a specified text file are provided, this module will
-attempt to use the file first, but will default to the input if file input fails"""
-import Report.py
+'''File: listBuild'''
+'''Takes a list of Report object that have already been decoded
+and adds HTML code to them so that they can be displayed as a
+collapsibleList object on the results page'''
+from Report import *
 
-def makeList(reportList):
-	"""Currently assuming that it will be passed rep, which is a list of sperate messages"""
-	myList = '<ul class="collapsibleList" id="mahList">\n'
+def makeCollapsibleList(reportList):
+	'''Takes list of reports and adds HTML to the highest-level parts'''
+	outputString = '<ul class="collapsibleList">\n'
 	
-	for msg in reportList: #loop through each Report msg#= #FIGURE OUT IF LIST OR DUMMY HEAD
-		#if msg.description != "":
-			#myList += msg.description
+	for report in reportList.Next: #loop through each Report report in reportList
+		#if report.description != "":
+			#outputString += report.description
 		#else:
-		myList += msg.title + ": " + msg.data
-		myList = innerContents(msg.Next, myList)
+		outputString += "<li>\n" + report.title + ": " + report.raw + "\n<ul>\n"
+		if len(report.Next) > 0:
+			outputString = innerContents(report.Next, outputString)
+		outputString += "</ul>\n</li>\n"
 	#end for
-	myList += '\n</ul>'
-	return myList
+	outputString += '\n</ul>'
+	return outputString
 
-def innerContents(reportList, myList):
-	"""description"""
+def innerContents(reportList, outputString):
+	'''Adds HTML recursively to each sub-branch in the Report list's Report objects'''
 	for item in reportList:
-		myList += "<li>\n"
-		myList += item.title + ": " + item.data + "\n"
-		if item.description == "":
-			myList += "<li>\n" + item.description + "\n</li>\n</li>\n"
-		else:
-			myList += "<ul>\n"
-			myList = innerContents(reportList.Next, myList)
-			myList += "</ul>\n"
+		if len(item.Next) > 0:
+			outputString += "<li>\n" + item.title + ": " + str(item.data) + "\n"
+			outputString += "<ul>\n"
+			outputString = innerContents(item.Next, outputString)
+			outputString += "</ul>\n</li>\n"
+		else: #item.description
+			#outputString += "<li>\n" + item.description + "\n</li>\n" #</li>\n
+			outputString += '<li title="' + item.description + '">\n' + item.title + ": " + str(item.data) + "\n"
+			#outputString += "" + item.description + "\n</li>\n"
 	#end for
-	myList += "</li>\n"
-	return myList
+	return outputString

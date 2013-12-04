@@ -1,11 +1,11 @@
-"""This is a script for creating the two diminsional dictionary that will hold the 
-DNP3 data object library.  This will be used for reference when decrypting 
-messages."""
+
 
 import csv
 from collections import defaultdict
 
-
+"""This is a script for creating the two diminsional dictionary that will hold the 
+DNP3 data object library.  This will be used for reference when decrypting 
+messages."""
 def buildDict():
 	"""function to build type dictionary,
 	
@@ -71,7 +71,42 @@ def buildDict():
 		Dict[groupPos][variationPos] = dict2
 		
 	return Dict
-
+   
+   
+"""You shouldn't be using this, use one of the below instead"""
+def fetchVariableSizeFieldTable(filename):
+    listDict = csv.reader(open(filename))
+    
+    Dict = dict()
+     
+    for row in listDict:
+    
+        group = row[0]
+        variation = row[1]
+        valueIndex = row[2]
+        valueSizeIndex = row[3]
+    
+        if not group in Dict:
+            Dict[group] = dict()
+        
+        if not variation in Dict[group]:
+            Dict[group][variation] = []
+        
+        Dict[group][variation].append((valueIndex, valueSizeIndex))
+        
+    return Dict()
+        
+def fetchUINTnTable():
+    return fetchVariableSizeFieldTable("UINTn_variableSizeLookups.csv")
+    
+def fetchINTnTable():
+    return fetchVariableSizeFieldTable("INTn_variableSizeLookups.csv")
+    
+def fetchVSTRnTable():
+    return fetchVariableSizeFieldTable("VSTRn_variableSizeLookups.csv")
+    
+def fetchOSTRnTable():
+    return fetchVariableSizeFieldTable("OSTRn_variableSizeLookups.csv")
 
 	
 

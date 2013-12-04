@@ -37,7 +37,7 @@
 	margin:auto; 
 	z-index:100000; 
 	width:100%;
-	height: 15%;
+	height: 13%;
 	opacity: .95;
 	
 	/* IE10 Consumer Preview */ 
@@ -78,21 +78,21 @@
 	text-align: left;
 	height: 100%;
 	width: 20%;
-	/*background-color: #3CB371;*/
-	background-image: linear-gradient(bottom, rgb(200,200,200) 30%, rgb(45,53,77) 72%);
-	background-image: -o-linear-gradient(bottom, rgb(200,200,200) 30%, rgb(45,53,77) 72%);
-	background-image: -moz-linear-gradient(bottom, rgb(200,200,200) 30%, rgb(45,53,77) 72%);
-	background-image: -webkit-linear-gradient(bottom, rgb(200,200,200) 30%, rgb(45,53,77) 72%);
-	background-image: -ms-linear-gradient(bottom, rgb(200,200,200) 30%, rgb(45,53,77) 72%);
-
+	/*background-color: #3D9AD1;*/
 	background-image: -webkit-gradient(
 		linear,
-		left bottom,
 		left top,
-		color-stop(0.3, rgb(200,200,200)),
-		color-stop(0.72, rgb(45,53,77))
+		left bottom,
+		color-stop(0, #FF6229),
+		color-stop(1, #FCFCFC)
 	);
-	/*background-image: url("images/content7.jpg");*/
+	background-image: -o-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: -moz-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: -webkit-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: -ms-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: linear-gradient(to bottom, #FF6229 0%, #FCFCFC 100%);
+	border: 1px solid #f00;
+		/*background-image: url("images/content7.jpg");
 	border: 1px solid #000;
 	/*overflow: invisible;*/
 }
@@ -101,8 +101,9 @@
 #content{
 	float:right;
 	width: 68%;
-	/*background-color: #778899;*/
-	background-image: linear-gradient(bottom, rgb(99,125,125) 30%, rgb(33,71,48) 58%);
+	/*background-color: #3D9AD1;*/
+	/*background-color: #FF1919;*/
+	/*background-image: linear-gradient(bottom, rgb(99,125,125) 30%, rgb(33,71,48) 58%);
 	background-image: -o-linear-gradient(bottom, rgb(99,125,125) 30%, rgb(33,71,48) 58%);
 	background-image: -moz-linear-gradient(bottom, rgb(99,125,125) 30%, rgb(33,71,48) 58%);
 	background-image: -webkit-linear-gradient(bottom, rgb(99,125,125) 30%, rgb(33,71,48) 58%);
@@ -114,7 +115,19 @@
 		left top,
 		color-stop(0.3, rgb(99,125,125)),
 		color-stop(0.58, rgb(33,71,48))
+	);*/
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #FF6229),
+		color-stop(1, #FCFCFC)
 	);
+	background-image: -o-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: -moz-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: -webkit-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: -ms-linear-gradient(bottom, #FF6229 0%, #FCFCFC 100%);
+	background-image: linear-gradient(to bottom, #FF6229 0%, #FCFCFC 100%);
 	border: 1px solid #f00;
 	padding: 3%; /*KEEP A CLOSE EYE ON THIS */
 	overflow:invisible;
@@ -145,6 +158,7 @@
 	left:-20%; 
 	width:200%; 
 	height:200%;
+	background: #5CCDC9;
 }
 
 /* Div meant for content instead of using the <h> tags*/
@@ -169,6 +183,7 @@
 	top: 0;
 	left: 0;
 	z-index:-9999;
+	background: #5CCDC9;
 }
 
 /* Div meant to alter the font of the content.  Currently not in use.*/

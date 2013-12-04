@@ -20,31 +20,13 @@
 		<link rel="icon" type="image/png" href= " {% static "images/favicon.ico" %}">
 		<script type = "text/javascript" src = "{% static "jquery/jquery.js" %}"></script>
 		<script type = "text/javascript" src = "{% static "jquery/jquery.cycle.all.js" %}"></script>
-		<!--Functionality that will change the background of the webpage on a set timer every X seconds-->
-		<script>
-		$(document).ready(function() {
-				$('#slideshow').cycle({
-				fx: 'fade',
-				pager: '#smallnav', 
-				pause:   15, 
-				speed: 1800,
-				timeout:  3500 
-			});			
-		});
-		</script>
 		
 	</head>
 	<body>
 		<!--Images used in the background-->
 		{% load staticfiles %}
 		<div id="slideshow">
-		<img src="{% static "images/bg1.jpg" %}"class="bgM"/>
-		<img src="{% static "images/bg2.jpg" %}"class="bgM"/>
-		<img src="{% static "images/bg3.jpg" %}"class="bgM"/>
-		<img src="{% static "images/bg4.jpg" %}"class="bgM"/>
-		<img src="{% static "images/bg5.jpg" %}"class="bgM"/>
-		<img src="{% static "images/bg6.jpg" %}"class="bgM"/>
-		<img src="{% static "images/bg7.jpg" %}"class="bgM"/>
+		<img src="{% static "images/bg10.jpg" %}"class="bgM"/>
 		</div>		
 		</br></br></br></br></br></br>
 		<div id = "header"> 
@@ -65,7 +47,7 @@
 				<div id = "reference"> 
 					<ul>
 					<li>&nbsp&nbsp&nbsp<a href = 'http://127.0.0.1:8000/Power/DNP3/DNP3/'>DNP3</a></li>
-					<li>&nbsp&nbsp&nbsp<a href = 'http://127.0.0.1:8000/Power/Modbus/Modbus/'>Modbus</a></li>
+					<!--<li>&nbsp&nbsp&nbsp<a href = 'http://127.0.0.1:8000/Power/Modbus/Modbus/'>Modbus</a></li>-->
 					<li>&nbsp&nbsp&nbsp<a href = 'http://127.0.0.1:8000/Power/About/'>About</a></li>
 					<li>&nbsp&nbsp&nbsp<a href = 'http://127.0.0.1:8000/Power/Contact/'>Contact</a></li>
 					</ul>

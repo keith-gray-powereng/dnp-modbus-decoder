@@ -28,65 +28,127 @@ def slice(input,length, startBit):
 '''(Application layer) Isolates sequence bits from application layer segment'''    
 def getSequence(input):
     #print ("seq")
-    return slice(input, 4, 1)    
+    return input[4:8]
 
 '''(Application layer) Isolates bit declaring requests for confirmation''' 
 def getConfirmationFlag(input):
     #print ("conseq")
-    return slice(input,1, 5)
+    return input[2:3]
 
 '''(Application layer) Isolates bit declaring if request is unsolicited'''     
 def getUnsolicitedFlag(input):
     #print ("unsol")
-    return slice(input, 1, 4)
+    return input[3:4]
 
 '''(Application layer) Bit declaring if it is the first fragment'''     
 def getFirstFlag(input):
     #print ("first")
-    return slice(input, 1, 6)
+    return input[0:1]
 
 '''(Application layer) Bit declaring if it is final fragment''' 
 def getFinalFlag(input):
     #print ("final")
-    return slice(input, 1, 7)
+    return input[1:2]
     
 '''(Application layer) Declares what action should be done with data enclosed'''     
 def getFuncCode(input):
     #print ("func")
-    return slice(input, 8,8)
+    return input[8:16]
     
 #only for responses
 '''(Application layer) Part one of Error Codes ''' 
 def getLSBInternalIndications(input):
-    return slice(input, 4, 16)
+    return input[16:24]
 
 '''(Application layer) Part two of Error Codes'''     
 def getMSBInternalIndications(input):
-    return slice(input, 4, 20)
-    
-#everything after will need to take a 16 bit displacement if it is a response, and if it isn't, not.
+    return input[24:32]
 
 #seq is the multiple of object parsed, zero indexed
 #Object Header = Object Type (group, variation), Qualifier Field, Range Field
-def OH_ObjectGroup(input, response, seq = 0):
-    if input:
-        return slice(input, 8, 32 + seq * 8)
-    else:
-        return slice(input, 8, 16 + seq * 8)
+#page 63 has basic layouts
+def OH_ObjectGroup(input, seq = 0):
+    tempIn = bistring.BitArray(input)
+    return tempIn[0:8]
+
     
 def OH_ObjectVariation(input, response,  seq = 0):
-    if input:
-        return slice(input, 8, 40 + seq * 8)
-    else:
-        return slice(input, 8, 24 + seq * 8)
+    tempIn = bistring.BitArray(input)
+    return tempIn[8:16]
 
 def OH_Qualifier(input, response, seq = 0):
-    #is an octet (pg 74 (32))
-    #the object Prefix code defined here is REALLY important: it determines how future parts are parsed, also constains range specifier and object prefix
-    #contains a Range specifier code (4), a Object prefix code(3), and a 0 bit (reserved)
-    pass
+    tempIn = bistring.BitArray(input)
+    #skip the reserved bit
+    ObjectPrefix = tempIn[17:20]
+    RangeSpecifier = tempIn[20:24] 
     
-# I'm going to re-evaluate what is going on, as this gets hella complicated
-#each DNP object parses differntly
-#data type codes can be found on page 170, and can be defined further in that section
+    typed = ""
+    size = 0
+    if ObjectPrefix.uint == 0:
+        typed = "No Prefix"
+        size = 0
+    elif ObjectPrefix.uint == 1:
+        typed = "index"
+        size = 1
+    elif ObjectPrefix.uint == 2:
+        typed = "index"
+        size = 2
+    elif ObjectPrefix.uint == 3:
+        typed = "index"
+        size = 3
+    elif ObjectPrefix.uint == 4:
+        typed = "size"
+        size = 1
+    elif ObjectPrefix.uint == 5:
+        typed = "size"
+        size = 2
+    elif ObjectPrefix.uint == 6:
+        typed = "size"
+        size = 3
+    else:
+        typed = "RESERVED"
+        size = 0
+    
+    indexed = ""
+    indexSize = 0
+    if RangeSpecifier.uint == 0:
+        indexed = "start-stopped"
+        indexSize = 2
+    elif RangeSpecifier.uint == 1:
+        indexed = "start-stopped"
+        indexSize = 4
+    elif RangeSpecifier.uint == 2:
+        indexed = "start-stopped"
+        indexSize = 8
+    elif RangeSpecifier.uint == 3:
+        indexed = "start-stopped Virtual"
+        indexSize = 2
+    elif RangeSpecifier.uint == 4:
+        indexed = "start-stopped Virtual"
+        indexSize = 4
+    elif RangeSpecifier.uint == 5:
+        indexed = "start-stopped Virtual"
+        indexSize = 8
+    elif RangeSpecifier.uint == 6:
+        indexed = "All Objects (no range)"
+        indexSize = 0
+    elif RangeSpecifier.uint == 7:
+        indexed = "ObjectCount"
+        indexSize = 1
+    elif RangeSpecifier.uint == 8:
+        indexed = "ObjectCount"
+        indexSize = 2
+    elif RangeSpecifier.uint == 9:
+        indexed = "ObjectCount"
+        indexSize = 4
+    elif RangeSpecifier.uint == 11:
+        indexed = "Object Specified"
+        indexSize = 0
+    else:
+        indexed = "RESERVED"
+        indexSize = 0
+        
+    return (typed, size, indexed, indexSize)
+    
+
 

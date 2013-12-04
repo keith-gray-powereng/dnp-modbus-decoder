@@ -24,7 +24,9 @@ def parseData(data, fileContents):
 	bytes = 0
 	byteCount = 0
 	gotCrc = True
+	request = True
 	messages = [] #Message type? #Use two indexes per message, first=message, second=CRC (or nothing if no CRC given)
+	requests = []
 	#First tries to parse the input as if it were setup like a normal capture file log.
 	while i < len(msg)-2 and i != INVALID: #iterating through msg to find each message and CRC codes
 		i = msg.find("X", i) + 1
@@ -33,6 +35,8 @@ def parseData(data, fileContents):
 		elif i != (INVALID+1) and msg[i] == "[": # or msg[i:i+2] == "X:": #looking for TX[/RX[ or TX:/RX:
 			c = "" #temporary crc
 			m = "" #temporary msg
+			if msg[i-2] == "R": #TX = request, otherwise RX = recieve
+				request = False
 			bytes = int(msg[i+1:(msg.find("]", i))]) * 2
 			byteCount = 0
 			i = msg.find(":", i) + 1
@@ -46,7 +50,9 @@ def parseData(data, fileContents):
 							byteCount += 1
 						i += 1
 					
-					messages.append( (m, c) )
+					#messages.append( (m, c, request) )
+					messages.append(m)
+					requests.append(request)
 					m = ""
 					c = ""
 					i = msg.find("\n", i) + 1
@@ -60,7 +66,9 @@ def parseData(data, fileContents):
 					i += 1
 			#end while (msg)
 			if m != "":
-				messages.append( (m,c) ) #pushing message and crc as a tuple
+				#messages.append( (m,c, request) ) #pushing message and crc as a tuple
+				messages.append(m)
+				requests.append(request)
 		#end if
 	#end while
 	
@@ -68,11 +76,16 @@ def parseData(data, fileContents):
 	if len(messages) == 0:
 		c = "" #temporary crc
 		m = "" #temporary msg
+		request = True
 		seperator_chars = ['-', '/', '_', '(']
-		nxt_msg_chars = ['\n', '\r', ',']
+		nxt_msg_chars = ['\n', '\r', ',', ')']
 		status = 'm'
 		for letter in msg:
-			if letter in hexdigits: #if the current letter is a hex digit, it adds it to 'c' or 'm'
+			if letter == "T":
+				request = True
+			elif letter == "R":
+				request = False
+			elif letter in hexdigits: #if the current letter is a hex digit, it adds it to 'c' or 'm'
 				if status == 'm': #add to message
 					m += letter
 				else: #add to crc
@@ -82,7 +95,9 @@ def parseData(data, fileContents):
 			elif letter in nxt_msg_chars: #ends current message or crc and begins next message
 				if m == "" and c == "":
 					continue #if both m and c are empty, doesn't add either to messages
-				messages.append( (m,c) )
+				#messages.append( (m,c,request) )
+				messages.append(m)
+				requests.append(request)
 				m = ""
 				c = ""
 				status = 'm'
@@ -90,6 +105,8 @@ def parseData(data, fileContents):
 				continue
 				
 		if m != "":
-			messages.append( (m,c) )
+			#messages.append( (m,c,request) )
+			messages.append(m)
+			requests.append(request)
 			
-	return messages
+	return (messages, requests)
