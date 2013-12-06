@@ -11,6 +11,16 @@ def getAppRequestHeader(fragment):
     summary.append(Report("Confirmation Required", "Opposite station must acknowledge to be valid", getConfirmationFlag(fragment).uint == 1))
     return summary
     
+def getAppResponseHeader(fragment):
+    InternalIndications = []
+    InternalIndications.append(Report("Internal Indications 1 {}".format(LSBinternalIndicationLookup(getLSBInternalIndications(fragment)[:8])), "Block used for response Error codes, first part (LSB)", getLSBInternalIndications(fragment)))
+    InternalIndications.append(Report("Internal Indications 2 {}".format(LSBinternalIndicationLookup(getMSBInternalIndications(fragment)[8:16])), "Block used for response Error codes, first part (LSB)", getMSBInternalIndications(fragment)))
+
+    temp = getAppRequestHeader(fragment)
+    temp.append(Report("Internal Indicators", "Errors for responses go here", None))
+    temp[-1].AddNext(InternalIndications)
+    return temp
+    
 def translateFuncCode(functionSection):
 
     mtype = ""
@@ -85,3 +95,61 @@ def translateFuncCode(functionSection):
         
         
     return Report("Function", "action for message", "Function: {} ({})".format(funcCode,mtype))
+    
+def LSBinternalIndicationLookup(fragment):
+    lsb = ""
+    if fragment.uint == 1:
+        #print ("BroadCast")
+        lsb1 += "BroadCast "
+    if fragment.uint == 2:
+        #print ("Class 1 Events")
+        lsb1 += "Class 1 Events "
+    if fragment.uint == 4:
+        #print ("Class 2 Events")
+        lsb1 += "Class 2 Events "
+    if fragment.uint == 8:
+        #print ("Class 3 Events")
+        lsb1 += "Class 3 Events "
+    if fragment.uint == 16:
+        #print ("Needs time for synchronization")
+        lsb1 += "Needs time for synchronization"
+    if fragment.uint ==  32:
+        #print ("Local Control Mode")
+        lsb1 += "Local Control Mode "
+    if fragment.uint == 64:
+        #print ("Device Trouble")
+        lsb1 += "Device Trouble "
+    if fragment.uint == 128:
+        #print ("Device Restart")
+        lsb1 += "Device Restart "
+        
+    return lsb1
+    
+def MSBinternalIndicationLookup(fragment):
+    msb1 = ""
+    if fragment.uint == 1:
+        #print ("No function Code Support")
+        msb1 += "No function Code Support "
+    if fragment.uint == 2:
+        #print ("Object Unknown")
+        msb1 += "Object Unknown "
+    if fragment.uint == 4:
+        #print ("Parameter Error")
+        msb1 += "Parameter Error "
+    if fragment.uint == 8:
+        #print ("Event Buffer Overflow")
+        msb1 += "Event buffer Overflow "
+    if fragment.uint == 16:
+        #print ("Already Executing")
+        msb1 += "Already Executing "
+    if fragment.uint == 32:
+        #print ("Configuration corrupt")
+        msb1 += "Configuration corrupt "
+    if fragment.uint == 64:
+        #print ("Reserved (you shouldn't ever get this)")
+        msb1 += "Reserved "
+    if fragment.uint == 128:
+        #print ("Reserved(2) (you shouldn't ever get this)")
+        msb1 += "Reserved(2) " 
+        
+    return msb1
