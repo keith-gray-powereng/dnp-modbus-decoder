@@ -23,8 +23,7 @@ def parseData(data, fileContents):
 	j = 0
 	bytes = 0
 	byteCount = 0
-	gotCrc = True
-	request = True
+	request = "True"
 	messages = [] #Message type? #Use two indexes per message, first=message, second=CRC (or nothing if no CRC given)
 	requests = []
 	#First tries to parse the input as if it were setup like a normal capture file log.
@@ -36,7 +35,7 @@ def parseData(data, fileContents):
 			c = "" #temporary crc
 			m = "" #temporary msg
 			if msg[i-2] == "R": #TX = request, otherwise RX = recieve
-				request = False
+				request = "False"
 			bytes = int(msg[i+1:(msg.find("]", i))]) * 2
 			byteCount = 0
 			i = msg.find(":", i) + 1
@@ -72,15 +71,15 @@ def parseData(data, fileContents):
 	if len(messages) == 0:
 		c = "" #temporary crc
 		m = "" #temporary msg
-		request = True
+		request = "True"
 		seperator_chars = ['-', '/', '_', '(']
 		nxt_msg_chars = ['\n', '\r', ',', ')']
 		status = 'm'
 		for letter in msg:
 			if letter == "T":
-				request = True
+				request = "True"
 			elif letter == "R":
-				request = False
+				request = "False"
 			elif letter in hexdigits: #if the current letter is a hex digit, it adds it to 'c' or 'm'
 				if status == 'm': #add to message
 					m += letter

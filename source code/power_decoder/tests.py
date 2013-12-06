@@ -159,16 +159,16 @@ class SimpleTest(TestCase):
             + "(Port 23)TX[25]: 05 64 12 C4 02 00 64 00 (FF B7)-CRC\n" \
             + "F8 C8 05 29 02 28 01 00 10 00 00 80 00 (E8 57)-CRC\n"
         parsedData = parseInput.parseData(logFile, "")
-        result = [("056412C402006400","FFB7"),("F8C80529022801001000008000","E857")]
+        result = [("056412C402006400","FFB7","True"),("F8C80529022801001000008000","E857","True")]
         assert result == parsedData
 
     def test_ParseSimpleInput(self):
         inputData = "05 64 05 C0 01 00 0A 00 (E0 8C), 05 64 12 C4 02 00 64 00 (FF B7)"
         parsedData = parseInput.parseData("" , inputData)
-        result = [("056405C001000A00","E08C"), ("056412C402006400","FFB7")]
+        result = [("056405C001000A00","E08C","True"), ("056412C402006400","FFB7","True")]
         assert result == parsedData
 
-    def test_ParseTwoInputs(self): #when both inputs present, it should use the first one (if not empty)
+    def test_ParseTwoInputs(self): #with both inputs present, it should use the first one (if not empty)
         parsedData = parseInput.parseData("1", "2")
         result = "1"
         assert result == parsedData[0][0]
