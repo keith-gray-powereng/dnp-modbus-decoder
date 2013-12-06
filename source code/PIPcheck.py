@@ -1,4 +1,5 @@
-"""PIP requirements check"""
+"""PIP requirements check.
+Checks if pip is installed, runs secondary script to execute pip"""
 import os
 try: 
 	import pip
@@ -6,16 +7,3 @@ try:
 	os.system("pause")
 except:
 	print("Failed to find Pip, you must install Pip to use this application.")
-	
-"""try:
-	import django
-except:
-	print("Failed to find Django")
-	return False
-	
-try:
-	import bitstring
-except:
-	print("Failed to find bitstring")
-	return False
-"""
