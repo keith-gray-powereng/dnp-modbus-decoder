@@ -27,12 +27,15 @@ def DNP3results(request):
 	printBool = request.GET['printPass']
 	
 	messages = parseData(userData, userFileContents) #passing input into parseData to strip out the messages (and get rid of extra data)
-	if messages != "": #example message = "05 64 05 C0 01 00 0A 00"
+	if messages != "": #if it's not empty #example message = "05 64 05 C0 01 00 0A 00"
 		decodedReports = []
 		reportBuilder = DNPReportBuilder()
-		#for msg in messages: #Decoding each message and getting Report objects back
-			#decodedReports.append( reportBuilder.translate(msg[0], msg[2]) )
-		decodedReports = reportBuilder.translate(messages[0], messages[1])
+		
+		messages2 = [] #changing 3-part tuple 
+		for msg in messages: #Decoding each message and getting Report objects back
+			messages2.append( msg[0] )
+			
+		decodedReports = reportBuilder.translate(messages2, True)
 		#Convert Report list to HTML collapsible list
 		
 		if printBool == "false":
