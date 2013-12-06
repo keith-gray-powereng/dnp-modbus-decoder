@@ -1,0 +1,65 @@
+READ ME FOR POWER DECODER
+Contains notes on installation and running the power decoder.
+The power decoder is an application that translates network protocols 
+DNP3 and Modbus into readable formats.
+This applicaiton runs locally through your 
+browser (IE 8 and above, Firefox 20 and above, and Chrome 26 and above).
+
+Installing and running the application:
+
+In order to run this application, the user must have the following programs and libraries installed on their computer.
+	1.) Python 3.3
+	2.) Pip 1.4.1
+	3.) Django 1.5
+	4.) bitstring 3.1.2
+	
+Only two of these must be previously installed on your computer: Python 3.3 and Pip 1.4.1. 
+Once both of these are installed on your computer, you can run a python script which will install Django 1.5 and bitstring 3.1.2.
+This script will be included in your application package.
+This script is called "PIPcheck.py" and requires two other items, "PIPcheck.bat" and "requirements.txt" in order to successfully run.
+Once this script is executed, it should create a command prompt that will one of three things: 
+	1. You have already installed these items.
+	2. You have successfully installed these items.
+	3. You need to install PIP in order to run this application.
+	
+Once you finish running this script you can launch Power Decoder through your local browser. This does not require any internet connection.
+In order to launch Power Decoder, you must double click on a .bat file, this file is known as "RunSite.bat".  
+When this script is launched, it will create two command prompts, one will disappear while the other will remain.  In order for the website
+to work, do not close these command prompts until you are finished using the website.  Also, sometimes the setup of this application may be slower,
+and the page that loads in your local browser will appear to not load properly.  If this does happen, simply refresh or wait a few moments and then refresh.
+This will give Django enough time to setup its local servers to operate the webpage correctly.  
+
+If you launch the webpage, and you can access it, then you have successfully installed Power Decoder.  
+
+Running and using the application:
+
+In order to run the application, double click and launch "RunSite.bat".
+This will load a webpage in your browser (or launch your browser with the webpage) and launch a commad prompt running in the background. Do no close the command 
+prompt until you are finished with the application.  
+When you begin to access the webpage, you currently default to the DNP3 page, with a sidebar that links to the contact, about, and DNP3 page itself.  Currently,
+the Modbus page has been removed until functionality has been fully tested. 
+
+DNP3 page
+You can translate multiple messages at once.  
+You can translate your messages either by uploading a log file from your capture, or by performing a copy/paste from a text document.  
+You can upload the log file using the browse button and then selecting the appropiate log.  In order to translate a message from other sources, simply copy
+and paste the information into the textbox.  
+You will also see a checkbox, "printable view". This checkbox will change the output of your message into either a 'tree' view or a 'plain text' view.
+Once you made your selection, click on the button "decode messages" to begin performing the translation.  You will be redirected to a results page
+with the set of messages in either a tree view (if you didn't select printable view) or a plain text view (if you selected printable view).
+A note, currently if you copy and paste information into the textbox as well as choose a file to upload, the translator
+will default to translating the text that was copied and pasted into the textbox.  
+
+DNP3 results page
+The page will appear with no results if the translation was unsuccessful.
+The page will appear with the results in either a 'tree' view or a 'plain text' view.  
+--The tree view:
+		Holds the main message, with each portion of the message being expanded in sub sections under the main message.
+		Simply click the plus to expand the section or a minus to contract the message.
+The page will have a hyperlink to the DNP3 page when you want to begin the tranlsation process again.  
+
+Contact page
+Simply a list of the developers who work on the project. Their emails and role on the project are noted for convienence.  
+
+About page
+A discription of the project and its purpose for Power Engineers.
