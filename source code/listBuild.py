@@ -13,7 +13,27 @@ def makeCollapsibleList(reportList):
 		#if report.description != "":
 			#outputString += report.description
 		#else:
-		outputString += "<li>\n" + report.title + ": " + report.raw + "\n<ul>\n"
+		outputString += "<li>\n" + report.title + ":"
+		for i in report.Next:
+			if i.title.find("Sender") != -1: #Source
+				outputString  += " Source: "
+				if str(i.data) == "":
+					outputString += 'X'
+				else:
+					outputString += str(i.data)
+				outputString += ','
+			elif i.title.find("Reciever") != -1: #Destination
+				outputString += " Destination: "
+				if str(i.data) == "":
+					outputString += 'X'
+				else:
+					outputString += str(i.data)
+				outputString += ','
+			elif i.title.find("Transport") != -1: #Function Code
+				for part in i.Next:
+					if part.title.find("Function") != -1:
+						outputString += ' ' + str(part.data) #" Function: "
+		outputString += "\n<ul>\n"
 		if len(report.Next) > 0:
 			outputString = innerContents(report.Next, outputString)
 		outputString += "</ul>\n</li>\n"
