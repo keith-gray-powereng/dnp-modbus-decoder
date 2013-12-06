@@ -7,6 +7,7 @@ from Report import *
 def makeCollapsibleList(reportList):
 	'''Takes list of reports and adds HTML to the highest-level parts'''
 	outputString = '<ul class="collapsibleList">\n'
+	#class="collapsibleList"
 	
 	for report in reportList.Next: #loop through each Report report in reportList
 		#if report.description != "":
@@ -18,6 +19,22 @@ def makeCollapsibleList(reportList):
 		outputString += "</ul>\n</li>\n"
 	#end for
 	outputString += '\n</ul>'
+	return outputString
+	
+def makePrintableList(reportList):
+	'''Takes list of reports and adds HTML to the highest-level parts'''
+	outputString = '<ul>\n'
+	
+	for report in reportList.Next: #loop through each Report report in reportList
+		#if report.description != "":
+			#outputString += report.description
+		#else:
+		outputString += "<li>\n" + report.title + ": " + report.raw + "\n<ul>\n"
+		if len(report.Next) > 0:
+			outputString = innerContents(report.Next, outputString)
+		outputString += "</ul>\n</li>\n"
+	#end for
+	outputString += '\n</ul><br><br>'
 	return outputString
 
 def innerContents(reportList, outputString):

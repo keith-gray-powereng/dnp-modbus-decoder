@@ -9,6 +9,7 @@ import POC #Contains our DNP3 decoder module
 from parseInput import parseData
 from listBuild import *
 from DNPReportBuilder import *
+
 import BitSlice
 
 def test(request):
@@ -23,6 +24,7 @@ def DNP3results(request):
 	#if 'msg' in request.GET and request.GET['msg']: #consider error-checking later
 	userData = request.GET['inputByText']
 	userFileContents = request.GET['fileContents']
+	printBool = request.GET['printPass']
 	
 	messages = parseData(userData, userFileContents) #passing input into parseData to strip out the messages (and get rid of extra data)
 	if messages != "": #example message = "05 64 05 C0 01 00 0A 00"
@@ -32,7 +34,11 @@ def DNP3results(request):
 			#decodedReports.append( reportBuilder.translate(msg[0], msg[2]) )
 		decodedReports = reportBuilder.translate(messages[0], messages[1])
 		#Convert Report list to HTML collapsible list
-		outty = makeCollapsibleList(decodedReports)
+		
+		if printBool == "false":
+			outty = makeCollapsibleList(decodedReports)
+		else:
+			outty = makePrintableList(decodedReports)
 	else:
 		outty = 'Failed to parse out any messages'
 		

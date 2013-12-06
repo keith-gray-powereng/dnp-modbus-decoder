@@ -38,6 +38,8 @@
 			<br><br><br>
 			<!--Functionality: Allow the user to submit their decision, call error check for NULL values-->			
 			<input type="hidden" id = "fileContents" name="fileContents" value="">
+			<input type = "checkbox" id = "printCheck" name = "printCheck" value = "false"> Printable View<br>
+			<input type = "hidden" id = "printPass" name = "printPass" value = "false">
 			<input type = "submit"  value = "Decode Message(s)">
 			</form>
 			
@@ -49,12 +51,19 @@
 				function valueCheck(){
 					var x = document.getElementById("inputByFile").value;
 					var y = document.getElementById("inputByText").value;
+					var z = document.getElementById("printCheck").checked;
 					if (x == '' && (!y.match(/\S/))){
 						alert("No value was inputted to parse.");
 						return false;
 					}
 					else{
 						//alert("Appropiate value has been inserted.");
+						if (z == true){
+							document.getElementById("printPass").value = "true";
+						}
+						else{
+							document.getElementById("printPass").value = "false";
+						}
 						return true;
 					}
 				}
