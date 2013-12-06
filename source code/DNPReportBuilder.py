@@ -39,9 +39,7 @@ class DNPReportBuilder:
            
         allMessages = Report("All Messages", "The entirity of the message", "", "")
         messageCount = -1
-        index = -1
         for hexMessage in hexMessages:
-            index += 1
             messageCount += 1
             hexString = ""
             for msg in hexMessage:
@@ -95,7 +93,7 @@ class DNPReportBuilder:
                 bucket = []
                 #requests contain no actual data
                 #just outlines for what is expected in responses
-                if request[index]:
+                if request:
                     bucket.append(Report("Object Header", "Prefix information on Application layer", "", ""))
                     flags = getAppRequestHeader(hexMessage[fragment])
                     for i in flags:
