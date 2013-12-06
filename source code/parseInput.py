@@ -91,7 +91,7 @@ def parseData(data, fileContents):
 			elif letter in nxt_msg_chars: #ends current message or crc and begins next message
 				if m == "" and c == "":
 					continue #if both m and c are empty, doesn't add either to messages
-				messages.append( (m,c,request) )
+				messages.append( (m,request) )
 				m = ""
 				c = ""
 				status = 'm'
@@ -99,6 +99,6 @@ def parseData(data, fileContents):
 				continue
 				
 		if m != "":
-			messages.append( (m,c,request) )
+			messages.append( (m,request) )
 			
 	return messages

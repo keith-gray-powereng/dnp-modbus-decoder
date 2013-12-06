@@ -4,7 +4,7 @@ from Report import Report
 import bitstring
 import BitSlice
 import DataLinkTranslator
-import dictScriptV2
+import TypeLookup
 import parseInput
 
 class SimpleTest(TestCase):
@@ -111,7 +111,7 @@ class SimpleTest(TestCase):
         primaryRef = "0"
         secondaryRef = "209"
         originalValue = 'This attribute provides the secure authentication version supported by the outstation. '
-        dictionary = dictScriptV2.buildDict()
+        dictionary = TypeLookup.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
         #print('\n\n')
         #print(originalValue)
@@ -123,7 +123,7 @@ class SimpleTest(TestCase):
         primaryRef = "0"
         secondaryRef = "242"
         originalValue = [('Attribute data type code ', 'UNIT8'), ('Length ', 'UNIT8'), ("Manufacturer's software version string. ", 'VSTRn')]
-        dictionary = dictScriptV2.buildDict()
+        dictionary = TypeLookup.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
         #print('\n\n')
         #print(originalValue)
@@ -134,7 +134,7 @@ class SimpleTest(TestCase):
         primaryRef = "0"
         secondaryRef = "255"
         originalValue = 'This is a special attribute that is used to retrieve a list of all of the device attribute variation numbers supported by the outstation at a specified index- and the properties of those attributes.  This object has a variable length that depends on the count of attribute variations supported by the outstation. '
-        dictionary = dictScriptV2.buildDict()
+        dictionary = TypeLookup.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
         #print('\n\n')
         #print(originalValue)
@@ -146,7 +146,7 @@ class SimpleTest(TestCase):
         primaryRef = "122"
         secondaryRef = "1"
         originalValue = 'This object is used to report the current value of a security statistic. See 11.9.10 for a description of a Security Statistic Point Type. See 7.5.2.2 for details of the point indexes permitted for this object and when the statistics are incremented. Variation 1 objects contain a 32-bit- unsigned integer count value.  '
-        dictionary = dictScriptV2.buildDict()
+        dictionary = TypeLookup.buildDict()
         testValue = dictionary[primaryRef][secondaryRef]
         assert testValue["description"] != originalValue
 		
