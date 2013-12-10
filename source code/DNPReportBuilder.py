@@ -3,27 +3,32 @@ import DataLinkTranslator
 from bitstring import BitArray
 from BitSlice import *
 from translators import *
+from TypeLookup import *
+
 
 
 class DNPReportBuilder:
 
     def dummyData(self):
-        return ["05 64 12 C4 02 00 64 00 FF B7", "F8 C8 05 29 02 28 01 00 10 00 00 80 00 E8 57", "05 64 14 44 64 00 02 00 A4 D8", "F1 C8 81 00 00 29 02 28 01 00 10 00 00 80 00 7E 25"]
+        return [("05 64 12 C4 02 00 64 00 FF B7", False), ("F8 C8 05 29 02 28 01 00 10 00 00 80 00 E8 57", False), ("05 64 14 44 64 00 02 00 A4 D8", False), ("F1 C8 81 00 00 29 02 28 01 00 10 00 00 80 00 7E 25", False)]
     
     def __init__(self):
         self.out = Report("Message", "", "")
+        self.typeDict = buildDict()
+        
     
     '''Translates message into a displayable report
-    I am expecting "message" to be a list of hex numbers, preferrably strings'''
-    def translate(self, message, request):
+    I am expecting "message" to be a tuple with hex numbers, preferrably strings, and a bool referring to if it is a request or not'''
+    def translate(self, message):
 
         hexMessageIN = []
+        isRequest = []
         #turn into bitstrings
         for i in message:
-            value = BitArray(hex = i.replace(" ", ""))
+            value = BitArray(hex = i[0].replace(" ", ""))
             hexMessageIN.append(value)
-            
-           
+            isRequest.append(i[1])
+
         #detect multiple messages
         hexMessages = []
         temp = []
@@ -37,9 +42,11 @@ class DNPReportBuilder:
         if len(temp) > 0:
             hexMessages.append(list(temp))
            
+        index = -1
         allMessages = Report("All Messages", "The entirity of the message", "", "")
         messageCount = -1
         for hexMessage in hexMessages:
+            index += 1
             messageCount += 1
             hexString = ""
             for msg in hexMessage:
@@ -54,9 +61,9 @@ class DNPReportBuilder:
             except:
                 return Report("Invalid Input", "", "", "")
                 
-            #remove CRC bits for everything
-            for i in hexMessage:
-                i = DataLinkTranslator.StripCRCBits(i)
+            #remove CRC bits for everything (Andy took 'em out)
+            #for i in hexMessage:
+            #    i = DataLinkTranslator.StripCRCBits(i)
             
             #Get message length
             thisMessage.length = DataLinkTranslator.DataLayerLength(hexMessage[0][:])
@@ -78,12 +85,16 @@ class DNPReportBuilder:
             
             #message transport layer
             thisMessage.transport = ""
-            if hexMessage[1][0]:
-                thisMessage.transport += " FINAL "
-            if hexMessage[1][1]:
-                thisMessage.transport += " FIRST "
-            thisMessage.AddNext(Report("Transport Function", "Links together large messages in sequence", (thisMessage.transport + "Seq {}").format(hexMessage[1][2:8].uint), ""))
-            hexMessage[1] = hexMessage[1][8:]
+            try:
+                if hexMessage[1][0]:
+                    thisMessage.transport += " FINAL "
+                if hexMessage[1][1]:
+                    thisMessage.transport += " FIRST "
+
+                thisMessage.AddNext(Report("Transport Function", "Links together large messages in sequence", (thisMessage.transport + "Seq {}").format(hexMessage[1][2:8].uint), ""))
+                hexMessage[1] = hexMessage[1][8:]
+            except:
+                print("decoding a response message\n")
             
             #technically a block, so sue me
             fragment = 1
@@ -93,13 +104,22 @@ class DNPReportBuilder:
                 bucket = []
                 #requests contain no actual data
                 #just outlines for what is expected in responses
-                if request:
+
+                if isRequest[index]:
                     bucket.append(Report("Object Header", "Prefix information on Application layer", "", ""))
                     flags = getAppRequestHeader(hexMessage[fragment])
                     for i in flags:
                         bucket[-1].Next.append(i)
                     bucket.append(translateFuncCode(getFuncCode(hexMessage[fragment])))
                     #skip internal indications, does not exist in requests
+                #responses...well...
+                else:
+                    bucket.append(Report("Object Header", "Prefix information on Application layer", "", ""))
+                    flags = getAppRequestHeader(hexMessage[fragment])
+                    for i in flags:
+                        bucket[-1].Next.append(i) 
+                    bucket.append(translateFuncCode(getFuncCode(hexMessage[fragment])))
+                    
                     
                 for i in bucket:
                     temp = i

@@ -107,8 +107,3 @@ def fetchVSTRnTable():
     
 def fetchOSTRnTable():
     return fetchVariableSizeFieldTable("OSTRn_variableSizeLookups.csv")
-
-	
-
-	
-	
