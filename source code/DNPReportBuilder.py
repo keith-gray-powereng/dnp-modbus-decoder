@@ -42,9 +42,11 @@ class DNPReportBuilder:
         if len(temp) > 0:
             hexMessages.append(list(temp))
            
+        index = -1
         allMessages = Report("All Messages", "The entirity of the message", "", "")
         messageCount = -1
         for hexMessage in hexMessages:
+            index += 1
             messageCount += 1
             hexString = ""
             for msg in hexMessage:
@@ -83,12 +85,16 @@ class DNPReportBuilder:
             
             #message transport layer
             thisMessage.transport = ""
-            if hexMessage[1][0]:
-                thisMessage.transport += " FINAL "
-            if hexMessage[1][1]:
-                thisMessage.transport += " FIRST "
-            thisMessage.AddNext(Report("Transport Function", "Links together large messages in sequence", (thisMessage.transport + "Seq {}").format(hexMessage[1][2:8].uint), ""))
-            hexMessage[1] = hexMessage[1][8:]
+            try:
+                if hexMessage[1][0]:
+                    thisMessage.transport += " FINAL "
+                if hexMessage[1][1]:
+                    thisMessage.transport += " FIRST "
+
+                thisMessage.AddNext(Report("Transport Function", "Links together large messages in sequence", (thisMessage.transport + "Seq {}").format(hexMessage[1][2:8].uint), ""))
+                hexMessage[1] = hexMessage[1][8:]
+            except:
+                print("decoding a response message\n")
             
             #technically a block, so sue me
             fragment = 1
