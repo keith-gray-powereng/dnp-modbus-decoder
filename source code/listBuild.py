@@ -7,6 +7,7 @@ from Report import *
 def makeCollapsibleList(reportList):
 	'''Takes list of reports and adds HTML to the highest-level parts'''
 	outputString = '<ul class="collapsibleList">\n'
+	foundFunction = False
 	#class="collapsibleList"
 	
 	for report in reportList.Next: #loop through each Report report in reportList
@@ -32,7 +33,15 @@ def makeCollapsibleList(reportList):
 			elif i.title.find("Transport") != -1: #Function Code
 				for part in i.Next:
 					if part.title.find("Function") != -1:
+						foundFunction = True
 						outputString += ' ' + str(part.data) #" Function: "
+		#end (i in report.Next) for loop
+		if(foundFunction == False):
+			for i in report.Next:
+				if i.title.find("Control") != -1: #Message Control Data
+					for part in i.Next[0].Next:
+						if part.title.find("Function") != -1: #Function
+							outputString += ' Function: ' + str(part.data) #" Function: "
 		outputString += "\n<ul>\n"
 		if len(report.Next) > 0:
 			outputString = innerContents(report.Next, outputString)
