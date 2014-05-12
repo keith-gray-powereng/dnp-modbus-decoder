@@ -1,7 +1,6 @@
 import bitstring
 #from BitSlice import slice
-import BitSlice
-from Report import Report
+from .Report import Report
 
 '''confirms the beginning of the message is DNP3 standard'''
 def DataLayerCorrect(testWord):
@@ -95,4 +94,4 @@ def DataLayerControlReport(ControlOctet):
     return ControlByte
             
             
-        
+

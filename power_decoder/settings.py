@@ -118,9 +118,9 @@ INSTALLED_APPS = (
     #'django.contrib.sites',
     #'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bitstring',
-    'testing',
-    'DataLinkTranslator',
+    #'bitstring',
+    #'testing',
+    #'DataLinkTranslator',
     'DNP3',
     'power_decoder'
     # Uncomment the next line to enable the admin:

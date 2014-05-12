@@ -1,9 +1,9 @@
-from Report import Report
-import DataLinkTranslator
+from .Report import Report
+from . import DataLinkTranslator
 from bitstring import BitArray
-from BitSlice import *
-from translators import *
-from TypeLookup import *
+from .BitSlice import *
+from .translators import *
+from .TypeLookup import *
 
 
 
@@ -132,4 +132,4 @@ class DNPReportBuilder:
         
         #http://www.kepware.com/Support_Center/SupportDocuments/DNP3_Control_Relay_Output_Block.pdf
 
-            
+

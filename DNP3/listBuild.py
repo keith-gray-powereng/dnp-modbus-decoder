@@ -2,13 +2,13 @@
 '''Takes a list of Report object that have already been decoded
 and adds HTML code to them so that they can be displayed as a
 collapsibleList object on the results page'''
-from Report import *
+from .Report import *
 
 def makeCollapsibleList(reportList):
 	'''Takes list of reports and adds HTML to the highest-level parts'''
 	outputString = '<ul class="collapsibleList">\n'
 	#class="collapsibleList"
-	
+
 	for report in reportList.Next: #loop through each Report report in reportList
 		#if report.description != "":
 			#outputString += report.description
@@ -20,11 +20,11 @@ def makeCollapsibleList(reportList):
 	#end for
 	outputString += '\n</ul>'
 	return outputString
-	
+
 def makePrintableList(reportList):
 	'''Takes list of reports and adds HTML to the highest-level parts'''
 	outputString = '<ul>\n'
-	
+
 	for report in reportList.Next: #loop through each Report report in reportList
 		#if report.description != "":
 			#outputString += report.description

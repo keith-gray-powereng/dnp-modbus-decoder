@@ -1,6 +1,6 @@
 #translators.py
-from BitSlice import *
-from Report import Report
+from .BitSlice import *
+from .Report import Report
 
 def getAppRequestHeader(fragment):
     summary = []
@@ -10,7 +10,7 @@ def getAppRequestHeader(fragment):
     summary.append(Report("Unsolicited", "This information was not part of a request", getUnsolicitedFlag(fragment).uint == 1))
     summary.append(Report("Confirmation Required", "Opposite station must acknowledge to be valid", getConfirmationFlag(fragment).uint == 1))
     return summary
-    
+
 def getAppResponseHeader(fragment):
     InternalIndications = []
     InternalIndications.append(Report("Internal Indications 1 {}".format(LSBinternalIndicationLookup(getLSBInternalIndications(fragment)[:8])), "Block used for response Error codes, first part (LSB)", getLSBInternalIndications(fragment)))
@@ -20,7 +20,7 @@ def getAppResponseHeader(fragment):
     temp.append(Report("Internal Indicators", "Errors for responses go here", None))
     temp[-1].AddNext(InternalIndications)
     return temp
-    
+
 def translateFuncCode(functionSection):
 
     mtype = ""
@@ -79,7 +79,7 @@ def translateFuncCode(functionSection):
     elif functionSection.uint > 17 and functionSection.uint < 128:
         mtype = "REQUEST"
         funcCode = "RESERVED"
-    #there are a lot of these, in the interest of rapid prototyping, I skip to the reponses   
+    #there are a lot of these, in the interest of rapid prototyping, I skip to the reponses
     elif functionSection.uint == 129:
         mtype = "RESPONSE"
         funcCode = "RESPONSE"
@@ -92,10 +92,10 @@ def translateFuncCode(functionSection):
     elif functionSection.uint >= 132:
         mtype = "RESPONSE"
         funcCode = "RESERVED"
-        
-        
+
+
     return Report("Function", "action for message", "Function: {} ({})".format(funcCode,mtype))
-    
+
 def LSBinternalIndicationLookup(fragment):
     lsb = ""
     if fragment.uint == 1:
@@ -122,9 +122,9 @@ def LSBinternalIndicationLookup(fragment):
     if fragment.uint == 128:
         #print ("Device Restart")
         lsb1 += "Device Restart "
-        
+
     return lsb1
-    
+
 def MSBinternalIndicationLookup(fragment):
     msb1 = ""
     if fragment.uint == 1:
@@ -150,6 +150,6 @@ def MSBinternalIndicationLookup(fragment):
         msb1 += "Reserved "
     if fragment.uint == 128:
         #print ("Reserved(2) (you shouldn't ever get this)")
-        msb1 += "Reserved(2) " 
-        
+        msb1 += "Reserved(2) "
+
     return msb1
