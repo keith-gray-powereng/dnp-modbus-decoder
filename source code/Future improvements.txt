@@ -1,0 +1,5 @@
+Future improvements
+	1.) Complete Modbus functionality and incoporate it into the current application
+		i.) Found implemented python script that decodes Modbus, but incorporation was not possible due to time constraints.
+		ii.) Pymodbus: https://github.com/bashwork/pymodbus
+	2.) Print feature for printing only the results portion in black/white without color.
