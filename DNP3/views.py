@@ -33,13 +33,7 @@ def DNP3results(request):
         decodedReports = []
         reportBuilder = DNPReportBuilder()
 
-        #changing 3-part tuple -> (message, crc, request bool STRING)
-        messages2 = []
-        #Decoding each message and getting Report objects back
-        for msg in messages:
-            messages2.append(msg[0])
-
-        decodedReports = reportBuilder.translate(messages2, True)
+        decodedReports = reportBuilder.translate(messages)
         #Convert Report list to HTML collapsible list
 
         if printBool == "false":
