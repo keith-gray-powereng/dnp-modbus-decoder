@@ -17,7 +17,6 @@ def parseData(data, fileContents):
     elif fileContents != "": #if the textbox is empty then go with the data in the textbox
         msg = fileContents
     else: #if neither condition was met, then no input was entered, so return a bad value
-        print("Bad Exit")
         return badExit
 
     i = 0

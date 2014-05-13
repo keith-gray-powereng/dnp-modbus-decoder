@@ -11,3 +11,4 @@ parser.out
 parsetab.py
 *.log
 Thumbs.db
+*.ropeproject
