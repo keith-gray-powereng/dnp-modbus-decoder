@@ -21,7 +21,7 @@ def parseData(data, fileContents):
 
     i = 0
     j = 0
-    bytes = 0
+    twice_byte_count = 0
     byteCount = 0
     request = "True"
     messages = [] #Message type? #Use two indexes per message, first=message, second=CRC (or nothing if no CRC given)
@@ -36,10 +36,10 @@ def parseData(data, fileContents):
             m = "" #temporary msg
             if msg[i-2] == "R": #TX = request, otherwise RX = recieve
                 request = "False"
-            bytes = int(msg[i+1:(msg.find("]", i))]) * 2
+            twice_byte_count = int(msg[i+1:(msg.find("]", i))]) * 2
             byteCount = 0
             i = msg.find(":", i) + 1
-            while i < len(msg) and byteCount < bytes:
+            while i < len(msg) and byteCount < twice_byte_count:
                 if msg[i] == "(":
                     #start getting CRC
                     i += 1
