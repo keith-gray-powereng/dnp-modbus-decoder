@@ -12,3 +12,4 @@ parsetab.py
 *.log
 Thumbs.db
 *.ropeproject
+htmlcov
