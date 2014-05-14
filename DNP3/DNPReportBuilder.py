@@ -2,8 +2,9 @@ from .Report import Report
 from . import DataLinkTranslator
 from bitstring import BitArray
 from .BitSlice import getFuncCode
-from .translators import *
-from .TypeLookup import *
+from .translators import getAppRequestHeader
+from .translators import translateFuncCode
+from .TypeLookup import buildDict
 
 
 class DNPReportBuilder:
