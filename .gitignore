@@ -13,3 +13,4 @@ parsetab.py
 Thumbs.db
 *.ropeproject
 htmlcov
+__pycache__
