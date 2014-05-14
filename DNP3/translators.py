@@ -1,23 +1,54 @@
 #translators.py
-from .BitSlice import *
+from .BitSlice import getSequence
+from .BitSlice import getConfirmationFlag
+from .BitSlice import getUnsolicitedFlag
+from .BitSlice import getFirstFlag
+from .BitSlice import getFinalFlag
+from .BitSlice import getLSBInternalIndications
+from .BitSlice import getMSBInternalIndications
 from .Report import Report
+
 
 def getAppRequestHeader(fragment):
     summary = []
     summary.append(Report("Sequence number", "", getSequence(fragment).uint))
-    summary.append(Report("Final Flag" , "Last Fragment", getFinalFlag(fragment).uint == 1))
-    summary.append(Report("First Flag", "First Fragment", getFirstFlag(fragment).uint == 1))
-    summary.append(Report("Unsolicited", "This information was not part of a request", getUnsolicitedFlag(fragment).uint == 1))
-    summary.append(Report("Confirmation Required", "Opposite station must acknowledge to be valid", getConfirmationFlag(fragment).uint == 1))
+    summary.append(Report(
+        "Final Flag", "Last Fragment", getFinalFlag(fragment).uint == 1))
+    summary.append(Report(
+        "First Flag", "First Fragment", getFirstFlag(fragment).uint == 1))
+    summary.append(Report(
+        "Unsolicited",
+        "This information was not part of a request",
+        getUnsolicitedFlag(fragment).uint == 1)
+    )
+    summary.append(Report(
+        "Confirmation Required",
+        "Opposite station must acknowledge to be valid",
+        getConfirmationFlag(fragment).uint == 1)
+    )
     return summary
+
 
 def getAppResponseHeader(fragment):
     InternalIndications = []
-    InternalIndications.append(Report("Internal Indications 1 {}".format(LSBinternalIndicationLookup(getLSBInternalIndications(fragment)[:8])), "Block used for response Error codes, first part (LSB)", getLSBInternalIndications(fragment)))
-    InternalIndications.append(Report("Internal Indications 2 {}".format(LSBinternalIndicationLookup(getMSBInternalIndications(fragment)[8:16])), "Block used for response Error codes, first part (LSB)", getMSBInternalIndications(fragment)))
+    InternalIndications.append(Report(
+        "Internal Indications 1 {}".format(
+            LSBinternalIndicationLookup(
+                getLSBInternalIndications(fragment)[:8])),
+        "Block used for response Error codes, first part (LSB)",
+        getLSBInternalIndications(fragment))
+    )
+    InternalIndications.append(Report(
+        "Internal Indications 2 {}".format(
+            LSBinternalIndicationLookup(
+                getMSBInternalIndications(fragment)[8:16])),
+        "Block used for response Error codes, first part (LSB)",
+        getMSBInternalIndications(fragment))
+    )
 
     temp = getAppRequestHeader(fragment)
-    temp.append(Report("Internal Indicators", "Errors for responses go here", None))
+    temp.append(Report(
+        "Internal Indicators", "Errors for responses go here", None))
     temp[-1].AddNext(InternalIndications)
     return temp
 
@@ -79,7 +110,8 @@ def translateFuncCode(functionSection):
     elif functionSection.uint > 17 and functionSection.uint < 128:
         mtype = "REQUEST"
         funcCode = "RESERVED"
-    #there are a lot of these, in the interest of rapid prototyping, I skip to the reponses
+    #there are a lot of these, in the interest of rapid prototyping,
+    #I skip to the reponses
     elif functionSection.uint == 129:
         mtype = "RESPONSE"
         funcCode = "RESPONSE"
@@ -93,11 +125,13 @@ def translateFuncCode(functionSection):
         mtype = "RESPONSE"
         funcCode = "RESERVED"
 
-
-    return Report("Function", "action for message", "Function: {} ({})".format(funcCode,mtype))
+    return Report(
+        "Function", "action for message", "Function: {} ({})".format(
+            funcCode, mtype)
+    )
 
 def LSBinternalIndicationLookup(fragment):
-    lsb = ""
+    lsb1 = ""
     if fragment.uint == 1:
         #print ("BroadCast")
         lsb1 += "BroadCast "
@@ -113,7 +147,7 @@ def LSBinternalIndicationLookup(fragment):
     if fragment.uint == 16:
         #print ("Needs time for synchronization")
         lsb1 += "Needs time for synchronization"
-    if fragment.uint ==  32:
+    if fragment.uint == 32:
         #print ("Local Control Mode")
         lsb1 += "Local Control Mode "
     if fragment.uint == 64:
