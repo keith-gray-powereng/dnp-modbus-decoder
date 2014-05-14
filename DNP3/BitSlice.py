@@ -6,61 +6,61 @@ import bitstring
 '''slice gets the bits specified by counting from the least signifigant bit, as this is sometimes easier
 for starting from msb, use bistring slice ([]) notation'''
 def slice(input,length, startBit):
-    
+
     #generate "length" filter
     filter = bitstring.BitArray(length=len(input))
     bitFilter = ""
     for i in range(0, length):
         bitFilter += "1"
     bitFilter = "0b" + bitFilter
-    
+
     if len(bitFilter) == 2:
         bitFilter = bitFilter + "0"
-    
+
     filter.overwrite(bitFilter, startBit)
     filter.reverse()
-    
+
     #print (filter)
     #print (input)
-    
+
     return (filter & input) >> startBit
-    
-'''(Application layer) Isolates sequence bits from application layer segment'''    
+
+'''(Application layer) Isolates sequence bits from application layer segment'''
 def getSequence(input):
     #print ("seq")
     return input[4:8]
 
-'''(Application layer) Isolates bit declaring requests for confirmation''' 
+'''(Application layer) Isolates bit declaring requests for confirmation'''
 def getConfirmationFlag(input):
     #print ("conseq")
     return input[2:3]
 
-'''(Application layer) Isolates bit declaring if request is unsolicited'''     
+'''(Application layer) Isolates bit declaring if request is unsolicited'''
 def getUnsolicitedFlag(input):
     #print ("unsol")
     return input[3:4]
 
-'''(Application layer) Bit declaring if it is the first fragment'''     
+'''(Application layer) Bit declaring if it is the first fragment'''
 def getFirstFlag(input):
     #print ("first")
     return input[0:1]
 
-'''(Application layer) Bit declaring if it is final fragment''' 
+'''(Application layer) Bit declaring if it is final fragment'''
 def getFinalFlag(input):
     #print ("final")
     return input[1:2]
-    
-'''(Application layer) Declares what action should be done with data enclosed'''     
+
+'''(Application layer) Declares what action should be done with data enclosed'''
 def getFuncCode(input):
     #print ("func")
     return input[8:16]
-    
+
 #only for responses
-'''(Application layer) Part one of Error Codes ''' 
+'''(Application layer) Part one of Error Codes '''
 def getLSBInternalIndications(input):
     return input[16:24]
 
-'''(Application layer) Part two of Error Codes'''     
+'''(Application layer) Part two of Error Codes'''
 def getMSBInternalIndications(input):
     return input[24:32]
 
@@ -71,7 +71,7 @@ def OH_ObjectGroup(input, seq = 0):
     tempIn = bistring.BitArray(input)
     return tempIn[0:8]
 
-    
+
 def OH_ObjectVariation(input, response,  seq = 0):
     tempIn = bistring.BitArray(input)
     return tempIn[8:16]
@@ -80,8 +80,8 @@ def OH_Qualifier(input, response, seq = 0):
     tempIn = bistring.BitArray(input)
     #skip the reserved bit
     ObjectPrefix = tempIn[17:20]
-    RangeSpecifier = tempIn[20:24] 
-    
+    RangeSpecifier = tempIn[20:24]
+
     typed = ""
     size = 0
     if ObjectPrefix.uint == 0:
@@ -108,7 +108,7 @@ def OH_Qualifier(input, response, seq = 0):
     else:
         typed = "RESERVED"
         size = 0
-    
+
     indexed = ""
     indexSize = 0
     if RangeSpecifier.uint == 0:
@@ -147,8 +147,8 @@ def OH_Qualifier(input, response, seq = 0):
     else:
         indexed = "RESERVED"
         indexSize = 0
-        
+
     return (typed, size, indexed, indexSize)
-    
+
 
 
